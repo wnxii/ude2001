@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initScrollEffects();
   initAnimations();
   initInteractiveElements();
+  // Note: Image comparisons are initialized via inline script for better compatibility
 });
 
 // Navigation Functionality
@@ -472,6 +473,8 @@ Built with modern web technologies:
 • Accessibility Features
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 `);
+
+// Image Comparison Slider functionality is now implemented via inline script in HTML for better compatibility
 
 // Export functions for potential external use
 window.BotaniqShowcase = {

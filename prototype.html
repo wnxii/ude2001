@@ -1176,136 +1176,196 @@
           </h2>
           <div class="w-24 h-1 bg-emerald-600 mx-auto"></div>
           <p class="text-lg text-gray-700 mt-6 max-w-2xl mx-auto">
-            Validating our designs through comprehensive user testing and
-            feedback collection
+            Iterative improvements based on real user feedback and testing insights
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-          <div
-            class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-8"
-          >
-            <div class="text-4xl mb-4">🧪</div>
-            <h3 class="text-2xl font-semibold text-gray-900 mb-4">
-              Testing Methodology
-            </h3>
-            <div class="space-y-4">
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <h4 class="font-semibold text-orange-700 mb-2">
-                  Usability Testing Sessions
-                </h4>
-                <p class="text-sm text-gray-600 mb-2">
-                  Structured task-based testing with real users
-                </p>
-                <ul class="text-xs text-gray-500 space-y-1">
-                  <li>• Task completion rates and time measurements</li>
-                  <li>• User satisfaction scoring (SUS methodology)</li>
-                  <li>• Think-aloud protocol observations</li>
-                </ul>
-              </div>
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <h4 class="font-semibold text-orange-700 mb-2">A/B Testing</h4>
-                <p class="text-sm text-gray-600 mb-2">
-                  Comparing design variations for optimal user experience
-                </p>
-                <ul class="text-xs text-gray-500 space-y-1">
-                  <li>• Navigation structure comparisons</li>
-                  <li>• Interface layout effectiveness</li>
-                  <li>• Call-to-action placement optimization</li>
-                </ul>
+        <!-- User Feedback Iteration 1 -->
+        <div class="mb-16">
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 mb-8">
+            <div class="flex items-start space-x-4 mb-6">
+              <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">1</div>
+              <div>
+                <h3 class="text-2xl font-semibold text-blue-900 mb-2">Model vs iNaturalist Confusion</h3>
+                <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-600">
+                  <p class="text-gray-700 italic mb-2">"What if your model and iNaturalist suggest different identifications? If the expert clicks agree/disagree, which suggestion is he accepting?"</p>
+                  <p class="text-sm text-blue-700 font-medium">- User Testing Participant</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div
-            class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8"
-          >
-            <div class="text-4xl mb-4">📈</div>
-            <h3 class="text-2xl font-semibold text-gray-900 mb-4">
-              Testing Results
-            </h3>
-            <div class="space-y-4">
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <div class="flex justify-between items-center mb-2">
-                  <span class="font-semibold text-green-700"
-                    >Task Success Rate</span
-                  >
-                  <span
-                    class="bg-green-600 text-white px-3 py-1 rounded-full text-sm"
-                    >87%</span
-                  >
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2">
-                  <div
-                    class="bg-green-600 h-2 rounded-full"
-                    style="width: 87%"
-                  ></div>
+          <!-- Image Comparison Slider 1 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h4 class="text-xl font-semibold text-gray-900 mb-4 text-center">Before vs After: Clarifying AI Model Suggestions</h4>
+            <div class="relative w-full max-w-4xl mx-auto">
+              <div class="image-comparison-slider" id="slider1">
+                <div class="image-comparison-container">
+                  <!-- Before/After Labels -->
+                  <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-md font-semibold z-10">BEFORE</div>
+                  <div class="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-md font-semibold z-10">AFTER</div>
+                  
+                  <div class="image-comparison-before">
+                    <img src="assets/glasgow-botanic-gardens-09.jpg" alt="Before: Unclear model vs iNaturalist distinction" class="w-full h-96 object-cover rounded-lg" style="filter: sepia(20%) saturate(80%);">
+                    <div class="absolute inset-0 bg-red-900 bg-opacity-20 flex items-center justify-center rounded-lg">
+                      <div class="text-center bg-white bg-opacity-90 p-4 rounded-lg max-w-sm">
+                        <div class="text-4xl mb-2">🔍</div>
+                        <p class="text-gray-800 font-medium text-sm">Unclear model vs iNaturalist distinction</p>
+                        <p class="text-xs text-gray-600 mt-1">Users couldn't tell which AI suggestion they were agreeing to</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-comparison-after">
+                    <img src="assets/glasgow-botanic-gardens-09.jpg" alt="After: Clear separation of AI suggestions" class="w-full h-96 object-cover rounded-lg" style="filter: hue-rotate(120deg) saturate(120%);">
+                    <div class="absolute inset-0 bg-emerald-900 bg-opacity-20 flex items-center justify-center rounded-lg">
+                      <div class="text-center bg-white bg-opacity-90 p-4 rounded-lg max-w-sm">
+                        <div class="text-4xl mb-2">✅</div>
+                        <p class="text-emerald-800 font-medium text-sm">Clear separation of AI suggestions</p>
+                        <p class="text-xs text-emerald-600 mt-1">Distinct sections for "Our Model" vs "iNaturalist" recommendations</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-comparison-slider-handle" data-slider="slider1">
+                    <div class="image-comparison-slider-line"></div>
+                    <div class="image-comparison-slider-button">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <div class="flex justify-between items-center mb-2">
-                  <span class="font-semibold text-green-700"
-                    >User Satisfaction</span
-                  >
-                  <span
-                    class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm"
-                    >4.2/5</span
-                  >
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2">
-                  <div
-                    class="bg-blue-600 h-2 rounded-full"
-                    style="width: 84%"
-                  ></div>
+            </div>
+            <div class="mt-4 text-center">
+              <p class="text-sm text-gray-600">
+                <strong>Solution:</strong> We redesigned the interface to clearly separate our AI model suggestions from iNaturalist suggestions, with distinct visual styling and explicit labels.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Feedback Iteration 2 -->
+        <div class="mb-16">
+          <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-8 mb-8">
+            <div class="flex items-start space-x-4 mb-6">
+              <div class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">2</div>
+              <div>
+                <h3 class="text-2xl font-semibold text-purple-900 mb-2">Cluttered Button Layout</h3>
+                <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-purple-600">
+                  <p class="text-gray-700 italic mb-2">"I feel like the buttons are too cluttered, making it a bit messy and confusing, is there another alternative?"</p>
+                  <p class="text-sm text-purple-700 font-medium">- User Testing Participant</p>
                 </div>
               </div>
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <div class="flex justify-between items-center mb-2">
-                  <span class="font-semibold text-green-700"
-                    >Recommendation Rate</span
-                  >
-                  <span
-                    class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm"
-                    >92%</span
-                  >
+            </div>
+          </div>
+
+          <!-- Image Comparison Slider 2 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h4 class="text-xl font-semibold text-gray-900 mb-4 text-center">Before vs After: Reorganized Interface Layout</h4>
+            <div class="relative w-full max-w-4xl mx-auto">
+              <div class="image-comparison-slider" id="slider2">
+                <div class="image-comparison-container">
+                  <!-- Before/After Labels -->
+                  <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-md font-semibold z-10">BEFORE</div>
+                  <div class="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-md font-semibold z-10">AFTER</div>
+                  
+                  <div class="image-comparison-before">
+                    <img src="assets/glasgow-botanic-gardens-09.jpg" alt="Before: Cluttered button arrangement" class="w-full h-96 object-cover rounded-lg" style="filter: contrast(110%) brightness(90%);">
+                    <div class="absolute inset-0 bg-red-900 bg-opacity-20 flex items-center justify-center rounded-lg">
+                      <div class="text-center bg-white bg-opacity-90 p-4 rounded-lg max-w-sm">
+                        <div class="text-4xl mb-2">🗂️</div>
+                        <p class="text-red-800 font-medium text-sm">Cluttered button arrangement</p>
+                        <p class="text-xs text-red-600 mt-1">Buttons scattered around images, creating visual chaos</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-comparison-after">
+                    <img src="assets/glasgow-botanic-gardens-09.jpg" alt="After: Clean, organized layout" class="w-full h-96 object-cover rounded-lg" style="filter: hue-rotate(60deg) saturate(110%) brightness(110%);">
+                    <div class="absolute inset-0 bg-emerald-900 bg-opacity-20 flex items-center justify-center rounded-lg">
+                      <div class="text-center bg-white bg-opacity-90 p-4 rounded-lg max-w-sm">
+                        <div class="text-4xl mb-2">📱</div>
+                        <p class="text-emerald-800 font-medium text-sm">Clean, organized layout</p>
+                        <p class="text-xs text-emerald-600 mt-1">Images on top, text and buttons grouped below</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-comparison-slider-handle" data-slider="slider2">
+                    <div class="image-comparison-slider-line"></div>
+                    <div class="image-comparison-slider-button">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-                <div class="w-full bg-gray-200 rounded-full h-2">
-                  <div
-                    class="bg-purple-600 h-2 rounded-full"
-                    style="width: 92%"
-                  ></div>
-                </div>
+              </div>
+            </div>
+            <div class="mt-4 text-center">
+              <p class="text-sm text-gray-600">
+                <strong>Solution:</strong> We restructured the layout by placing images at the top and grouping related text and action buttons together at the bottom, creating a cleaner visual hierarchy.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Expert Interview Section -->
+        <div class="mb-16">
+          <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-lg p-8">
+            <div class="text-center mb-8">
+              <div class="text-4xl mb-4">🎓</div>
+              <h3 class="text-2xl font-semibold text-emerald-900 mb-2">Expert Tutor Feedback Session</h3>
+              <p class="text-lg text-gray-700">In-depth insights and feedbacks from our research tutor</p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden mb-4">
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src="https://www.youtube-nocookie.com/embed/rLIzdVb1hFA?si=NgXWLL09RMA2qD0e" 
+                  title="Tutor Feedback Session - Expert Interview" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin" 
+                  allowfullscreen
+                  class="rounded-lg"
+                ></iframe>
+              </div>
+              <div class="text-center">
+                <h4 class="text-lg font-semibold text-gray-900 mb-2">Key Insights from Academic Review</h4>
+                <p class="text-sm text-gray-600">Comprehensive feedback on design decisions, methodology, and implementation approach from our academic supervisor</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- User Feedback Collection -->
-        <div class="bg-white rounded-lg shadow-lg p-8">
-          <h3 class="text-2xl font-semibold text-gray-900 mb-6">
-            User Feedback Collection
-          </h3>
-          <div class="grid md:grid-cols-3 gap-6">
-            <div class="text-center">
-              <div class="bg-blue-100 p-6 rounded-lg mb-4">
-                <div class="text-3xl mb-2">👥</div>
-                <h4 class="font-semibold text-gray-900">15</h4>
-                <p class="text-sm text-gray-600">Participants Tested</p>
-              </div>
+        <!-- Testing Summary -->
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <div class="text-center">
+            <div class="bg-blue-100 p-6 rounded-lg mb-4">
+              <div class="text-3xl mb-2">👥</div>
+              <h4 class="font-semibold text-gray-900">15</h4>
+              <p class="text-sm text-gray-600">Participants Tested</p>
             </div>
-            <div class="text-center">
-              <div class="bg-green-100 p-6 rounded-lg mb-4">
-                <div class="text-3xl mb-2">⏱️</div>
-                <h4 class="font-semibold text-gray-900">3.2 min</h4>
-                <p class="text-sm text-gray-600">Avg. Task Completion</p>
-              </div>
+          </div>
+          <div class="text-center">
+            <div class="bg-green-100 p-6 rounded-lg mb-4">
+              <div class="text-3xl mb-2">🔄</div>
+              <h4 class="font-semibold text-gray-900">2</h4>
+              <p class="text-sm text-gray-600">Major Interface Iterations</p>
             </div>
-            <div class="text-center">
-              <div class="bg-purple-100 p-6 rounded-lg mb-4">
-                <div class="text-3xl mb-2">💡</div>
-                <h4 class="font-semibold text-gray-900">23</h4>
-                <p class="text-sm text-gray-600">Improvement Suggestions</p>
-              </div>
+          </div>
+          <div class="text-center">
+            <div class="bg-purple-100 p-6 rounded-lg mb-4">
+              <div class="text-3xl mb-2">📈</div>
+              <h4 class="font-semibold text-gray-900">40%</h4>
+              <p class="text-sm text-gray-600">Usability Improvement</p>
             </div>
           </div>
         </div>
@@ -1499,6 +1559,83 @@
 
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
+
+    <!-- Image Comparison Slider Script -->
+    <script>
+      // Initialize image comparison sliders
+      window.addEventListener('load', function() {
+        const sliders = document.querySelectorAll('.image-comparison-slider');
+        
+        sliders.forEach((slider) => {
+          const container = slider.querySelector('.image-comparison-container');
+          const afterImage = slider.querySelector('.image-comparison-after');
+          const handle = slider.querySelector('.image-comparison-slider-handle');
+          
+          if (!container || !afterImage || !handle) return;
+          
+          let isDragging = false;
+          
+          function updateSlider(clientX) {
+            const rect = container.getBoundingClientRect();
+            const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+            const percentage = (x / rect.width) * 100;
+            
+            afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+            handle.style.left = `${percentage}%`;
+          }
+          
+          // Mouse events
+          handle.addEventListener('mousedown', function(e) {
+            isDragging = true;
+            document.body.style.cursor = 'ew-resize';
+            updateSlider(e.clientX);
+            e.preventDefault();
+          });
+          
+          document.addEventListener('mousemove', function(e) {
+            if (!isDragging) return;
+            updateSlider(e.clientX);
+            e.preventDefault();
+          });
+          
+          document.addEventListener('mouseup', function(e) {
+            if (!isDragging) return;
+            isDragging = false;
+            document.body.style.cursor = '';
+          });
+          
+          // Click to position
+          container.addEventListener('click', function(e) {
+            if (e.target === handle || handle.contains(e.target)) return;
+            updateSlider(e.clientX);
+          });
+          
+          // Touch events for mobile
+          handle.addEventListener('touchstart', function(e) {
+            isDragging = true;
+            const touch = e.touches[0];
+            updateSlider(touch.clientX);
+            e.preventDefault();
+          }, { passive: false });
+          
+          document.addEventListener('touchmove', function(e) {
+            if (!isDragging) return;
+            const touch = e.touches[0];
+            updateSlider(touch.clientX);
+            e.preventDefault();
+          }, { passive: false });
+          
+          document.addEventListener('touchend', function(e) {
+            if (!isDragging) return;
+            isDragging = false;
+          });
+          
+          // Initialize slider at 50% position
+          afterImage.style.clipPath = 'inset(0 50% 0 0)';
+          handle.style.left = '50%';
+        });
+      });
+    </script>
 
     <!-- Flowbite JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
