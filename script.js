@@ -15,7 +15,7 @@ function initNavigation() {
   const navbar = document.getElementById("navbar");
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
-  const navLinks = document.querySelectorAll(".nav-link, .nav-link-mobile");
+  const navLinks = document.querySelectorAll(".nav-link, #mobile-menu a");
 
   // Mobile Menu Toggle
   mobileMenuBtn.addEventListener("click", function () {

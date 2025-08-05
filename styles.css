@@ -57,7 +57,7 @@ html {
   background: var(--color-emerald-600);
 }
 
-/* Navigation Styles */
+/* Navigation Styles - Using Tailwind for mobile responsiveness */
 .nav-link {
   position: relative;
   color: #374151;
@@ -87,41 +87,9 @@ html {
   width: 100%;
 }
 
-.nav-link-mobile {
-  display: block;
-  padding: 0.75rem 0;
-  color: #374151;
-  font-weight: 500;
-  text-decoration: none;
-  border-bottom: 1px solid #e5e7eb;
-  transition: color 0.3s ease;
-}
-
-.nav-link-mobile:hover {
-  color: var(--color-emerald-700);
-}
-
-/* Mobile Menu Button */
-#mobile-menu-btn {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-
-.hamburger-line {
-  display: block;
-  width: 24px;
-  height: 3px;
-  background-color: #374151;
-  margin: 4px 0;
-  transition: 0.3s;
-  border-radius: 2px;
-}
-
-/* Mobile Menu Animation */
+/* Mobile Menu Hamburger Animation - Using Tailwind-compatible styles */
 #mobile-menu-btn.active .hamburger-line:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-2px, 6px);
 }
 
 #mobile-menu-btn.active .hamburger-line:nth-child(2) {
@@ -129,7 +97,7 @@ html {
 }
 
 #mobile-menu-btn.active .hamburger-line:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
+  transform: rotate(45deg) translate(-2px, -6px);
 }
 
 /* Section Transitions */
