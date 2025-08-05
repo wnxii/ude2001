@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Botaniq Project Timeline - Team 08 University of Glasgow project journey documenting key milestones and progress" />
+    <meta
+      name="description"
+      content="Botaniq Project Timeline - Team 08 University of Glasgow project journey documenting key milestones and progress"
+    />
     <title>Project Timeline - Botaniq | Team 08 UofG</title>
 
     <!-- Tailwind CSS -->
@@ -15,8 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -26,157 +28,160 @@
     <link rel="stylesheet" href="styles.css" />
 
     <style>
-        /* Timeline specific styles */
-        .timeline-container {
-            position: relative;
-        }
+      /* Timeline specific styles */
+      .timeline-container {
+        position: relative;
+      }
 
+      .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(to bottom, #10b981, #059669);
+        transform: translateX(-50%);
+        border-radius: 2px;
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 3rem;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+      }
+
+      .timeline-item.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .timeline-item:nth-child(odd) {
+        padding-right: 50%;
+        padding-left: 0;
+      }
+
+      .timeline-item:nth-child(even) {
+        padding-left: 50%;
+        padding-right: 0;
+        text-align: left;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content {
+        margin-right: 2rem;
+        text-align: right;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 2rem;
+        text-align: left;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 50%;
+        top: 1.5rem;
+        width: 20px;
+        height: 20px;
+        background: #10b981;
+        border: 4px solid white;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 0 0 4px #10b981;
+        z-index: 10;
+      }
+
+      .timeline-dot.milestone {
+        width: 24px;
+        height: 24px;
+        background: #dc2626;
+        box-shadow: 0 0 0 4px #dc2626;
+      }
+
+      .timeline-dot.future {
+        background: #9ca3af;
+        box-shadow: 0 0 0 4px #9ca3af;
+      }
+
+      @media (max-width: 768px) {
         .timeline-line {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(to bottom, #10b981, #059669);
-            transform: translateX(-50%);
-            border-radius: 2px;
+          left: 2rem;
         }
 
         .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+          padding-left: 4rem !important;
+          padding-right: 0 !important;
+          text-align: left !important;
         }
 
-        .timeline-item.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .timeline-item:nth-child(odd) {
-            padding-right: 50%;
-            padding-left: 0;
-        }
-
-        .timeline-item:nth-child(even) {
-            padding-left: 50%;
-            padding-right: 0;
-            text-align: left;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-right: 2rem;
-            text-align: right;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-left: 2rem;
-            text-align: left;
+        .timeline-item .timeline-content {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          text-align: left !important;
         }
 
         .timeline-dot {
-            position: absolute;
-            left: 50%;
-            top: 1.5rem;
-            width: 20px;
-            height: 20px;
-            background: #10b981;
-            border: 4px solid white;
-            border-radius: 50%;
-            transform: translateX(-50%);
-            box-shadow: 0 0 0 4px #10b981;
-            z-index: 10;
+          left: 2rem;
         }
-
-        .timeline-dot.milestone {
-            width: 24px;
-            height: 24px;
-            background: #dc2626;
-            box-shadow: 0 0 0 4px #dc2626;
-        }
-
-        .timeline-dot.future {
-            background: #9ca3af;
-            box-shadow: 0 0 0 4px #9ca3af;
-        }
-
-        @media (max-width: 768px) {
-            .timeline-line {
-                left: 2rem;
-            }
-
-            .timeline-item {
-                padding-left: 4rem !important;
-                padding-right: 0 !important;
-                text-align: left !important;
-            }
-
-            .timeline-item .timeline-content {
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                text-align: left !important;
-            }
-
-            .timeline-dot {
-                left: 2rem;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body class="font-inter bg-neutral-50">
+  <body class="font-inter bg-neutral-50">
     <!-- Navigation -->
-    <nav id="navbar"
-        class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
-        <div class="max-w-6xl mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo/Brand -->
-                <div class="text-2xl font-playfair font-bold text-emerald-700">
-                    Botaniq
-                </div>
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300"
+    >
+      <div class="max-w-6xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo/Brand -->
+          <a
+            class="text-2xl font-playfair font-bold text-emerald-700"
+            href="index.html"
+          >
+            Botaniq
+          </a>
 
-                <!-- Navigation Links -->
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="timeline.html" class="nav-link">Timeline</a></li>
-                    <li><a href="ideation.html" class="nav-link">Ideation</a></li>
-                    <li><a href="prototype.html" class="nav-link">Prototype</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li><a href="reflections.html" class="nav-link">Reflections</a></li>
-                </ul>
+          <!-- Navigation Links -->
+          <ul class="hidden md:flex space-x-8">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+            <li><a href="ideation.html" class="nav-link">Ideation</a></li>
+            <li><a href="prototype.html" class="nav-link">Prototype</a></li>
+            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+            <li><a href="reflections.html" class="nav-link">Reflections</a></li>
+          </ul>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
-                <ul class="space-y-3">
-                    <li>
-                        <a href="#problem" class="nav-link-mobile">Problem & Solution</a>
-                    </li>
-                    <li>
-                        <a href="#journey" class="nav-link-mobile">Design Journey</a>
-                    </li>
-                    <li><a href="#portfolio" class="nav-link-mobile">Portfolio</a></li>
-                    <li>
-                        <a href="timeline.html" class="nav-link-mobile">Timeline</a>
-                    </li>
-                    <li>
-                        <a href="#reflections" class="nav-link-mobile">Reflections</a>
-                    </li>
-                </ul>
-            </div>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden p-2">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+          <ul class="space-y-3">
+            <li>
+              <a href="#problem" class="nav-link-mobile">Problem & Solution</a>
+            </li>
+            <li>
+              <a href="#journey" class="nav-link-mobile">Design Journey</a>
+            </li>
+            <li><a href="#portfolio" class="nav-link-mobile">Portfolio</a></li>
+            <li>
+              <a href="timeline.html" class="nav-link-mobile">Timeline</a>
+            </li>
+            <li>
+              <a href="#reflections" class="nav-link-mobile">Reflections</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <!-- Main Content -->
-
-</body>
-
+  </body>
 </html>
