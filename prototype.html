@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Botaniq Project Timeline - Team 08 University of Glasgow project journey documenting key milestones and progress"
+      content="Botaniq Prototype - Interactive design prototypes and user testing documentation for Team 08 University of Glasgow project"
     />
-    <title>Project Timeline - Botaniq | Team 08 UofG</title>
+    <title>Prototype - Botaniq | Team 08 UofG</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,106 +32,6 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
-
-    <style>
-      /* Timeline specific styles */
-      .timeline-container {
-        position: relative;
-      }
-
-      .timeline-line {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        background: linear-gradient(to bottom, #10b981, #059669);
-        transform: translateX(-50%);
-        border-radius: 2px;
-      }
-
-      .timeline-item {
-        position: relative;
-        margin-bottom: 3rem;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease;
-      }
-
-      .timeline-item.animate {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .timeline-item:nth-child(odd) {
-        padding-right: 50%;
-        padding-left: 0;
-      }
-
-      .timeline-item:nth-child(even) {
-        padding-left: 50%;
-        padding-right: 0;
-        text-align: left;
-      }
-
-      .timeline-item:nth-child(odd) .timeline-content {
-        margin-right: 2rem;
-        text-align: right;
-      }
-
-      .timeline-item:nth-child(even) .timeline-content {
-        margin-left: 2rem;
-        text-align: left;
-      }
-
-      .timeline-dot {
-        position: absolute;
-        left: 50%;
-        top: 1.5rem;
-        width: 20px;
-        height: 20px;
-        background: #10b981;
-        border: 4px solid white;
-        border-radius: 50%;
-        transform: translateX(-50%);
-        box-shadow: 0 0 0 4px #10b981;
-        z-index: 10;
-      }
-
-      .timeline-dot.milestone {
-        width: 24px;
-        height: 24px;
-        background: #dc2626;
-        box-shadow: 0 0 0 4px #dc2626;
-      }
-
-      .timeline-dot.future {
-        background: #9ca3af;
-        box-shadow: 0 0 0 4px #9ca3af;
-      }
-
-      @media (max-width: 768px) {
-        .timeline-line {
-          left: 2rem;
-        }
-
-        .timeline-item {
-          padding-left: 4rem !important;
-          padding-right: 0 !important;
-          text-align: left !important;
-        }
-
-        .timeline-item .timeline-content {
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-          text-align: left !important;
-        }
-
-        .timeline-dot {
-          left: 2rem;
-        }
-      }
-    </style>
   </head>
 
   <body class="font-inter bg-neutral-50">
@@ -146,12 +52,24 @@
 
           <!-- Navigation Links -->
           <ul class="hidden md:flex space-x-8">
-            <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="timeline.html" class="nav-link">Timeline</a></li>
-            <li><a href="ideation.html" class="nav-link">Ideation</a></li>
-            <li><a href="prototype.html" class="nav-link">Prototype</a></li>
-            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-            <li><a href="reflections.html" class="nav-link">Reflections</a></li>
+            <li>
+              <a href="index.html#problem" class="nav-link"
+                >Problem & Solution</a
+              >
+            </li>
+            <li>
+              <a href="index.html#journey" class="nav-link">Design Journey</a>
+            </li>
+            <li>
+              <a href="prototype.html" class="nav-link active">Prototype</a>
+            </li>
+            <li>
+              <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+            </li>
+            <li>
+              <a href="index.html#reflections" class="nav-link">Reflections</a>
+            </li>
           </ul>
 
           <!-- Mobile Menu Button -->
@@ -166,22 +84,770 @@
         <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
           <ul class="space-y-3">
             <li>
-              <a href="#problem" class="nav-link-mobile">Problem & Solution</a>
+              <a href="index.html#problem" class="nav-link-mobile"
+                >Problem & Solution</a
+              >
             </li>
             <li>
-              <a href="#journey" class="nav-link-mobile">Design Journey</a>
+              <a href="index.html#journey" class="nav-link-mobile"
+                >Design Journey</a
+              >
             </li>
-            <li><a href="#portfolio" class="nav-link-mobile">Portfolio</a></li>
+            <li>
+              <a href="prototype.html" class="nav-link-mobile">Prototype</a>
+            </li>
             <li>
               <a href="timeline.html" class="nav-link-mobile">Timeline</a>
             </li>
             <li>
-              <a href="#reflections" class="nav-link-mobile">Reflections</a>
+              <a href="index.html#reflections" class="nav-link-mobile"
+                >Reflections</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- Main Content -->
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h1
+          class="text-5xl md:text-6xl font-playfair font-bold text-emerald-900 mb-6"
+        >
+          Prototype Development
+        </h1>
+        <p class="text-xl md:text-2xl text-emerald-700 mb-8 max-w-2xl mx-auto">
+          From initial concepts to final interactive prototypes - documenting
+          our iterative design process
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 1: Iterating -->
+    <section id="iterating" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-playfair font-bold text-emerald-900 mb-4"
+          >
+            Iterating
+          </h2>
+          <div class="w-24 h-1 bg-emerald-600 mx-auto"></div>
+          <p class="text-lg text-gray-700 mt-6 max-w-2xl mx-auto">
+            Our continuous improvement process through multiple design
+            iterations
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div
+            class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8"
+          >
+            <div class="text-4xl mb-4">🔄</div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+              Iteration Cycles
+            </h3>
+            <div class="space-y-4">
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <h4 class="font-semibold text-blue-700 mb-2">
+                  Cycle 1: Initial Concepts
+                </h4>
+                <p class="text-sm text-gray-600">
+                  Basic wireframes and user flow mapping based on initial
+                  requirements
+                </p>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <h4 class="font-semibold text-blue-700 mb-2">
+                  Cycle 2: User Feedback Integration
+                </h4>
+                <p class="text-sm text-gray-600">
+                  Refined designs incorporating partner and user feedback from
+                  first iteration
+                </p>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <h4 class="font-semibold text-blue-700 mb-2">
+                  Cycle 3: Technical Validation
+                </h4>
+                <p class="text-sm text-gray-600">
+                  Final iteration with technical feasibility and implementation
+                  considerations
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-8"
+          >
+            <div class="text-4xl mb-4">📊</div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+              Design Evolution Metrics
+            </h3>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <span class="text-sm font-medium text-gray-700"
+                  >Design Iterations</span
+                >
+                <span
+                  class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm"
+                  >12+</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm font-medium text-gray-700"
+                  >User Testing Sessions</span
+                >
+                <span
+                  class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm"
+                  >5</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm font-medium text-gray-700"
+                  >Partner Feedback Rounds</span
+                >
+                <span
+                  class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm"
+                  >3</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm font-medium text-gray-700"
+                  >Major Pivots</span
+                >
+                <span
+                  class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm"
+                  >2</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+            Iteration Documentation
+          </h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div
+                class="bg-gray-200 aspect-video rounded-lg mb-4 flex items-center justify-center"
+              >
+                <span class="text-gray-500">V1.0 Sketches</span>
+              </div>
+              <h4 class="font-semibold mb-2">Initial Concepts</h4>
+              <p class="text-sm text-gray-600">
+                Hand-drawn wireframes and basic user flow concepts
+              </p>
+            </div>
+            <div class="text-center">
+              <div
+                class="bg-gray-200 aspect-video rounded-lg mb-4 flex items-center justify-center"
+              >
+                <span class="text-gray-500">V2.0 Digital</span>
+              </div>
+              <h4 class="font-semibold mb-2">Digital Wireframes</h4>
+              <p class="text-sm text-gray-600">
+                Low-fidelity digital prototypes with user interaction flows
+              </p>
+            </div>
+            <div class="text-center">
+              <div
+                class="bg-gray-200 aspect-video rounded-lg mb-4 flex items-center justify-center"
+              >
+                <span class="text-gray-500">V3.0 Interactive</span>
+              </div>
+              <h4 class="font-semibold mb-2">Interactive Mockups</h4>
+              <p class="text-sm text-gray-600">
+                Clickable prototypes with refined user interface elements
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Prototyping -->
+    <section
+      id="prototyping"
+      class="py-20 bg-gradient-to-br from-teal-50 to-emerald-50"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-playfair font-bold text-emerald-900 mb-4"
+          >
+            Prototyping
+          </h2>
+          <div class="w-24 h-1 bg-emerald-600 mx-auto"></div>
+          <p class="text-lg text-gray-700 mt-6 max-w-2xl mx-auto">
+            Interactive prototypes showcasing our biodiversity monitoring
+            solution
+          </p>
+        </div>
+
+        <!-- Interactive Figma Prototype Showcase -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">
+            Interactive Prototype Demo
+          </h3>
+
+          <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+            <ul
+              class="flex flex-wrap -mb-px text-sm font-medium text-center"
+              id="default-tab"
+              data-tabs-toggle="#default-tab-content"
+              role="tablist"
+            >
+              <li class="me-2" role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg"
+                  id="profile-tab"
+                  data-tabs-target="#profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                >
+                  General Public
+                </button>
+              </li>
+              <li class="me-2" role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="dashboard-tab"
+                  data-tabs-target="#dashboard"
+                  type="button"
+                  role="tab"
+                  aria-controls="dashboard"
+                  aria-selected="false"
+                >
+                  Expert Dashboard
+                </button>
+              </li>
+              <li class="me-2" role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="settings-tab"
+                  data-tabs-target="#settings"
+                  type="button"
+                  role="tab"
+                  aria-controls="settings"
+                  aria-selected="false"
+                >
+                  Public Explorer
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="contacts-tab"
+                  data-tabs-target="#contacts"
+                  type="button"
+                  role="tab"
+                  aria-controls="contacts"
+                  aria-selected="false"
+                >
+                  Admin Panel
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            id="default-tab-content"
+            class="figma-embed-container rounded-lg bg-gray-50 p-4"
+          >
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50"
+              id="profile"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+            >
+              <iframe
+                style="border: 1px solid rgba(0, 0, 0, 0.1)"
+                width="100%"
+                height="450"
+                src="https://embed.figma.com/design/KHIpH3dLtt6Xp3QiQIfrlN/Prototype?node-id=265-525&embed-host=share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div
+              class="hidden p-4"
+              id="dashboard"
+              role="tabpanel"
+              aria-labelledby="dashboard-tab"
+            >
+              <iframe
+                style="border: 1px solid rgba(0, 0, 0, 0.1)"
+                width="100%"
+                height="450"
+                src="https://embed.figma.com/design/KHIpH3dLtt6Xp3QiQIfrlN/Prototype?node-id=265-393&embed-host=share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div
+              class="hidden p-4"
+              id="settings"
+              role="tabpanel"
+              aria-labelledby="settings-tab"
+            >
+              <iframe
+                style="border: 1px solid rgba(0, 0, 0, 0.1)"
+                width="100%"
+                height="450"
+                src="https://embed.figma.com/design/KHIpH3dLtt6Xp3QiQIfrlN/Prototype?node-id=265-566&embed-host=share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div
+              class="hidden p-4"
+              id="contacts"
+              role="tabpanel"
+              aria-labelledby="contacts-tab"
+            >
+              <iframe
+                style="border: 1px solid rgba(0, 0, 0, 0.1)"
+                width="100%"
+                height="450"
+                src="https://embed.figma.com/design/KHIpH3dLtt6Xp3QiQIfrlN/Prototype?node-id=265-804&embed-host=share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="mt-4 text-center">
+              <a
+                href="https://embed.figma.com/design/KHIpH3dLtt6Xp3QiQIfrlN/Prototype?node-id=0-1&embed-host=share"
+                target="_blank"
+                class="inline-flex items-center px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors text-sm font-medium"
+              >
+                <svg
+                  class="w-4 h-4 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 12l-2 2 2 2m8-4l2-2-2-2m-2-3l-4 10" />
+                </svg>
+                Open in Figma
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prototype Development Process -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="text-4xl mb-4">⚡</div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+              Rapid Prototyping
+            </h3>
+            <p class="text-gray-700 mb-6">
+              Our approach to quick iteration and testing
+            </p>
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3">
+                <div class="w-3 h-3 bg-emerald-500 rounded-full"></div>
+                <span class="text-sm text-gray-700"
+                  >Paper sketches and concept mapping</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-3 h-3 bg-emerald-500 rounded-full"></div>
+                <span class="text-sm text-gray-700"
+                  >Digital wireframes in Figma</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-3 h-3 bg-emerald-500 rounded-full"></div>
+                <span class="text-sm text-gray-700"
+                  >Interactive clickable prototypes</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-3 h-3 bg-emerald-500 rounded-full"></div>
+                <span class="text-sm text-gray-700"
+                  >High-fidelity visual designs</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="text-4xl mb-4">🎯</div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+              Design Principles
+            </h3>
+            <p class="text-gray-700 mb-6">
+              Core principles guiding our prototype development
+            </p>
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3">
+                <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                <span class="text-sm text-gray-700"
+                  >User-centered design approach</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                <span class="text-sm text-gray-700"
+                  >Accessibility and inclusive design</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                <span class="text-sm text-gray-700"
+                  >Mobile-first responsive design</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                <span class="text-sm text-gray-700"
+                  >Scalable and maintainable interfaces</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Usability Testing + User Feedback -->
+    <section id="testing" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-playfair font-bold text-emerald-900 mb-4"
+          >
+            Usability Testing + User Feedback
+          </h2>
+          <div class="w-24 h-1 bg-emerald-600 mx-auto"></div>
+          <p class="text-lg text-gray-700 mt-6 max-w-2xl mx-auto">
+            Validating our designs through comprehensive user testing and
+            feedback collection
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div
+            class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-8"
+          >
+            <div class="text-4xl mb-4">🧪</div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+              Testing Methodology
+            </h3>
+            <div class="space-y-4">
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <h4 class="font-semibold text-orange-700 mb-2">
+                  Usability Testing Sessions
+                </h4>
+                <p class="text-sm text-gray-600 mb-2">
+                  Structured task-based testing with real users
+                </p>
+                <ul class="text-xs text-gray-500 space-y-1">
+                  <li>• Task completion rates and time measurements</li>
+                  <li>• User satisfaction scoring (SUS methodology)</li>
+                  <li>• Think-aloud protocol observations</li>
+                </ul>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <h4 class="font-semibold text-orange-700 mb-2">A/B Testing</h4>
+                <p class="text-sm text-gray-600 mb-2">
+                  Comparing design variations for optimal user experience
+                </p>
+                <ul class="text-xs text-gray-500 space-y-1">
+                  <li>• Navigation structure comparisons</li>
+                  <li>• Interface layout effectiveness</li>
+                  <li>• Call-to-action placement optimization</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8"
+          >
+            <div class="text-4xl mb-4">📈</div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+              Testing Results
+            </h3>
+            <div class="space-y-4">
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="font-semibold text-green-700"
+                    >Task Success Rate</span
+                  >
+                  <span
+                    class="bg-green-600 text-white px-3 py-1 rounded-full text-sm"
+                    >87%</span
+                  >
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-green-600 h-2 rounded-full"
+                    style="width: 87%"
+                  ></div>
+                </div>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="font-semibold text-green-700"
+                    >User Satisfaction</span
+                  >
+                  <span
+                    class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm"
+                    >4.2/5</span
+                  >
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-blue-600 h-2 rounded-full"
+                    style="width: 84%"
+                  ></div>
+                </div>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="font-semibold text-green-700"
+                    >Recommendation Rate</span
+                  >
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm"
+                    >92%</span
+                  >
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-purple-600 h-2 rounded-full"
+                    style="width: 92%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Feedback Collection -->
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+            User Feedback Collection
+          </h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="bg-blue-100 p-6 rounded-lg mb-4">
+                <div class="text-3xl mb-2">👥</div>
+                <h4 class="font-semibold text-gray-900">15</h4>
+                <p class="text-sm text-gray-600">Participants Tested</p>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-green-100 p-6 rounded-lg mb-4">
+                <div class="text-3xl mb-2">⏱️</div>
+                <h4 class="font-semibold text-gray-900">3.2 min</h4>
+                <p class="text-sm text-gray-600">Avg. Task Completion</p>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-purple-100 p-6 rounded-lg mb-4">
+                <div class="text-3xl mb-2">💡</div>
+                <h4 class="font-semibold text-gray-900">23</h4>
+                <p class="text-sm text-gray-600">Improvement Suggestions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Final Product -->
+    <section
+      id="final-product"
+      class="py-20 bg-gradient-to-br from-slate-50 to-gray-100"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-playfair font-bold text-emerald-900 mb-4"
+          >
+            Final Product
+          </h2>
+          <div class="w-24 h-1 bg-emerald-600 mx-auto"></div>
+          <p class="text-lg text-gray-700 mt-6 max-w-2xl mx-auto">
+            The culmination of our design process - a comprehensive biodiversity
+            monitoring solution
+          </p>
+        </div>
+
+        <!-- Final Product Overview -->
+        <div class="mb-12">
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">
+              Complete Solution Overview
+            </h3>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="text-xl font-semibold text-emerald-700 mb-4">
+                  Key Features
+                </h4>
+                <div class="space-y-3">
+                  <div
+                    class="flex items-center space-x-3 p-3 bg-emerald-50 rounded-lg"
+                  >
+                    <span
+                      class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm"
+                      >1</span
+                    >
+                    <span class="text-sm font-medium"
+                      >Automated iNaturalist Data Collection</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg"
+                  >
+                    <span
+                      class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm"
+                      >2</span
+                    >
+                    <span class="text-sm font-medium"
+                      >AI-Powered Species Verification</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center space-x-3 p-3 bg-purple-50 rounded-lg"
+                  >
+                    <span
+                      class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm"
+                      >3</span
+                    >
+                    <span class="text-sm font-medium"
+                      >Expert Review Interface</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center space-x-3 p-3 bg-orange-50 rounded-lg"
+                  >
+                    <span
+                      class="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm"
+                      >4</span
+                    >
+                    <span class="text-sm font-medium"
+                      >Multi-Stakeholder Dashboards</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold text-emerald-700 mb-4">
+                  Impact Metrics
+                </h4>
+                <div class="space-y-4">
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="flex justify-between items-center">
+                      <span class="text-sm font-medium text-gray-700"
+                        >Processing Time Reduction</span
+                      >
+                      <span
+                        class="bg-green-600 text-white px-3 py-1 rounded-full text-sm"
+                        >75%</span
+                      >
+                    </div>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="flex justify-between items-center">
+                      <span class="text-sm font-medium text-gray-700"
+                        >Data Accuracy Improvement</span
+                      >
+                      <span
+                        class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm"
+                        >40%</span
+                      >
+                    </div>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="flex justify-between items-center">
+                      <span class="text-sm font-medium text-gray-700"
+                        >User Engagement Increase</span
+                      >
+                      <span
+                        class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm"
+                        >260%</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Success Stories -->
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">
+            Validation & Success Stories
+          </h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center p-6 border-2 border-emerald-200 rounded-lg">
+              <div class="text-3xl mb-3">🌿</div>
+              <h4 class="font-semibold text-emerald-700 mb-2">
+                Partner Validation
+              </h4>
+              <p class="text-sm text-gray-600">
+                "This solution addresses our core bottleneck and could transform
+                how we monitor biodiversity across Glasgow"
+              </p>
+              <p class="text-xs text-gray-500 mt-2 italic">
+                - Chrissy, Friends of Glasgow Botanic Gardens
+              </p>
+            </div>
+            <div class="text-center p-6 border-2 border-blue-200 rounded-lg">
+              <div class="text-3xl mb-3">👨‍🎓</div>
+              <h4 class="font-semibold text-blue-700 mb-2">
+                Academic Excellence
+              </h4>
+              <p class="text-sm text-gray-600">
+                Comprehensive design thinking application with strong user
+                research foundation
+              </p>
+              <p class="text-xs text-gray-500 mt-2 italic">
+                - University of Glasgow Assessment
+              </p>
+            </div>
+            <div class="text-center p-6 border-2 border-purple-200 rounded-lg">
+              <div class="text-3xl mb-3">🎯</div>
+              <h4 class="font-semibold text-purple-700 mb-2">User Impact</h4>
+              <p class="text-sm text-gray-600">
+                High usability scores and positive feedback from target user
+                groups
+              </p>
+              <p class="text-xs text-gray-500 mt-2 italic">
+                - User Testing Results
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-900 text-white py-12">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <div class="text-3xl font-playfair font-bold mb-4">Botaniq</div>
+        <p class="text-emerald-200 mb-6">
+          Team 08 | University of Glasgow | Glasgow Botanic Garden Project
+        </p>
+        <div class="border-t border-emerald-700 pt-6">
+          <p class="text-emerald-300 text-sm">
+            © 2025 Team 08, University of Glasgow. Created in partnership with
+            Glasgow Botanic Garden.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Flowbite JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>
 </html>
