@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Botaniq Project Timeline - Team 08 University of Glasgow project journey documenting key milestones and progress"
-    />
+    <meta name="description"
+        content="Botaniq Project Timeline - Team 08 University of Glasgow project journey documenting key milestones and progress" />
     <title>Project Timeline - Botaniq | Team 08 UofG</title>
 
     <!-- Tailwind CSS -->
@@ -16,9 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
 
     <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -28,160 +26,358 @@
     <link rel="stylesheet" href="styles.css" />
 
     <style>
-      /* Timeline specific styles */
-      .timeline-container {
-        position: relative;
-      }
+        /* Timeline specific styles */
+        .timeline-container {
+            position: relative;
+        }
 
-      .timeline-line {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        background: linear-gradient(to bottom, #10b981, #059669);
-        transform: translateX(-50%);
-        border-radius: 2px;
-      }
-
-      .timeline-item {
-        position: relative;
-        margin-bottom: 3rem;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease;
-      }
-
-      .timeline-item.animate {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .timeline-item:nth-child(odd) {
-        padding-right: 50%;
-        padding-left: 0;
-      }
-
-      .timeline-item:nth-child(even) {
-        padding-left: 50%;
-        padding-right: 0;
-        text-align: left;
-      }
-
-      .timeline-item:nth-child(odd) .timeline-content {
-        margin-right: 2rem;
-        text-align: right;
-      }
-
-      .timeline-item:nth-child(even) .timeline-content {
-        margin-left: 2rem;
-        text-align: left;
-      }
-
-      .timeline-dot {
-        position: absolute;
-        left: 50%;
-        top: 1.5rem;
-        width: 20px;
-        height: 20px;
-        background: #10b981;
-        border: 4px solid white;
-        border-radius: 50%;
-        transform: translateX(-50%);
-        box-shadow: 0 0 0 4px #10b981;
-        z-index: 10;
-      }
-
-      .timeline-dot.milestone {
-        width: 24px;
-        height: 24px;
-        background: #dc2626;
-        box-shadow: 0 0 0 4px #dc2626;
-      }
-
-      .timeline-dot.future {
-        background: #9ca3af;
-        box-shadow: 0 0 0 4px #9ca3af;
-      }
-
-      @media (max-width: 768px) {
         .timeline-line {
-          left: 2rem;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #10b981, #059669);
+            transform: translateX(-50%);
+            border-radius: 2px;
         }
 
         .timeline-item {
-          padding-left: 4rem !important;
-          padding-right: 0 !important;
-          text-align: left !important;
+            position: relative;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
         }
 
-        .timeline-item .timeline-content {
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-          text-align: left !important;
+        .timeline-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:nth-child(odd) {
+            padding-right: 50%;
+            padding-left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            padding-left: 50%;
+            padding-right: 0;
+            text-align: left;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 2rem;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 2rem;
+            text-align: left;
         }
 
         .timeline-dot {
-          left: 2rem;
+            position: absolute;
+            left: 50%;
+            top: 1.5rem;
+            width: 20px;
+            height: 20px;
+            background: #10b981;
+            border: 4px solid white;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 4px #10b981;
+            z-index: 10;
         }
-      }
+
+        .timeline-dot.milestone {
+            width: 24px;
+            height: 24px;
+            background: #dc2626;
+            box-shadow: 0 0 0 4px #dc2626;
+        }
+
+        .timeline-dot.future {
+            background: #9ca3af;
+            box-shadow: 0 0 0 4px #9ca3af;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 2rem;
+            }
+
+            .timeline-item {
+                padding-left: 4rem !important;
+                padding-right: 0 !important;
+                text-align: left !important;
+            }
+
+            .timeline-item .timeline-content {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                text-align: left !important;
+            }
+
+            .timeline-dot {
+                left: 2rem;
+            }
+        }
     </style>
-  </head>
+</head>
 
-  <body class="font-inter bg-neutral-50">
+<body class="font-inter bg-neutral-50">
     <!-- Navigation -->
-    <nav
-      id="navbar"
-      class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300"
-    >
-      <div class="max-w-6xl mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
-          <!-- Logo/Brand -->
-          <a
-            class="text-2xl font-playfair font-bold text-emerald-700"
-            href="index.html"
-          >
-            Botaniq
-          </a>
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo/Brand -->
+                <div class="text-2xl font-playfair font-bold text-emerald-700">
+                    Botaniq
+                </div>
 
-          <!-- Navigation Links -->
-          <ul class="hidden md:flex space-x-8">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="timeline.html" class="nav-link">Timeline</a></li>
-            <li><a href="ideation.html" class="nav-link">Ideation</a></li>
-            <li><a href="prototype.html" class="nav-link">Prototype</a></li>
-            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-            <li><a href="reflections.html" class="nav-link">Reflections</a></li>
-          </ul>
+                <!-- Navigation Links -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                    <li><a href="ideation.html" class="nav-link">Ideation</a></li>
+                    <li><a href="prototype.html" class="nav-link">Prototype</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="reflections.html" class="nav-link">Reflections</a></li>
+                </ul>
 
-          <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="md:hidden p-2">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#problem" class="nav-link-mobile">Problem & Solution</a>
+                    </li>
+                    <li>
+                        <a href="#journey" class="nav-link-mobile">Design Journey</a>
+                    </li>
+                    <li><a href="#portfolio" class="nav-link-mobile">Portfolio</a></li>
+                    <li>
+                        <a href="timeline.html" class="nav-link-mobile">Timeline</a>
+                    </li>
+                    <li>
+                        <a href="#reflections" class="nav-link-mobile">Reflections</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
-          <ul class="space-y-3">
-            <li>
-              <a href="#problem" class="nav-link-mobile">Problem & Solution</a>
-            </li>
-            <li>
-              <a href="#journey" class="nav-link-mobile">Design Journey</a>
-            </li>
-            <li><a href="#portfolio" class="nav-link-mobile">Portfolio</a></li>
-            <li>
-              <a href="timeline.html" class="nav-link-mobile">Timeline</a>
-            </li>
-            <li>
-              <a href="#reflections" class="nav-link-mobile">Reflections</a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </nav>
+
+    <section class="pt-24 pb-12 bg-gradient-to-br from-emerald-50 to-teal-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-playfair font-bold text-emerald-900 mb-6">
+                Ideation
+            </h1>
+            <p class="text-xl md:text-2xl text-emerald-700 mb-8 max-w-2xl mx-auto">
+                How our team brainstormed and refined ideas to create a unique solution for our project.
+            </p>
+        </div>
+    </section>
+
     <!-- Main Content -->
-  </body>
+    <section id="journey" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <!-- Ideation Process -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-semibold text-gray-900 mb-8">
+                    Ideation Process
+                </h3>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="text-gray-700 leading-relaxed mb-6 space-y-4">
+                        <h5 class="font-semibold text-emerald-700">
+                            Initial Brainstorming phase:
+                        </h5>
+                        <div class="bg-gray-50 p-4 rounded">
+                            <!-- <div class="bg-blue-50 border-l-4 border-blue-400 p-8 rounded shadow-lg"> -->
+
+                            <p>
+                                Our ideation process was a collaborative effort that involved brainstorming,
+                                evaluating, and refining ideas to arrive at a unique solution. We utilized various
+                                techniques such as mind mapping, sketching, and group discussions to generate a wide
+                                range of concepts.
+                                <br> <br>
+                                Each team member came up with many initial ideas, which was then placed onto a Action
+                                Priority Matrix, as seen in the embedded Miro Board, to determine the most feasible and
+                                impactful concepts. The ideas were
+                                grouped into four categories, that being:
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-4 mt-4">
+                                <div class="flex items-center space-x-3 p-3 bg-emerald-50 rounded-lg">
+                                    <span
+                                        class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</span>
+                                    <span class="text-sm font-medium">Quick Wins (Top Left, Low Effort/High
+                                        Impact)</span>
+                                </div>
+                                <div class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
+                                    <span
+                                        class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</span>
+                                    <span class="text-sm font-medium">Big Projects (Top Right, High Effort/High
+                                        Impact)</span>
+                                </div>
+                                <div class="flex items-center space-x-3 p-3 bg-purple-50 rounded-lg">
+                                    <span
+                                        class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</span>
+                                    <span class="text-sm font-medium">Fill-Ins (Bottom Left, Low Effort/Low
+                                        Impact)</span>
+                                </div>
+                                <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-lg">
+                                    <span
+                                        class="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">4</span>
+                                    <span class="text-sm font-medium">Time Sinks (Bottom Right, High Effort/Low
+                                        Impact)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <iframe width="100%" height="550"
+                            src="https://miro.com/app/live-embed/uXjVK7_XY_E=/?focusWidget=3458764636495739541&embedMode=view_only_without_ui&embedId=480102418784"
+                            frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write"
+                            allowfullscreen></iframe>
+                        <h5 class="font-semibold text-emerald-700">
+                            Narrowing down ideas:
+                        </h5>
+                        <div class="bg-gray-50 p-4 rounded">
+                            <!-- <div class="bg-blue-50 border-l-4 border-blue-400 p-8 rounded shadow-lg"> -->
+                            <p>
+                                After brainstorming with a large pool of ideas, we narrowed down our focus to the
+                                projects that aligned with our goals and objectives. In addition, we considered the
+                                feasibility and effort for each idea, ultimately selected four ideas that stood out.
+                                </br></br>
+                                The projects that we selected mainly had high impact, and are outlined by the green and
+                                orange rectangles in the Miro Board.
+                            </p>
+                        </div>
+
+                        <iframe width="100%" height="550"
+                            src="https://miro.com/app/live-embed/uXjVK7_XY_E=/?focusWidget=3458764636495965465&embedMode=view_only_without_ui&embedId=777527757235"
+                            frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write"
+                            allowfullscreen></iframe>
+                        <div class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 text-sm">
+                            <p>
+                                The idea that is outlined by the orange rectangles was one that we considered. However,
+                                after considering the timeframe that the team had to complete the project, we decided to
+                                not pursue this idea as it would require too much effort within the timeframe.
+                            </p>
+                        </div>
+                        <!-- <div class="mt-4 p-3 bg-yellow-50 border-l-4 border-yellow-400 text-sm">
+                            <strong>A1 Focus:</strong> Show your complete creative process
+                            including ideas that were discarded.
+                        </div> -->
+                        <h5 class="font-semibold text-emerald-700">
+                            Final Concept:
+                        </h5>
+                        <div class="bg-gray-50 p-4 rounded">
+                            <p>
+                                The final concept that we decided to pursue was a combination of the ideas that were had
+                                the highest impact and most feasible for the team to complete. These ideas were:
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div
+                                class="bg-yellow-100 p-6 rounded-lg mb-4 h-48 flex flex-col justify-center items-center">
+                                <div class="text-4xl mb-2">📋</div>
+                                <h4 class="font-semibold">An API to feed authenticated biodiversity data to the Glasgow
+                                    City Council's reporting system</h4>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="bg-orange-100 p-6 rounded-lg mb-4 h-48 flex flex-col justify-center items-center">
+                                <div class="text-4xl mb-2">🕸️</div>
+                                <h4 class="font-semibold">A web portal for experts to rapidly verify, comment on, or
+                                    correct flagged iNaturalist submissions</h4>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="bg-green-100 p-6 rounded-lg mb-4 h-48 flex flex-col justify-center items-center">
+                                <div class="text-4xl mb-2">✅</div>
+                                <h4 class="font-semibold">A "triage" system that auto-verified high-confidence sightings
+                                    of common species, leaving only challenging IDs for experts</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis of Pre-existing Solutions -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-semibold text-gray-900 mb-8">
+                    Analysis of Pre-existing Solutions
+                </h3>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="text-gray-700 leading-relaxed mb-8 space-y-4">
+                        <h5 class="font-semibold text-emerald-700">
+                            Pre-existing Solutions Analysis:
+                        </h5>
+                        <div class="bg-gray-50 p-4 rounded text-sm space-y-3">
+                            <p><strong>Research Questions to Address:</strong></p>
+                            <ul class="space-y-1 ml-4">
+                                <li>• What existing solutions did you research?</li>
+                                <li>• Which competitors or alternatives did you analyze?</li>
+                                <li>• What are their key strengths and weaknesses?</li>
+                                <li>
+                                    • How does your solution differentiate from existing
+                                    options?
+                                </li>
+                                <li>• What gaps in the market did you identify?</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4 p-3 bg-yellow-50 border-l-4 border-yellow-400 text-sm">
+                            <strong>A1 Requirement:</strong> Include comparative analysis to
+                            justify your solution choice.
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-emerald-100">
+                                    <th class="border border-emerald-200 p-4 text-left">
+                                        Solution
+                                    </th>
+                                    <th class="border border-emerald-200 p-4 text-left">
+                                        Strengths
+                                    </th>
+                                    <th class="border border-emerald-200 p-4 text-left">
+                                        Weaknesses
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-200 p-4">[Competitor 1]</td>
+                                    <td class="border border-gray-200 p-4">[Strengths]</td>
+                                    <td class="border border-gray-200 p-4">[Weaknesses]</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="border border-gray-200 p-4">[Competitor 2]</td>
+                                    <td class="border border-gray-200 p-4">[Strengths]</td>
+                                    <td class="border border-gray-200 p-4">[Weaknesses]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
 </html>
