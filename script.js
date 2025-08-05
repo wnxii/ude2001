@@ -30,12 +30,13 @@ function initNavigation() {
         });
     });
     
-    // Smooth scrolling for navigation links
+    // Smooth scrolling for navigation links (only for anchor links)
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
+            // Only prevent default for internal anchor links
             if (targetId.startsWith('#')) {
+                e.preventDefault();
                 const targetSection = document.querySelector(targetId);
                 if (targetSection) {
                     const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
@@ -45,6 +46,7 @@ function initNavigation() {
                     });
                 }
             }
+            // For external links (like timeline.html), let the browser handle navigation normally
         });
     });
     

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Botaniq Project Timeline - Team 08 University of Glasgow project journey documenting key milestones and progress"
+    />
+    <title>Project Timeline - Botaniq | Team 08 UofG</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* Timeline specific styles */
+      .timeline-container {
+        position: relative;
+      }
+
+      .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(to bottom, #10b981, #059669);
+        transform: translateX(-50%);
+        border-radius: 2px;
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 3rem;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+      }
+
+      .timeline-item.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .timeline-item:nth-child(odd) {
+        padding-right: 50%;
+        padding-left: 0;
+      }
+
+      .timeline-item:nth-child(even) {
+        padding-left: 50%;
+        padding-right: 0;
+        text-align: left;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content {
+        margin-right: 2rem;
+        text-align: right;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 2rem;
+        text-align: left;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 50%;
+        top: 1.5rem;
+        width: 20px;
+        height: 20px;
+        background: #10b981;
+        border: 4px solid white;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 0 0 4px #10b981;
+        z-index: 10;
+      }
+
+      .timeline-dot.milestone {
+        width: 24px;
+        height: 24px;
+        background: #dc2626;
+        box-shadow: 0 0 0 4px #dc2626;
+      }
+
+      .timeline-dot.future {
+        background: #9ca3af;
+        box-shadow: 0 0 0 4px #9ca3af;
+      }
+
+      @media (max-width: 768px) {
+        .timeline-line {
+          left: 2rem;
+        }
+
+        .timeline-item {
+          padding-left: 4rem !important;
+          padding-right: 0 !important;
+          text-align: left !important;
+        }
+
+        .timeline-item .timeline-content {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          text-align: left !important;
+        }
+
+        .timeline-dot {
+          left: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-inter bg-neutral-50">
+    <!-- Navigation -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300"
+    >
+      <div class="max-w-6xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo/Brand -->
+          <a
+            href="index.html"
+            class="text-2xl font-playfair font-bold text-emerald-700"
+          >
+            Botaniq
+          </a>
+
+          <!-- Navigation Links -->
+          <ul class="hidden md:flex space-x-8">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li>
+              <a href="timeline.html" class="nav-link active">Timeline</a>
+            </li>
+            <li>
+              <a href="index.html#problem" class="nav-link"
+                >Problem & Solution</a
+              >
+            </li>
+            <li>
+              <a href="index.html#journey" class="nav-link">Design Journey</a>
+            </li>
+            <li>
+              <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+            </li>
+            <li>
+              <a href="index.html#reflections" class="nav-link">Reflections</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden p-2">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+          <ul class="space-y-3">
+            <li><a href="index.html" class="nav-link-mobile">Home</a></li>
+            <li>
+              <a href="index.html#problem" class="nav-link-mobile"
+                >Problem & Solution</a
+              >
+            </li>
+            <li>
+              <a href="index.html#journey" class="nav-link-mobile"
+                >Design Journey</a
+              >
+            </li>
+            <li>
+              <a href="index.html#portfolio" class="nav-link-mobile"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="timeline.html" class="nav-link-mobile">Timeline</a>
+            </li>
+            <li>
+              <a href="index.html#reflections" class="nav-link-mobile"
+                >Reflections</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h1
+          class="text-5xl md:text-6xl font-playfair font-bold text-emerald-900 mb-6"
+        >
+          Project Timeline
+        </h1>
+        <p class="text-xl md:text-2xl text-emerald-700 mb-8 max-w-2xl mx-auto">
+          Our journey from concept to completion - tracking key milestones,
+          discoveries, and breakthroughs
+        </p>
+        <div
+          class="flex items-center justify-center space-x-4 text-sm text-emerald-600"
+        >
+          <div class="flex items-center space-x-2">
+            <div class="w-4 h-4 bg-emerald-500 rounded-full"></div>
+            <span>Completed</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="w-4 h-4 bg-red-500 rounded-full"></div>
+            <span>Milestone</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="w-4 h-4 bg-gray-400 rounded-full"></div>
+            <span>Upcoming</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div
+                class="bg-white rounded-lg shadow-lg p-6 border border-emerald-100"
+              >
+                <div class="flex items-center mb-3">
+                  <div
+                    class="bg-emerald-100 px-3 py-1 rounded-full text-sm font-medium text-emerald-700"
+                  >
+                    July 22, 2025
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-gray-900 mb-3 flex items-center"
+                >
+                  <span class="text-2xl mr-3">🌱</span>
+                  First Lesson and Partner Meeting
+                </h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-emerald-500 mr-2 mt-1">•</span>
+                    <span
+                      >Learnt about botanic gardens and their ecological
+                      importance</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-emerald-500 mr-2 mt-1">•</span>
+                    <span
+                      >Practiced asking useful questions for stakeholder
+                      engagement</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-emerald-500 mr-2 mt-1">•</span>
+                    <span
+                      >Initial partner meeting to understand their
+                      challenges</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-emerald-500 mr-2 mt-1">•</span>
+                    <span
+                      >Understanding mental model of partner and their
+                      problem</span
+                    >
+                  </li>
+                </ul>
+                <div class="mt-4 text-sm text-gray-500 italic">
+                  Foundation day - Building understanding and relationships
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div
+                class="bg-white rounded-lg shadow-lg p-6 border border-blue-100"
+              >
+                <div class="flex items-center mb-3">
+                  <div
+                    class="bg-blue-100 px-3 py-1 rounded-full text-sm font-medium text-blue-700"
+                  >
+                    July 23, 2025
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-gray-900 mb-3 flex items-center"
+                >
+                  <span class="text-2xl mr-3">🤝</span>
+                  Shared Mental Model
+                </h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2 mt-1">•</span>
+                    <span
+                      >Learning about shared mental models and their
+                      importance</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2 mt-1">•</span>
+                    <span
+                      >Learnt about team contracts and collaboration
+                      frameworks</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2 mt-1">•</span>
+                    <span>Came up with a comprehensive team contract</span>
+                  </li>
+                </ul>
+                <div class="mt-4 text-sm text-gray-500 italic">
+                  Team formation - Establishing collaboration principles
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot milestone"></div>
+            <div class="timeline-content">
+              <div
+                class="bg-white rounded-lg shadow-lg p-6 border border-purple-100"
+              >
+                <div class="flex items-center mb-3">
+                  <div
+                    class="bg-purple-100 px-3 py-1 rounded-full text-sm font-medium text-purple-700"
+                  >
+                    July 24, 2025
+                  </div>
+                  <div
+                    class="ml-2 bg-red-100 px-2 py-1 rounded text-xs font-medium text-red-700"
+                  >
+                    Milestone
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-gray-900 mb-3 flex items-center"
+                >
+                  <span class="text-2xl mr-3">💡</span>
+                  Ideation & First Tutor Meeting
+                </h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-purple-500 mr-2 mt-1">•</span>
+                    <span
+                      >Got started on ideation and pitch video development</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-purple-500 mr-2 mt-1">•</span>
+                    <span
+                      >Met our tutor for the first time - valuable guidance
+                      received</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-purple-500 mr-2 mt-1">•</span>
+                    <span
+                      >Brainstormed innovative solutions for biodiversity
+                      monitoring</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-purple-500 mr-2 mt-1">•</span>
+                    <span
+                      >Split tasks accordingly based on team member
+                      strengths</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-purple-500 mr-2 mt-1">•</span>
+                    <span
+                      >Checked in with tutor for initial feedback and
+                      direction</span
+                    >
+                  </li>
+                </ul>
+                <div class="mt-4 text-sm text-gray-500 italic">
+                  Creative breakthrough - First major ideation session
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div
+                class="bg-white rounded-lg shadow-lg p-6 border border-orange-100"
+              >
+                <div class="flex items-center mb-3">
+                  <div
+                    class="bg-orange-100 px-3 py-1 rounded-full text-sm font-medium text-orange-700"
+                  >
+                    July 25, 2025
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-gray-900 mb-3 flex items-center"
+                >
+                  <span class="text-2xl mr-3">🔧</span>
+                  Prototyping & User Testing
+                </h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-orange-500 mr-2 mt-1">•</span>
+                    <span
+                      >Learnt about prototyping methodologies and best
+                      practices</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-orange-500 mr-2 mt-1">•</span>
+                    <span>Worked on lo-fi prototype development</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-orange-500 mr-2 mt-1">•</span>
+                    <span
+                      >Conducted simple user testing amongst classmates</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-orange-500 mr-2 mt-1">•</span>
+                    <span>Worked on pitch and reflection video content</span>
+                  </li>
+                </ul>
+                <div class="mt-4 text-sm text-gray-500 italic">
+                  Testing phase - Validating concepts with real users
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 5 -->
+          <div class="timeline-item">
+            <div class="timeline-dot milestone"></div>
+            <div class="timeline-content">
+              <div
+                class="bg-white rounded-lg shadow-lg p-6 border border-indigo-100"
+              >
+                <div class="flex items-center mb-3">
+                  <div
+                    class="bg-indigo-100 px-3 py-1 rounded-full text-sm font-medium text-indigo-700"
+                  >
+                    July 28, 2025
+                  </div>
+                  <div
+                    class="ml-2 bg-red-100 px-2 py-1 rounded text-xs font-medium text-red-700"
+                  >
+                    Milestone
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-gray-900 mb-3 flex items-center"
+                >
+                  <span class="text-2xl mr-3">📋</span>
+                  Poster Design & Clarity
+                </h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-indigo-500 mr-2 mt-1">•</span>
+                    <span>Designed comprehensive project poster</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-indigo-500 mr-2 mt-1">•</span>
+                    <span
+                      >Poster creation helped streamline project goals and
+                      motivations</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-indigo-500 mr-2 mt-1">•</span>
+                    <span
+                      >Achieved greater clarity about project direction and
+                      scope</span
+                    >
+                  </li>
+                </ul>
+                <div class="mt-4 text-sm text-gray-500 italic">
+                  Synthesis moment - Crystallizing project vision
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 6 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div
+                class="bg-white rounded-lg shadow-lg p-6 border border-teal-100"
+              >
+                <div class="flex items-center mb-3">
+                  <div
+                    class="bg-teal-100 px-3 py-1 rounded-full text-sm font-medium text-teal-700"
+                  >
+                    July 29, 2025
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-gray-900 mb-3 flex items-center"
+                >
+                  <span class="text-2xl mr-3">✨</span>
+                  Refinement & Reflection
+                </h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-teal-500 mr-2 mt-1">•</span>
+                    <span>Continued working on poster refinements</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-teal-500 mr-2 mt-1">•</span>
+                    <span>Worked on detailed reflection documentation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-teal-500 mr-2 mt-1">•</span>
+                    <span
+                      >Refining prototype by thinking of more innovative
+                      ideas</span
+                    >
+                  </li>
+                </ul>
+                <div class="mt-4 text-sm text-gray-500 italic">
+                  Iteration phase - Continuous improvement and reflection
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 7 - Future -->
+          <div class="timeline-item">
+            <div class="timeline-dot future"></div>
+            <div class="timeline-content">
+              <div
+                class="bg-gray-50 rounded-lg shadow-lg p-6 border border-gray-200 opacity-75"
+              >
+                <div class="flex items-center mb-3">
+                  <div
+                    class="bg-gray-200 px-3 py-1 rounded-full text-sm font-medium text-gray-600"
+                  >
+                    July 30-31, 2025
+                  </div>
+                  <div
+                    class="ml-2 bg-gray-200 px-2 py-1 rounded text-xs font-medium text-gray-600"
+                  >
+                    Upcoming
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-gray-600 mb-3 flex items-center"
+                >
+                  <span class="text-2xl mr-3">⏱️</span>
+                  Scheduled Activities
+                </h3>
+                <p class="text-gray-500 italic">
+                  Activities and milestones to be determined based on project
+                  progress and partner feedback.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 8 - Future -->
+          <div class="timeline-item">
+            <div class="timeline-dot future"></div>
+            <div class="timeline-content">
+              <div
+                class="bg-gray-50 rounded-lg shadow-lg p-6 border border-gray-200 opacity-75"
+              >
+                <div class="flex items-center mb-3">
+                  <div
+                    class="bg-gray-200 px-3 py-1 rounded-full text-sm font-medium text-gray-600"
+                  >
+                    August 1, 2025
+                  </div>
+                  <div
+                    class="ml-2 bg-yellow-100 px-2 py-1 rounded text-xs font-medium text-yellow-700"
+                  >
+                    Partner Meeting
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-gray-600 mb-3 flex items-center"
+                >
+                  <span class="text-2xl mr-3">🤝</span>
+                  Partner Feedback Session
+                </h3>
+                <ul class="space-y-2 text-gray-500">
+                  <li class="flex items-start">
+                    <span class="text-gray-400 mr-2 mt-1">•</span>
+                    <span
+                      >Partner meeting (status: did not happen as
+                      scheduled)</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-gray-400 mr-2 mt-1">•</span>
+                    <span>Feedback collection on prototype development</span>
+                  </li>
+                </ul>
+                <div class="mt-4 text-sm text-gray-400 italic">
+                  Scheduled for feedback and validation
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 9 - Future -->
+          <div class="timeline-item">
+            <div class="timeline-dot future"></div>
+            <div class="timeline-content">
+              <div
+                class="bg-gray-50 rounded-lg shadow-lg p-6 border border-gray-200 opacity-75"
+              >
+                <div class="flex items-center mb-3">
+                  <div
+                    class="bg-gray-200 px-3 py-1 rounded-full text-sm font-medium text-gray-600"
+                  >
+                    August 5, 2025
+                  </div>
+                  <div
+                    class="ml-2 bg-emerald-100 px-2 py-1 rounded text-xs font-medium text-emerald-700"
+                  >
+                    Partner Meeting
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-gray-600 mb-3 flex items-center"
+                >
+                  <span class="text-2xl mr-3">📅</span>
+                  Rescheduled Partner Meeting
+                </h3>
+                <p class="text-gray-500 italic">
+                  Follow-up partner meeting to discuss project progress, gather
+                  feedback, and align on next steps.
+                </p>
+                <div class="mt-4 text-sm text-gray-400 italic">
+                  Critical checkpoint for project direction
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-900 text-white py-12">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <div class="text-3xl font-playfair font-bold mb-4">Botaniq</div>
+        <p class="text-emerald-200 mb-6">
+          Team 08 | University of Glasgow | Glasgow Botanic Garden Project
+        </p>
+        <div class="border-t border-emerald-700 pt-6">
+          <p class="text-emerald-300 text-sm">
+            © 2025 Team 08, University of Glasgow. Created in partnership with
+            Glasgow Botanic Garden.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script>
+      // Basic navigation functionality for timeline page
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        // Mobile Menu Toggle
+        if (mobileMenuBtn && mobileMenu) {
+          mobileMenuBtn.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+            mobileMenuBtn.classList.toggle("active");
+          });
+        }
+
+        // Close mobile menu when clicking on links
+        const navLinks = document.querySelectorAll(".nav-link-mobile");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            if (mobileMenu) {
+              mobileMenu.classList.add("hidden");
+            }
+            if (mobileMenuBtn) {
+              mobileMenuBtn.classList.remove("active");
+            }
+          });
+        });
+
+        // Timeline animation on scroll
+        animateTimeline();
+      });
+
+      // Timeline animation on scroll
+      function animateTimeline() {
+        const timelineItems = document.querySelectorAll(".timeline-item");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        timelineItems.forEach((item) => {
+          observer.observe(item);
+        });
+      }
+
+      // ESC key closes mobile menu
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          const mobileMenu = document.getElementById("mobile-menu");
+          const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+          if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+            if (mobileMenuBtn) {
+              mobileMenuBtn.classList.remove("active");
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

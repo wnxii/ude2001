@@ -42,6 +42,7 @@
 
           <!-- Navigation Links -->
           <ul class="hidden md:flex space-x-8">
+            <li><a href="timeline.html" class="nav-link">Timeline</a></li>
             <li><a href="#problem" class="nav-link">Problem & Solution</a></li>
             <li><a href="#journey" class="nav-link">Design Journey</a></li>
             <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
@@ -66,6 +67,9 @@
               <a href="#journey" class="nav-link-mobile">Design Journey</a>
             </li>
             <li><a href="#portfolio" class="nav-link-mobile">Portfolio</a></li>
+            <li>
+              <a href="timeline.html" class="nav-link-mobile">Timeline</a>
+            </li>
             <li>
               <a href="#reflections" class="nav-link-mobile">Reflections</a>
             </li>
@@ -100,12 +104,35 @@
           documenting our design thinking process from problem identification to
           final reflections
         </p>
-        <a
-          href="#problem"
-          class="inline-block bg-emerald-600/90 text-white px-8 py-3 rounded-full font-medium hover:bg-emerald-700/90 transition-colors backdrop-blur-sm"
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          Explore Our Journey
-        </a>
+          <a
+            href="#problem"
+            class="inline-block bg-emerald-600/90 text-white px-8 py-3 rounded-full font-medium hover:bg-emerald-700/90 transition-colors backdrop-blur-sm"
+          >
+            Explore Our Journey
+          </a>
+          <a
+            href="timeline.html"
+            class="inline-flex items-center bg-white/90 text-emerald-700 px-8 py-3 rounded-full font-medium hover:bg-white transition-colors backdrop-blur-sm border-2 border-emerald-600/50 hover:border-emerald-600"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            View Timeline
+          </a>
+        </div>
       </div>
     </section>
 
@@ -124,54 +151,73 @@
         <!-- Problem Statement Section -->
         <div class="mb-16">
           <div class="text-center mb-8">
-            <h3 class="text-3xl font-semibold text-gray-900 mb-4">Problem Statement</h3>
+            <h3 class="text-3xl font-semibold text-gray-900 mb-4">
+              Problem Statement
+            </h3>
             <div class="w-16 h-1 bg-red-500 mx-auto"></div>
           </div>
-          
+
           <div class="max-w-4xl mx-auto">
-            <div class="bg-red-50 border-l-4 border-red-400 p-8 rounded-r-lg shadow-lg">
+            <div
+              class="bg-red-50 border-l-4 border-red-400 p-8 rounded-r-lg shadow-lg"
+            >
               <h4 class="font-bold text-red-800 text-2xl mb-6 text-center">
                 Biodiversity Data Management Crisis in Glasgow
               </h4>
-              
+
               <div class="grid md:grid-cols-3 gap-6 mb-6">
                 <div class="text-center">
                   <div class="bg-red-100 p-4 rounded-lg mb-3">
                     <div class="text-3xl mb-2">⏱️</div>
                     <h5 class="font-semibold text-red-800">Time-Consuming</h5>
-                    <p class="text-sm text-red-700">Manual data entry into spreadsheets</p>
+                    <p class="text-sm text-red-700">
+                      Manual data entry into spreadsheets
+                    </p>
                   </div>
                 </div>
                 <div class="text-center">
                   <div class="bg-red-100 p-4 rounded-lg mb-3">
                     <div class="text-3xl mb-2">📏</div>
                     <h5 class="font-semibold text-red-800">Limited Scale</h5>
-                    <p class="text-sm text-red-700">Difficulty tracking city-wide trends</p>
+                    <p class="text-sm text-red-700">
+                      Difficulty tracking city-wide trends
+                    </p>
                   </div>
                 </div>
                 <div class="text-center">
                   <div class="bg-red-100 p-4 rounded-lg mb-3">
                     <div class="text-3xl mb-2">🔒</div>
-                    <h5 class="font-semibold text-red-800">Underutilized Data</h5>
-                    <p class="text-sm text-red-700">iNaturalist data not integrated</p>
+                    <h5 class="font-semibold text-red-800">
+                      Underutilized Data
+                    </h5>
+                    <p class="text-sm text-red-700">
+                      iNaturalist data not integrated
+                    </p>
                   </div>
                 </div>
               </div>
-              
+
               <div class="bg-white p-6 rounded-lg border border-red-200 mb-4">
                 <div class="flex items-center mb-3">
                   <span class="text-2xl mr-3">🚨</span>
-                  <h5 class="font-bold text-red-800 text-lg">Critical Bottleneck</h5>
+                  <h5 class="font-bold text-red-800 text-lg">
+                    Critical Bottleneck
+                  </h5>
                 </div>
                 <p class="text-gray-700 mb-2">
-                  <strong>Only one domain expert/specialist</strong> is single-handedly processing all biodiversity entries manually on a <strong>quarterly basis</strong>.
+                  <strong>Only one domain expert/specialist</strong> is
+                  single-handedly processing all biodiversity entries manually
+                  on a <strong>quarterly basis</strong>.
                 </p>
-                <p class="text-sm text-gray-600 italic">Source: Chrissy, Friends of Glasgow Botanic Gardens</p>
+                <p class="text-sm text-gray-600 italic">
+                  Source: Chrissy, Friends of Glasgow Botanic Gardens
+                </p>
               </div>
-              
+
               <div class="bg-red-100 p-4 rounded-lg text-center">
                 <p class="font-medium text-red-800">
-                  <strong>Target Audiences:</strong> General public, city stakeholders/decision-makers, and domain experts/specialists
+                  <strong>Target Audiences:</strong> General public, city
+                  stakeholders/decision-makers, and domain experts/specialists
                 </p>
               </div>
             </div>
@@ -181,34 +227,71 @@
         <!-- Solution Section -->
         <div class="mb-16">
           <div class="text-center mb-8">
-            <h3 class="text-3xl font-semibold text-gray-900 mb-4">Proposed Solution</h3>
+            <h3 class="text-3xl font-semibold text-gray-900 mb-4">
+              Proposed Solution
+            </h3>
             <div class="w-16 h-1 bg-emerald-600 mx-auto"></div>
           </div>
-          
+
           <div class="max-w-5xl mx-auto">
-            <div class="bg-emerald-50 border-l-4 border-emerald-400 p-8 rounded-r-lg shadow-lg">
+            <div
+              class="bg-emerald-50 border-l-4 border-emerald-400 p-8 rounded-r-lg shadow-lg"
+            >
               <h4 class="font-bold text-emerald-800 text-2xl mb-6 text-center">
                 AI-Powered Biodiversity Data Integration Platform
               </h4>
-              
-              <div class="bg-white p-6 rounded-lg border border-emerald-200 mb-6">
-                <p class="text-lg text-gray-700 text-center mb-4">A comprehensive four-part system that revolutionizes Glasgow's biodiversity monitoring</p>
+
+              <div
+                class="bg-white p-6 rounded-lg border border-emerald-200 mb-6"
+              >
+                <p class="text-lg text-gray-700 text-center mb-4">
+                  A comprehensive four-part system that revolutionizes Glasgow's
+                  biodiversity monitoring
+                </p>
                 <div class="grid md:grid-cols-2 gap-4">
-                  <div class="flex items-center space-x-3 p-3 bg-emerald-50 rounded-lg">
-                    <span class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</span>
-                    <span class="text-sm font-medium">Automated data collection via iNaturalist API</span>
+                  <div
+                    class="flex items-center space-x-3 p-3 bg-emerald-50 rounded-lg"
+                  >
+                    <span
+                      class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold"
+                      >1</span
+                    >
+                    <span class="text-sm font-medium"
+                      >Automated data collection via iNaturalist API</span
+                    >
                   </div>
-                  <div class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
-                    <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</span>
-                    <span class="text-sm font-medium">AI-assisted pre-screening for accuracy</span>
+                  <div
+                    class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg"
+                  >
+                    <span
+                      class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold"
+                      >2</span
+                    >
+                    <span class="text-sm font-medium"
+                      >AI-assisted pre-screening for accuracy</span
+                    >
                   </div>
-                  <div class="flex items-center space-x-3 p-3 bg-purple-50 rounded-lg">
-                    <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</span>
-                    <span class="text-sm font-medium">Expert verification with active learning</span>
+                  <div
+                    class="flex items-center space-x-3 p-3 bg-purple-50 rounded-lg"
+                  >
+                    <span
+                      class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold"
+                      >3</span
+                    >
+                    <span class="text-sm font-medium"
+                      >Expert verification with active learning</span
+                    >
                   </div>
-                  <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-lg">
-                    <span class="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">4</span>
-                    <span class="text-sm font-medium">Customized dashboards for all stakeholders</span>
+                  <div
+                    class="flex items-center space-x-3 p-3 bg-orange-50 rounded-lg"
+                  >
+                    <span
+                      class="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold"
+                      >4</span
+                    >
+                    <span class="text-sm font-medium"
+                      >Customized dashboards for all stakeholders</span
+                    >
                   </div>
                 </div>
               </div>
@@ -216,40 +299,68 @@
               <div class="grid md:grid-cols-2 gap-6">
                 <div class="space-y-4">
                   <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                    <h5 class="font-semibold text-blue-800 mb-2 flex items-center">
-                      <span class="text-lg mr-2">🤖</span> Automated Intelligence
+                    <h5
+                      class="font-semibold text-blue-800 mb-2 flex items-center"
+                    >
+                      <span class="text-lg mr-2">🤖</span> Automated
+                      Intelligence
                     </h5>
-                    <p class="text-sm text-blue-700">ML models analyze images and predict species accuracy (e.g., "User: Foxglove | Model: Foxglove (92%)")</p>
+                    <p class="text-sm text-blue-700">
+                      ML models analyze images and predict species accuracy
+                      (e.g., "User: Foxglove | Model: Foxglove (92%)")
+                    </p>
                   </div>
-                  
-                  <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
-                    <h5 class="font-semibold text-purple-800 mb-2 flex items-center">
+
+                  <div
+                    class="bg-purple-50 p-4 rounded-lg border border-purple-200"
+                  >
+                    <h5
+                      class="font-semibold text-purple-800 mb-2 flex items-center"
+                    >
                       <span class="text-lg mr-2">👩‍🔬</span> Expert Verification
                     </h5>
-                    <p class="text-sm text-purple-700">Tinder-like interface for quick expert review with active learning that improves over time</p>
+                    <p class="text-sm text-purple-700">
+                      Tinder-like interface for quick expert review with active
+                      learning that improves over time
+                    </p>
                   </div>
                 </div>
-                
+
                 <div class="space-y-4">
-                  <div class="bg-orange-50 p-4 rounded-lg border border-orange-200">
-                    <h5 class="font-semibold text-orange-800 mb-2 flex items-center">
+                  <div
+                    class="bg-orange-50 p-4 rounded-lg border border-orange-200"
+                  >
+                    <h5
+                      class="font-semibold text-orange-800 mb-2 flex items-center"
+                    >
                       <span class="text-lg mr-2">📊</span> Decision Support
                     </h5>
-                    <p class="text-sm text-orange-700">Real-time dashboards with AI alerts for decision-makers (e.g., invasive species tracking)</p>
+                    <p class="text-sm text-orange-700">
+                      Real-time dashboards with AI alerts for decision-makers
+                      (e.g., invasive species tracking)
+                    </p>
                   </div>
-                  
-                  <div class="bg-green-50 p-4 rounded-lg border border-green-200">
-                    <h5 class="font-semibold text-green-800 mb-2 flex items-center">
+
+                  <div
+                    class="bg-green-50 p-4 rounded-lg border border-green-200"
+                  >
+                    <h5
+                      class="font-semibold text-green-800 mb-2 flex items-center"
+                    >
                       <span class="text-lg mr-2">🌍</span> Public Engagement
                     </h5>
-                    <p class="text-sm text-green-700">Citizen-friendly portal with photo ID, location-based exploration, and gamification</p>
+                    <p class="text-sm text-green-700">
+                      Citizen-friendly portal with photo ID, location-based
+                      exploration, and gamification
+                    </p>
                   </div>
                 </div>
               </div>
-              
+
               <div class="mt-6 bg-emerald-100 p-4 rounded-lg text-center">
                 <p class="font-medium text-emerald-800">
-                  <strong>Result:</strong> Transform quarterly manual processing into real-time, scalable biodiversity monitoring
+                  <strong>Result:</strong> Transform quarterly manual processing
+                  into real-time, scalable biodiversity monitoring
                 </p>
               </div>
             </div>
