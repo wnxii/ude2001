@@ -663,7 +663,509 @@
       </div>
     </section>
 
-    <!-- Section 3: Usability Testing + User Feedback -->
+    <!-- Section 3: Prototyping Techniques -->
+    <section id="techniques" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-playfair font-bold text-emerald-900 mb-4"
+          >
+            Prototyping Techniques
+          </h2>
+          <div class="w-24 h-1 bg-emerald-600 mx-auto"></div>
+          <p class="text-lg text-gray-700 mt-6 max-w-2xl mx-auto">
+            A comprehensive toolkit of prototyping methods for every stage of the design process
+          </p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="mb-8 border-b border-gray-200">
+          <ul
+            class="flex flex-wrap -mb-px text-sm font-medium text-center"
+            id="techniques-tab"
+            data-tabs-toggle="#techniques-tab-content"
+            role="tablist"
+          >
+            <li class="me-2" role="presentation">
+              <button
+                class="inline-block p-4 border-b-2 rounded-t-lg"
+                id="core-tab"
+                data-tabs-target="#core"
+                type="button"
+                role="tab"
+                aria-controls="core"
+                aria-selected="false"
+              >
+                Core Strategies
+              </button>
+            </li>
+            <li class="me-2" role="presentation">
+              <button
+                class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                id="lowfi-tab"
+                data-tabs-target="#lowfi"
+                type="button"
+                role="tab"
+                aria-controls="lowfi"
+                aria-selected="false"
+              >
+                Low-Fidelity
+              </button>
+            </li>
+            <li class="me-2" role="presentation">
+              <button
+                class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                id="experience-tab"
+                data-tabs-target="#experience"
+                type="button"
+                role="tab"
+                aria-controls="experience"
+                aria-selected="false"
+              >
+                Experience & Role-Playing
+              </button>
+            </li>
+            <li class="me-2" role="presentation">
+              <button
+                class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                id="digital-tab"
+                data-tabs-target="#digital"
+                type="button"
+                role="tab"
+                aria-controls="digital"
+                aria-selected="false"
+              >
+                Digital & High-Fidelity
+              </button>
+            </li>
+            <li role="presentation">
+              <button
+                class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                id="strategic-tab"
+                data-tabs-target="#strategic"
+                type="button"
+                role="tab"
+                aria-controls="strategic"
+                aria-selected="false"
+              >
+                Strategic Approaches
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="techniques-tab-content">
+          <!-- Core Strategies -->
+          <div
+            class="hidden p-4"
+            id="core"
+            role="tabpanel"
+            aria-labelledby="core-tab"
+          >
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🔄</div>
+                <h3 class="text-xl font-semibold text-blue-800 mb-3">Iterative Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Sequential testing and refining of a single prototype through multiple cycles for gradual improvement.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Continuous improvement, requirement achievement</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🧬</div>
+                <h3 class="text-xl font-semibold text-green-800 mb-3">Evolutionary Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Continuous refinement where the prototype evolves into the final product rather than being discarded.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Long-term development, resource efficiency</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">⚡</div>
+                <h3 class="text-xl font-semibold text-purple-800 mb-3">Parallel Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Creating and testing multiple different concepts simultaneously to increase design diversity.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Exploring alternatives, reducing design fixation</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">📝</div>
+                <h3 class="text-xl font-semibold text-orange-800 mb-3">Paper Parallels</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Team members each create paper prototypes and discuss them to generate iterative improvements.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Team brainstorming, rapid ideation</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🏆</div>
+                <h3 class="text-xl font-semibold text-red-800 mb-3">Competitive Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Separate teams independently work to solve the same problem, fostering high divergence and innovation.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Innovation challenges, exploring diverse solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Low-Fidelity Techniques -->
+          <div
+            class="hidden p-4"
+            id="lowfi"
+            role="tabpanel"
+            aria-labelledby="lowfi-tab"
+          >
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">📱</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Wireframes</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Simple, abstract layouts focusing on structure and functionality while ignoring visual design.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Layout planning, information architecture</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">📄</div>
+                <h3 class="text-xl font-semibold text-yellow-800 mb-3">Paper Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Interactive mockups using paper and sticky notes where a person "plays computer" by swapping elements.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Early UI testing, quick iterations</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🎬</div>
+                <h3 class="text-xl font-semibold text-indigo-800 mb-3">Storyboarding</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Comic strip-like sequences visualizing user interactions and journeys over time.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: User journey mapping, context understanding</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">📦</div>
+                <h3 class="text-xl font-semibold text-amber-800 mb-3">Cardboard Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Physical mockups using cardboard - cheap, disposable, and easy to shape for tangible products.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Physical products, spatial relationships</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🧱</div>
+                <h3 class="text-xl font-semibold text-teal-800 mb-3">LEGO Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Quick physical models using LEGO bricks to explore shape, size, functionality, and ergonomics.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: 3D concepts, modular systems</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🃏</div>
+                <h3 class="text-xl font-semibold text-pink-800 mb-3">Deck of Cards Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Each card represents components or actions that can be shuffled to simulate random sequences and edge cases.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Testing edge cases, random scenarios</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience & Role-Playing -->
+          <div
+            class="hidden p-4"
+            id="experience"
+            role="tabpanel"
+            aria-labelledby="experience-tab"
+          >
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🎭</div>
+                <h3 class="text-xl font-semibold text-emerald-800 mb-3">Experience Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  First-hand appreciation of system engagement through situational kits, physical proxies, or spatial mockups.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Understanding user emotions, contextual design</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🎪</div>
+                <h3 class="text-xl font-semibold text-cyan-800 mb-3">Role Playing</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Acting out stakeholder roles to simulate service journeys and uncover pain points in user experiences.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Service design, stakeholder empathy</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-violet-50 to-violet-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🏃‍♂️</div>
+                <h3 class="text-xl font-semibold text-violet-800 mb-3">Roleplay Relay</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Structured version where actors pass users through service flows like relay races using scenario cards.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Complex service flows, handoff points</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-rose-50 to-rose-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">📺</div>
+                <h3 class="text-xl font-semibold text-rose-800 mb-3">Reality Show Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Scripted video scenarios with different personas to highlight use cases and make problems visible.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Stakeholder communication, problem illustration</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-lime-50 to-lime-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🔄</div>
+                <h3 class="text-xl font-semibold text-lime-800 mb-3">Human GIF Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Team acts out short, looping interactions to demonstrate single UI features with people as interface elements.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Quick feature demos, interaction flows</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-sky-50 to-sky-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🧙‍♂️</div>
+                <h3 class="text-xl font-semibold text-sky-800 mb-3">Wizard of Oz Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Users interact with seemingly functional interfaces while humans secretly operate the system responses.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: AI features, complex backend testing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Digital & High-Fidelity -->
+          <div
+            class="hidden p-4"
+            id="digital"
+            role="tabpanel"
+            aria-labelledby="digital-tab"
+          >
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">💻</div>
+                <h3 class="text-xl font-semibold text-blue-800 mb-3">Virtual Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Prototypes existing and tested on computational platforms using simulations and virtual environments.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Complex systems, cost-effective testing</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🏗️</div>
+                <h3 class="text-xl font-semibold text-purple-800 mb-3">CAD-Based Rapid Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Detailed 3D models with virtual simulations followed by 3D printing or CNC fabrication.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Physical products, engineering validation</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🥽</div>
+                <h3 class="text-xl font-semibold text-green-800 mb-3">AR/VR Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Immersive simulations and augmented reality overlays for testing layouts and user interactions.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Spatial interfaces, immersive experiences</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🔗</div>
+                <h3 class="text-xl font-semibold text-orange-800 mb-3">Hardware-in-the-loop</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Connecting real physical components to computer simulations for realistic system performance testing.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: IoT systems, embedded device testing</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🤲</div>
+                <h3 class="text-xl font-semibold text-red-800 mb-3">Haptic Prototypes</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Tactile feedback prototypes providing force or vibration through haptic interfaces connected to virtual models.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Tactile interfaces, accessibility design</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">📏</div>
+                <h3 class="text-xl font-semibold text-teal-800 mb-3">Scaled Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Smaller or larger physical models that mimic final design behavior through principles of similitude.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Large systems, architectural models</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Strategic Approaches -->
+          <div
+            class="hidden p-4"
+            id="strategic"
+            role="tabpanel"
+            aria-labelledby="strategic-tab"
+          >
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">💥</div>
+                <h3 class="text-xl font-semibold text-red-800 mb-3">Disruptive Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Bold approach ignoring conventional wisdom to challenge status quo and redefine entire categories.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Innovation breakthroughs, market disruption</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">💭</div>
+                <h3 class="text-xl font-semibold text-purple-800 mb-3">Provotyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Provocative prototypes based on extreme scenarios to provoke discussion and explore ethical implications.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Ethics exploration, societal impact discussion</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🚀</div>
+                <h3 class="text-xl font-semibold text-indigo-800 mb-3">Science Fiction Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Using narrative and storytelling to explore designs in various potential future scenarios.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Future planning, scenario exploration</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🎲</div>
+                <h3 class="text-xl font-semibold text-green-800 mb-3">Board Game Simulation</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Converting app or service flows into physical board games to make abstract features tangible.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Gamification, complex system understanding</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🔍</div>
+                <h3 class="text-xl font-semibold text-yellow-800 mb-3">Subsystem Isolation</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Prototyping and testing single parts of larger systems in isolation to reduce cost and focus effort.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Complex systems, targeted testing</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-3">🏙️</div>
+                <h3 class="text-xl font-semibold text-cyan-800 mb-3">Street-to-Screen Prototyping</h3>
+                <p class="text-sm text-gray-700 mb-3">
+                  Physical mockups placed in real-world contexts for public testing before digital implementation.
+                </p>
+                <div class="bg-white p-3 rounded-md">
+                  <p class="text-xs text-gray-600 font-medium">Best for: Public services, community feedback</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technique Selection Guide -->
+        <div class="mt-12 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-lg p-8">
+          <h3 class="text-2xl font-semibold text-emerald-900 mb-6 text-center">
+            Choosing the Right Technique
+          </h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="text-center">
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="text-3xl mb-3">🚀</div>
+                <h4 class="font-semibold text-emerald-700 mb-2">Early Stage</h4>
+                <p class="text-sm text-gray-600">Paper prototyping, wireframes, storyboarding</p>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="text-3xl mb-3">🔬</div>
+                <h4 class="font-semibold text-emerald-700 mb-2">Testing Ideas</h4>
+                <p class="text-sm text-gray-600">Experience prototyping, role playing, A/B testing</p>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="text-3xl mb-3">⚡</div>
+                <h4 class="font-semibold text-emerald-700 mb-2">Rapid Iteration</h4>
+                <p class="text-sm text-gray-600">Parallel prototyping, competitive prototyping</p>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="text-3xl mb-3">🎯</div>
+                <h4 class="font-semibold text-emerald-700 mb-2">Final Validation</h4>
+                <p class="text-sm text-gray-600">High-fidelity prototypes, CAD models, virtual testing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Usability Testing + User Feedback -->
     <section id="testing" class="py-20 bg-white">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-16">
@@ -810,7 +1312,7 @@
       </div>
     </section>
 
-    <!-- Section 4: Final Product -->
+    <!-- Section 5: Final Product -->
     <section
       id="final-product"
       class="py-20 bg-gradient-to-br from-slate-50 to-gray-100"
