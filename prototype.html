@@ -73,36 +73,76 @@
           </ul>
 
           <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="md:hidden p-3 flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
-            <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
-            <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
-            <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-3 flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none"
+          >
+            <span
+              class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"
+            ></span>
+            <span
+              class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"
+            ></span>
+            <span
+              class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"
+            ></span>
           </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden mt-4 pb-4 border-t border-gray-200"
+        >
           <ul class="space-y-1 pt-4">
             <li>
-              <a href="timeline.html" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Timeline</a>
+              <a
+                href="timeline.html"
+                class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300"
+                >Timeline</a
+              >
             </li>
             <li>
-              <a href="index.html#problem" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Problem & Solution</a>
+              <a
+                href="index.html#problem"
+                class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300"
+                >Problem & Solution</a
+              >
             </li>
             <li>
-              <a href="index.html#journey" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Design Journey</a>
+              <a
+                href="index.html#journey"
+                class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300"
+                >Design Journey</a
+              >
             </li>
             <li>
-              <a href="ideation.html" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Ideation</a>
+              <a
+                href="ideation.html"
+                class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300"
+                >Ideation</a
+              >
             </li>
             <li>
-              <a href="prototype.html" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Prototype</a>
+              <a
+                href="prototype.html"
+                class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300"
+                >Prototype</a
+              >
             </li>
             <li>
-              <a href="portfolio.html" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Portfolio</a>
+              <a
+                href="portfolio.html"
+                class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300"
+                >Portfolio</a
+              >
             </li>
             <li>
-              <a href="reflections.html" class="block py-3 px-0 text-gray-700 font-medium hover:text-emerald-700 transition-colors duration-300">Reflections</a>
+              <a
+                href="reflections.html"
+                class="block py-3 px-0 text-gray-700 font-medium hover:text-emerald-700 transition-colors duration-300"
+                >Reflections</a
+              >
             </li>
           </ul>
         </div>
@@ -232,51 +272,163 @@
             Iteration Documentation
           </h3>
           <div class="space-y-12">
-            
             <!-- Lo-Fi Prototypes Carousel -->
             <div class="text-center">
-              <h4 class="text-3xl font-semibold mb-6 text-emerald-700">Lo-Fi Prototypes</h4>
-              <div id="lofi-carousel" class="relative w-full max-w-4xl mx-auto" data-carousel="slide">
+              <h4 class="text-3xl font-semibold mb-6 text-emerald-700">
+                Lo-Fi Prototypes
+              </h4>
+              <div
+                id="lofi-carousel"
+                class="relative w-full max-w-4xl mx-auto"
+                data-carousel="slide"
+              >
                 <!-- Carousel wrapper -->
-                <div class="relative h-64 md:h-96 overflow-hidden rounded-lg bg-gray-50">
+                <div
+                  class="relative h-64 md:h-96 overflow-hidden rounded-lg bg-gray-50"
+                >
                   <!-- Item 1 -->
-                  <div class="duration-700 ease-in-out" data-carousel-item="active">
-                    <div class="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                      <span class="text-gray-500 text-lg">Lo-Fi Sketch 1</span>
-                    </div>
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item="active"
+                  >
+                    <img
+                      src="assets/lofi-1.jpeg"
+                      alt="Lo-Fi Prototype 1"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
                   </div>
                   <!-- Item 2 -->
-                  <div class="duration-700 ease-in-out" data-carousel-item>
-                    <div class="absolute inset-0 bg-gray-300 flex items-center justify-center">
-                      <span class="text-gray-600 text-lg">Lo-Fi Sketch 2</span>
-                    </div>
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/lofi-2.jpeg"
+                      alt="Lo-Fi Prototype 2"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
                   </div>
                   <!-- Item 3 -->
-                  <div class="duration-700 ease-in-out" data-carousel-item>
-                    <div class="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                      <span class="text-gray-500 text-lg">Lo-Fi Sketch 3</span>
-                    </div>
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/lofi-3.jpeg"
+                      alt="Lo-Fi Prototype 3"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                  </div>
+                  <!-- Item 4 -->
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/lofi-4.jpeg"
+                      alt="Lo-Fi Prototype 4"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
                   </div>
                 </div>
                 <!-- Slider indicators -->
-                <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
-                  <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white" data-carousel-slide-to="0"></button>
-                  <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white" data-carousel-slide-to="1"></button>
-                  <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white" data-carousel-slide-to="2"></button>
+                <div
+                  class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
+                >
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                    data-carousel-slide-to="0"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    aria-current="false"
+                    aria-label="Slide 2"
+                    data-carousel-slide-to="1"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    aria-current="false"
+                    aria-label="Slide 3"
+                    data-carousel-slide-to="2"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    aria-current="false"
+                    aria-label="Slide 4"
+                    data-carousel-slide-to="3"
+                  ></button>
                 </div>
                 <!-- Slider controls -->
-                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 6 10">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                <button
+                  type="button"
+                  class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                  data-carousel-prev
+                >
+                  <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-400/70 group-hover:bg-emerald-500/80 group-focus:ring-4 group-focus:ring-emerald-200 group-focus:outline-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 6 10"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 1 1 5l4 4"
+                      />
                     </svg>
                     <span class="sr-only">Previous</span>
                   </span>
                 </button>
-                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 6 10">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                <button
+                  type="button"
+                  class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                  data-carousel-next
+                >
+                  <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-400/70 group-hover:bg-emerald-500/80 group-focus:ring-4 group-focus:ring-emerald-200 group-focus:outline-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 6 10"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 9 4-4-4-4"
+                      />
                     </svg>
                     <span class="sr-only">Next</span>
                   </span>
@@ -289,55 +441,225 @@
 
             <!-- Mid-Fi Prototypes Carousel -->
             <div class="text-center">
-              <h4 class="text-3xl font-semibold mb-6 text-blue-700">Mid-Fi Prototypes</h4>
-              <div id="midfi-carousel" class="relative w-full max-w-4xl mx-auto" data-carousel="slide">
+              <h4 class="text-3xl font-semibold mb-6 text-blue-700">
+                Mid-Fi Prototypes
+              </h4>
+              <div
+                id="midfi-carousel"
+                class="relative w-full max-w-4xl mx-auto"
+                data-carousel="slide"
+              >
                 <!-- Carousel wrapper -->
-                <div class="relative h-64 md:h-96 overflow-hidden rounded-lg bg-gray-50">
+                <div
+                  class="relative h-64 md:h-96 overflow-hidden rounded-lg bg-gray-50"
+                >
                   <!-- Item 1 -->
-                  <div class="duration-700 ease-in-out" data-carousel-item="active">
-                    <div class="absolute inset-0 bg-blue-100 flex items-center justify-center">
-                      <span class="text-blue-600 text-lg">Mid-Fi Wireframe 1</span>
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item="active"
+                  >
+                    <img
+                      src="assets/midfi-data-portal.jpeg"
+                      alt="Mid-Fi Data Portal"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Data Portal
                     </div>
                   </div>
                   <!-- Item 2 -->
-                  <div class="duration-700 ease-in-out" data-carousel-item>
-                    <div class="absolute inset-0 bg-blue-200 flex items-center justify-center">
-                      <span class="text-blue-700 text-lg">Mid-Fi Wireframe 2</span>
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/midfi-internal-dashboard.jpeg"
+                      alt="Mid-Fi Internal Dashboard"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Internal Dashboard
                     </div>
                   </div>
                   <!-- Item 3 -->
-                  <div class="duration-700 ease-in-out" data-carousel-item>
-                    <div class="absolute inset-0 bg-blue-100 flex items-center justify-center">
-                      <span class="text-blue-600 text-lg">Mid-Fi Wireframe 3</span>
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/midfi-public-dashboard.jpeg"
+                      alt="Mid-Fi Public Dashboard"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Public Dashboard
                     </div>
                   </div>
                   <!-- Item 4 -->
-                  <div class="duration-700 ease-in-out" data-carousel-item>
-                    <div class="absolute inset-0 bg-blue-200 flex items-center justify-center">
-                      <span class="text-blue-700 text-lg">Mid-Fi Wireframe 4</span>
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/midfi-verification-stats.jpeg"
+                      alt="Mid-Fi Verification Stats"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Verification Stats
+                    </div>
+                  </div>
+                  <!-- Item 5 -->
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/midfi-verifying-page.jpeg"
+                      alt="Mid-Fi Verifying Page"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Verifying Page
+                    </div>
+                  </div>
+                  <!-- Item 6 -->
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/midfi-verifying-page-2.jpeg"
+                      alt="Mid-Fi Verifying Page 2"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Verifying Page 2
                     </div>
                   </div>
                 </div>
                 <!-- Slider indicators -->
-                <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
-                  <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white" data-carousel-slide-to="0"></button>
-                  <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white" data-carousel-slide-to="1"></button>
-                  <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white" data-carousel-slide-to="2"></button>
-                  <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white" data-carousel-slide-to="3"></button>
+                <div
+                  class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
+                >
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="0"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="1"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="2"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="3"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="4"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="5"
+                  ></button>
                 </div>
                 <!-- Slider controls -->
-                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 6 10">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                <button
+                  type="button"
+                  class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                  data-carousel-prev
+                >
+                  <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-400/70 group-hover:bg-emerald-500/80 group-focus:ring-4 group-focus:ring-emerald-200 group-focus:outline-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 6 10"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 1 1 5l4 4"
+                      />
                     </svg>
                     <span class="sr-only">Previous</span>
                   </span>
                 </button>
-                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 6 10">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                <button
+                  type="button"
+                  class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                  data-carousel-next
+                >
+                  <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-400/70 group-hover:bg-emerald-500/80 group-focus:ring-4 group-focus:ring-emerald-200 group-focus:outline-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 6 10"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 9 4-4-4-4"
+                      />
                     </svg>
                     <span class="sr-only">Next</span>
                   </span>
@@ -350,62 +672,303 @@
 
             <!-- Hi-Fi Prototypes Carousel -->
             <div class="text-center">
-              <h4 class="text-3xl font-semibold mb-6 text-purple-700">Hi-Fi Prototypes</h4>
-              <div id="hifi-carousel" class="relative w-full max-w-4xl mx-auto" data-carousel="slide">
+              <h4 class="text-3xl font-semibold mb-6 text-purple-700">
+                Hi-Fi Prototypes
+              </h4>
+              <div
+                id="hifi-carousel"
+                class="relative w-full max-w-4xl mx-auto"
+                data-carousel="slide"
+              >
                 <!-- Carousel wrapper -->
-                <div class="relative h-64 md:h-96 overflow-hidden rounded-lg bg-gray-50">
+                <div
+                  class="relative h-64 md:h-96 overflow-hidden rounded-lg bg-gray-50"
+                >
                   <!-- Item 1 -->
-                  <div class="duration-700 ease-in-out" data-carousel-item="active">
-                    <div class="absolute inset-0 bg-purple-100 flex items-center justify-center">
-                      <span class="text-purple-600 text-lg">Hi-Fi Mockup 1</span>
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item="active"
+                  >
+                    <img
+                      src="assets/hifi-home-page.png"
+                      alt="Hi-Fi Home Page"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Home Page
                     </div>
                   </div>
                   <!-- Item 2 -->
-                  <div class="duration-700 ease-in-out" data-carousel-item>
-                    <div class="absolute inset-0 bg-purple-200 flex items-center justify-center">
-                      <span class="text-purple-700 text-lg">Hi-Fi Mockup 2</span>
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/hifi-data-portal.png"
+                      alt="Hi-Fi Data Portal"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Data Portal
                     </div>
                   </div>
                   <!-- Item 3 -->
-                  <div class="duration-700 ease-in-out" data-carousel-item>
-                    <div class="absolute inset-0 bg-purple-100 flex items-center justify-center">
-                      <span class="text-purple-600 text-lg">Hi-Fi Mockup 3</span>
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/hifi-internal-dashboard.png"
+                      alt="Hi-Fi Internal Dashboard"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Internal Dashboard
                     </div>
                   </div>
                   <!-- Item 4 -->
-                  <div class="duration-700 ease-in-out" data-carousel-item>
-                    <div class="absolute inset-0 bg-purple-200 flex items-center justify-center">
-                      <span class="text-purple-700 text-lg">Hi-Fi Mockup 4</span>
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/hifi-public-dashboard.png"
+                      alt="Hi-Fi Public Dashboard"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Public Dashboard
                     </div>
                   </div>
                   <!-- Item 5 -->
-                  <div class="duration-700 ease-in-out" data-carousel-item>
-                    <div class="absolute inset-0 bg-purple-100 flex items-center justify-center">
-                      <span class="text-purple-600 text-lg">Hi-Fi Mockup 5</span>
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/hifi-public-dashboard-2.png"
+                      alt="Hi-Fi Public Dashboard 2"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Public Dashboard 2
+                    </div>
+                  </div>
+                  <!-- Item 6 -->
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/hifi-public-dashboard-3.png"
+                      alt="Hi-Fi Public Dashboard 3"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Public Dashboard 3
+                    </div>
+                  </div>
+                  <!-- Item 7 -->
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/hifi-invasive-species-overview.png"
+                      alt="Hi-Fi Invasive Species Overview"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Invasive Species Overview
+                    </div>
+                  </div>
+                  <!-- Item 8 -->
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/hifi-verication-stats.png"
+                      alt="Hi-Fi Verification Stats"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Verification Stats
+                    </div>
+                  </div>
+                  <!-- Item 9 -->
+                  <div
+                    class="hidden duration-700 ease-in-out"
+                    data-carousel-item
+                  >
+                    <img
+                      src="assets/hifi-verifying-page.png"
+                      alt="Hi-Fi Verifying Page"
+                      class="absolute block w-full"
+                      style="
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                      "
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-slate-400/80 backdrop-blur-sm text-white px-3 py-1 rounded-md font-semibold z-10"
+                    >
+                      Verifying Page
                     </div>
                   </div>
                 </div>
                 <!-- Slider indicators -->
-                <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
-                  <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white" data-carousel-slide-to="0"></button>
-                  <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white" data-carousel-slide-to="1"></button>
-                  <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white" data-carousel-slide-to="2"></button>
-                  <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white" data-carousel-slide-to="3"></button>
-                  <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white" data-carousel-slide-to="4"></button>
+                <div
+                  class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
+                >
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="0"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="1"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="2"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="3"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="4"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="5"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="6"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="7"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                    data-carousel-slide-to="8"
+                  ></button>
                 </div>
                 <!-- Slider controls -->
-                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 6 10">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                <button
+                  type="button"
+                  class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                  data-carousel-prev
+                >
+                  <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-400/70 group-hover:bg-emerald-500/80 group-focus:ring-4 group-focus:ring-emerald-200 group-focus:outline-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 6 10"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 1 1 5l4 4"
+                      />
                     </svg>
                     <span class="sr-only">Previous</span>
                   </span>
                 </button>
-                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 6 10">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                <button
+                  type="button"
+                  class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                  data-carousel-next
+                >
+                  <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-400/70 group-hover:bg-emerald-500/80 group-focus:ring-4 group-focus:ring-emerald-200 group-focus:outline-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 6 10"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 9 4-4-4-4"
+                      />
                     </svg>
                     <span class="sr-only">Next</span>
                   </span>
@@ -415,7 +978,6 @@
                 Clickable prototypes with refined user interface elements
               </p>
             </div>
-
           </div>
         </div>
       </div>
@@ -674,7 +1236,8 @@
           </h2>
           <div class="w-24 h-1 bg-emerald-600 mx-auto"></div>
           <p class="text-lg text-gray-700 mt-6 max-w-2xl mx-auto">
-            A comprehensive toolkit of prototyping methods for every stage of the design process
+            A comprehensive toolkit of prototyping methods for every stage of
+            the design process
           </p>
         </div>
 
@@ -764,58 +1327,93 @@
             aria-labelledby="core-tab"
           >
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🔄</div>
-                <h3 class="text-xl font-semibold text-blue-800 mb-3">Iterative Prototyping</h3>
+                <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                  Iterative Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Sequential testing and refining of a single prototype through multiple cycles for gradual improvement.
+                  Sequential testing and refining of a single prototype through
+                  multiple cycles for gradual improvement.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Continuous improvement, requirement achievement</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Continuous improvement, requirement achievement
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🧬</div>
-                <h3 class="text-xl font-semibold text-green-800 mb-3">Evolutionary Prototyping</h3>
+                <h3 class="text-xl font-semibold text-green-800 mb-3">
+                  Evolutionary Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Continuous refinement where the prototype evolves into the final product rather than being discarded.
+                  Continuous refinement where the prototype evolves into the
+                  final product rather than being discarded.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Long-term development, resource efficiency</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Long-term development, resource efficiency
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">⚡</div>
-                <h3 class="text-xl font-semibold text-purple-800 mb-3">Parallel Prototyping</h3>
+                <h3 class="text-xl font-semibold text-purple-800 mb-3">
+                  Parallel Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Creating and testing multiple different concepts simultaneously to increase design diversity.
+                  Creating and testing multiple different concepts
+                  simultaneously to increase design diversity.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Exploring alternatives, reducing design fixation</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Exploring alternatives, reducing design fixation
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">📝</div>
-                <h3 class="text-xl font-semibold text-orange-800 mb-3">Paper Parallels</h3>
+                <h3 class="text-xl font-semibold text-orange-800 mb-3">
+                  Paper Parallels
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Team members each create paper prototypes and discuss them to generate iterative improvements.
+                  Team members each create paper prototypes and discuss them to
+                  generate iterative improvements.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Team brainstorming, rapid ideation</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Team brainstorming, rapid ideation
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🏆</div>
-                <h3 class="text-xl font-semibold text-red-800 mb-3">Competitive Prototyping</h3>
+                <h3 class="text-xl font-semibold text-red-800 mb-3">
+                  Competitive Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Separate teams independently work to solve the same problem, fostering high divergence and innovation.
+                  Separate teams independently work to solve the same problem,
+                  fostering high divergence and innovation.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Innovation challenges, exploring diverse solutions</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Innovation challenges, exploring diverse solutions
+                  </p>
                 </div>
               </div>
             </div>
@@ -829,69 +1427,111 @@
             aria-labelledby="lowfi-tab"
           >
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">📱</div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">Wireframes</h3>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                  Wireframes
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Simple, abstract layouts focusing on structure and functionality while ignoring visual design.
+                  Simple, abstract layouts focusing on structure and
+                  functionality while ignoring visual design.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Layout planning, information architecture</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Layout planning, information architecture
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">📄</div>
-                <h3 class="text-xl font-semibold text-yellow-800 mb-3">Paper Prototyping</h3>
+                <h3 class="text-xl font-semibold text-yellow-800 mb-3">
+                  Paper Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Interactive mockups using paper and sticky notes where a person "plays computer" by swapping elements.
+                  Interactive mockups using paper and sticky notes where a
+                  person "plays computer" by swapping elements.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Early UI testing, quick iterations</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Early UI testing, quick iterations
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🎬</div>
-                <h3 class="text-xl font-semibold text-indigo-800 mb-3">Storyboarding</h3>
+                <h3 class="text-xl font-semibold text-indigo-800 mb-3">
+                  Storyboarding
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Comic strip-like sequences visualizing user interactions and journeys over time.
+                  Comic strip-like sequences visualizing user interactions and
+                  journeys over time.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: User journey mapping, context understanding</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: User journey mapping, context understanding
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">📦</div>
-                <h3 class="text-xl font-semibold text-amber-800 mb-3">Cardboard Prototyping</h3>
+                <h3 class="text-xl font-semibold text-amber-800 mb-3">
+                  Cardboard Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Physical mockups using cardboard - cheap, disposable, and easy to shape for tangible products.
+                  Physical mockups using cardboard - cheap, disposable, and easy
+                  to shape for tangible products.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Physical products, spatial relationships</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Physical products, spatial relationships
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🧱</div>
-                <h3 class="text-xl font-semibold text-teal-800 mb-3">LEGO Prototyping</h3>
+                <h3 class="text-xl font-semibold text-teal-800 mb-3">
+                  LEGO Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Quick physical models using LEGO bricks to explore shape, size, functionality, and ergonomics.
+                  Quick physical models using LEGO bricks to explore shape,
+                  size, functionality, and ergonomics.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: 3D concepts, modular systems</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: 3D concepts, modular systems
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🃏</div>
-                <h3 class="text-xl font-semibold text-pink-800 mb-3">Deck of Cards Prototyping</h3>
+                <h3 class="text-xl font-semibold text-pink-800 mb-3">
+                  Deck of Cards Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Each card represents components or actions that can be shuffled to simulate random sequences and edge cases.
+                  Each card represents components or actions that can be
+                  shuffled to simulate random sequences and edge cases.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Testing edge cases, random scenarios</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Testing edge cases, random scenarios
+                  </p>
                 </div>
               </div>
             </div>
@@ -905,69 +1545,111 @@
             aria-labelledby="experience-tab"
           >
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div class="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🎭</div>
-                <h3 class="text-xl font-semibold text-emerald-800 mb-3">Experience Prototyping</h3>
+                <h3 class="text-xl font-semibold text-emerald-800 mb-3">
+                  Experience Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  First-hand appreciation of system engagement through situational kits, physical proxies, or spatial mockups.
+                  First-hand appreciation of system engagement through
+                  situational kits, physical proxies, or spatial mockups.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Understanding user emotions, contextual design</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Understanding user emotions, contextual design
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🎪</div>
-                <h3 class="text-xl font-semibold text-cyan-800 mb-3">Role Playing</h3>
+                <h3 class="text-xl font-semibold text-cyan-800 mb-3">
+                  Role Playing
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Acting out stakeholder roles to simulate service journeys and uncover pain points in user experiences.
+                  Acting out stakeholder roles to simulate service journeys and
+                  uncover pain points in user experiences.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Service design, stakeholder empathy</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Service design, stakeholder empathy
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-violet-50 to-violet-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-violet-50 to-violet-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🏃‍♂️</div>
-                <h3 class="text-xl font-semibold text-violet-800 mb-3">Roleplay Relay</h3>
+                <h3 class="text-xl font-semibold text-violet-800 mb-3">
+                  Roleplay Relay
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Structured version where actors pass users through service flows like relay races using scenario cards.
+                  Structured version where actors pass users through service
+                  flows like relay races using scenario cards.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Complex service flows, handoff points</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Complex service flows, handoff points
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-rose-50 to-rose-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-rose-50 to-rose-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">📺</div>
-                <h3 class="text-xl font-semibold text-rose-800 mb-3">Reality Show Prototyping</h3>
+                <h3 class="text-xl font-semibold text-rose-800 mb-3">
+                  Reality Show Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Scripted video scenarios with different personas to highlight use cases and make problems visible.
+                  Scripted video scenarios with different personas to highlight
+                  use cases and make problems visible.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Stakeholder communication, problem illustration</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Stakeholder communication, problem illustration
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-lime-50 to-lime-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-lime-50 to-lime-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🔄</div>
-                <h3 class="text-xl font-semibold text-lime-800 mb-3">Human GIF Prototyping</h3>
+                <h3 class="text-xl font-semibold text-lime-800 mb-3">
+                  Human GIF Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Team acts out short, looping interactions to demonstrate single UI features with people as interface elements.
+                  Team acts out short, looping interactions to demonstrate
+                  single UI features with people as interface elements.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Quick feature demos, interaction flows</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Quick feature demos, interaction flows
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-sky-50 to-sky-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-sky-50 to-sky-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🧙‍♂️</div>
-                <h3 class="text-xl font-semibold text-sky-800 mb-3">Wizard of Oz Prototyping</h3>
+                <h3 class="text-xl font-semibold text-sky-800 mb-3">
+                  Wizard of Oz Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Users interact with seemingly functional interfaces while humans secretly operate the system responses.
+                  Users interact with seemingly functional interfaces while
+                  humans secretly operate the system responses.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: AI features, complex backend testing</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: AI features, complex backend testing
+                  </p>
                 </div>
               </div>
             </div>
@@ -981,69 +1663,111 @@
             aria-labelledby="digital-tab"
           >
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">💻</div>
-                <h3 class="text-xl font-semibold text-blue-800 mb-3">Virtual Prototyping</h3>
+                <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                  Virtual Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Prototypes existing and tested on computational platforms using simulations and virtual environments.
+                  Prototypes existing and tested on computational platforms
+                  using simulations and virtual environments.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Complex systems, cost-effective testing</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Complex systems, cost-effective testing
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🏗️</div>
-                <h3 class="text-xl font-semibold text-purple-800 mb-3">CAD-Based Rapid Prototyping</h3>
+                <h3 class="text-xl font-semibold text-purple-800 mb-3">
+                  CAD-Based Rapid Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Detailed 3D models with virtual simulations followed by 3D printing or CNC fabrication.
+                  Detailed 3D models with virtual simulations followed by 3D
+                  printing or CNC fabrication.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Physical products, engineering validation</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Physical products, engineering validation
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🥽</div>
-                <h3 class="text-xl font-semibold text-green-800 mb-3">AR/VR Prototyping</h3>
+                <h3 class="text-xl font-semibold text-green-800 mb-3">
+                  AR/VR Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Immersive simulations and augmented reality overlays for testing layouts and user interactions.
+                  Immersive simulations and augmented reality overlays for
+                  testing layouts and user interactions.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Spatial interfaces, immersive experiences</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Spatial interfaces, immersive experiences
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🔗</div>
-                <h3 class="text-xl font-semibold text-orange-800 mb-3">Hardware-in-the-loop</h3>
+                <h3 class="text-xl font-semibold text-orange-800 mb-3">
+                  Hardware-in-the-loop
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Connecting real physical components to computer simulations for realistic system performance testing.
+                  Connecting real physical components to computer simulations
+                  for realistic system performance testing.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: IoT systems, embedded device testing</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: IoT systems, embedded device testing
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🤲</div>
-                <h3 class="text-xl font-semibold text-red-800 mb-3">Haptic Prototypes</h3>
+                <h3 class="text-xl font-semibold text-red-800 mb-3">
+                  Haptic Prototypes
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Tactile feedback prototypes providing force or vibration through haptic interfaces connected to virtual models.
+                  Tactile feedback prototypes providing force or vibration
+                  through haptic interfaces connected to virtual models.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Tactile interfaces, accessibility design</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Tactile interfaces, accessibility design
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">📏</div>
-                <h3 class="text-xl font-semibold text-teal-800 mb-3">Scaled Prototyping</h3>
+                <h3 class="text-xl font-semibold text-teal-800 mb-3">
+                  Scaled Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Smaller or larger physical models that mimic final design behavior through principles of similitude.
+                  Smaller or larger physical models that mimic final design
+                  behavior through principles of similitude.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Large systems, architectural models</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Large systems, architectural models
+                  </p>
                 </div>
               </div>
             </div>
@@ -1057,69 +1781,111 @@
             aria-labelledby="strategic-tab"
           >
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">💥</div>
-                <h3 class="text-xl font-semibold text-red-800 mb-3">Disruptive Prototyping</h3>
+                <h3 class="text-xl font-semibold text-red-800 mb-3">
+                  Disruptive Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Bold approach ignoring conventional wisdom to challenge status quo and redefine entire categories.
+                  Bold approach ignoring conventional wisdom to challenge status
+                  quo and redefine entire categories.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Innovation breakthroughs, market disruption</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Innovation breakthroughs, market disruption
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">💭</div>
-                <h3 class="text-xl font-semibold text-purple-800 mb-3">Provotyping</h3>
+                <h3 class="text-xl font-semibold text-purple-800 mb-3">
+                  Provotyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Provocative prototypes based on extreme scenarios to provoke discussion and explore ethical implications.
+                  Provocative prototypes based on extreme scenarios to provoke
+                  discussion and explore ethical implications.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Ethics exploration, societal impact discussion</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Ethics exploration, societal impact discussion
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🚀</div>
-                <h3 class="text-xl font-semibold text-indigo-800 mb-3">Science Fiction Prototyping</h3>
+                <h3 class="text-xl font-semibold text-indigo-800 mb-3">
+                  Science Fiction Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Using narrative and storytelling to explore designs in various potential future scenarios.
+                  Using narrative and storytelling to explore designs in various
+                  potential future scenarios.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Future planning, scenario exploration</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Future planning, scenario exploration
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🎲</div>
-                <h3 class="text-xl font-semibold text-green-800 mb-3">Board Game Simulation</h3>
+                <h3 class="text-xl font-semibold text-green-800 mb-3">
+                  Board Game Simulation
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Converting app or service flows into physical board games to make abstract features tangible.
+                  Converting app or service flows into physical board games to
+                  make abstract features tangible.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Gamification, complex system understanding</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Gamification, complex system understanding
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🔍</div>
-                <h3 class="text-xl font-semibold text-yellow-800 mb-3">Subsystem Isolation</h3>
+                <h3 class="text-xl font-semibold text-yellow-800 mb-3">
+                  Subsystem Isolation
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Prototyping and testing single parts of larger systems in isolation to reduce cost and focus effort.
+                  Prototyping and testing single parts of larger systems in
+                  isolation to reduce cost and focus effort.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Complex systems, targeted testing</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Complex systems, targeted testing
+                  </p>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg p-6 transform hover:scale-105 transition-transform">
+              <div
+                class="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg p-6 transform hover:scale-105 transition-transform"
+              >
                 <div class="text-3xl mb-3">🏙️</div>
-                <h3 class="text-xl font-semibold text-cyan-800 mb-3">Street-to-Screen Prototyping</h3>
+                <h3 class="text-xl font-semibold text-cyan-800 mb-3">
+                  Street-to-Screen Prototyping
+                </h3>
                 <p class="text-sm text-gray-700 mb-3">
-                  Physical mockups placed in real-world contexts for public testing before digital implementation.
+                  Physical mockups placed in real-world contexts for public
+                  testing before digital implementation.
                 </p>
                 <div class="bg-white p-3 rounded-md">
-                  <p class="text-xs text-gray-600 font-medium">Best for: Public services, community feedback</p>
+                  <p class="text-xs text-gray-600 font-medium">
+                    Best for: Public services, community feedback
+                  </p>
                 </div>
               </div>
             </div>
@@ -1127,7 +1893,9 @@
         </div>
 
         <!-- Technique Selection Guide -->
-        <div class="mt-12 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-lg p-8">
+        <div
+          class="mt-12 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-lg p-8"
+        >
           <h3 class="text-2xl font-semibold text-emerald-900 mb-6 text-center">
             Choosing the Right Technique
           </h3>
@@ -1136,28 +1904,42 @@
               <div class="bg-white p-6 rounded-lg shadow-sm">
                 <div class="text-3xl mb-3">🚀</div>
                 <h4 class="font-semibold text-emerald-700 mb-2">Early Stage</h4>
-                <p class="text-sm text-gray-600">Paper prototyping, wireframes, storyboarding</p>
+                <p class="text-sm text-gray-600">
+                  Paper prototyping, wireframes, storyboarding
+                </p>
               </div>
             </div>
             <div class="text-center">
               <div class="bg-white p-6 rounded-lg shadow-sm">
                 <div class="text-3xl mb-3">🔬</div>
-                <h4 class="font-semibold text-emerald-700 mb-2">Testing Ideas</h4>
-                <p class="text-sm text-gray-600">Experience prototyping, role playing, A/B testing</p>
+                <h4 class="font-semibold text-emerald-700 mb-2">
+                  Testing Ideas
+                </h4>
+                <p class="text-sm text-gray-600">
+                  Experience prototyping, role playing, A/B testing
+                </p>
               </div>
             </div>
             <div class="text-center">
               <div class="bg-white p-6 rounded-lg shadow-sm">
                 <div class="text-3xl mb-3">⚡</div>
-                <h4 class="font-semibold text-emerald-700 mb-2">Rapid Iteration</h4>
-                <p class="text-sm text-gray-600">Parallel prototyping, competitive prototyping</p>
+                <h4 class="font-semibold text-emerald-700 mb-2">
+                  Rapid Iteration
+                </h4>
+                <p class="text-sm text-gray-600">
+                  Parallel prototyping, competitive prototyping
+                </p>
               </div>
             </div>
             <div class="text-center">
               <div class="bg-white p-6 rounded-lg shadow-sm">
                 <div class="text-3xl mb-3">🎯</div>
-                <h4 class="font-semibold text-emerald-700 mb-2">Final Validation</h4>
-                <p class="text-sm text-gray-600">High-fidelity prototypes, CAD models, virtual testing</p>
+                <h4 class="font-semibold text-emerald-700 mb-2">
+                  Final Validation
+                </h4>
+                <p class="text-sm text-gray-600">
+                  High-fidelity prototypes, CAD models, virtual testing
+                </p>
               </div>
             </div>
           </div>
@@ -1176,20 +1958,37 @@
           </h2>
           <div class="w-24 h-1 bg-emerald-600 mx-auto"></div>
           <p class="text-lg text-gray-700 mt-6 max-w-2xl mx-auto">
-            Iterative improvements based on real user feedback and testing insights
+            Iterative improvements based on real user feedback and testing
+            insights
           </p>
         </div>
 
         <!-- User Feedback Iteration 1 -->
         <div class="mb-16">
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 mb-8">
+          <div
+            class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 mb-8"
+          >
             <div class="flex items-start space-x-4 mb-6">
-              <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">1</div>
+              <div
+                class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg"
+              >
+                1
+              </div>
               <div>
-                <h3 class="text-2xl font-semibold text-blue-900 mb-2">Model vs iNaturalist Confusion</h3>
-                <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-600">
-                  <p class="text-gray-700 italic mb-2">"What if your model and iNaturalist suggest different identifications? If the expert clicks agree/disagree, which suggestion is he accepting?"</p>
-                  <p class="text-sm text-blue-700 font-medium">- User Testing Participant</p>
+                <h3 class="text-2xl font-semibold text-blue-900 mb-2">
+                  Model vs iNaturalist Confusion
+                </h3>
+                <div
+                  class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-600"
+                >
+                  <p class="text-gray-700 italic mb-2">
+                    "What if your model and iNaturalist suggest different
+                    identifications? If the expert clicks agree/disagree, which
+                    suggestion is he accepting?"
+                  </p>
+                  <p class="text-sm text-blue-700 font-medium">
+                    - User Testing Participant
+                  </p>
                 </div>
               </div>
             </div>
@@ -1197,42 +1996,107 @@
 
           <!-- Image Comparison Slider 1 -->
           <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-            <h4 class="text-xl font-semibold text-gray-900 mb-4 text-center">Before vs After: Clarifying AI Model Suggestions</h4>
+            <h4 class="text-xl font-semibold text-gray-900 mb-4 text-center">
+              Before vs After: Clarifying AI Model Suggestions
+            </h4>
             <div class="relative w-full max-w-4xl mx-auto">
               <div class="image-comparison-slider" id="slider1">
                 <div class="image-comparison-container">
                   <!-- Before/After Labels -->
-                  <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-md font-semibold z-10">BEFORE</div>
-                  <div class="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-md font-semibold z-10">AFTER</div>
-                  
+                  <div
+                    class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-md font-semibold z-10"
+                  >
+                    BEFORE
+                  </div>
+                  <div
+                    class="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-md font-semibold z-10"
+                  >
+                    AFTER
+                  </div>
+
                   <div class="image-comparison-before">
-                    <img src="assets/glasgow-botanic-gardens-09.jpg" alt="Before: Unclear model vs iNaturalist distinction" class="w-full h-96 object-cover rounded-lg" style="filter: sepia(20%) saturate(80%);">
-                    <div class="absolute inset-0 bg-red-900 bg-opacity-20 flex items-center justify-center rounded-lg">
-                      <div class="text-center bg-white bg-opacity-90 p-4 rounded-lg max-w-sm">
+                    <img
+                      src="assets/glasgow-botanic-gardens-09.jpg"
+                      alt="Before: Unclear model vs iNaturalist distinction"
+                      class="w-full h-96 object-cover rounded-lg"
+                      style="filter: sepia(20%) saturate(80%)"
+                    />
+                    <div
+                      class="absolute inset-0 bg-red-900 bg-opacity-20 flex items-center justify-center rounded-lg"
+                    >
+                      <div
+                        class="text-center bg-white bg-opacity-90 p-4 rounded-lg max-w-sm"
+                      >
                         <div class="text-4xl mb-2">🔍</div>
-                        <p class="text-gray-800 font-medium text-sm">Unclear model vs iNaturalist distinction</p>
-                        <p class="text-xs text-gray-600 mt-1">Users couldn't tell which AI suggestion they were agreeing to</p>
+                        <p class="text-gray-800 font-medium text-sm">
+                          Unclear model vs iNaturalist distinction
+                        </p>
+                        <p class="text-xs text-gray-600 mt-1">
+                          Users couldn't tell which AI suggestion they were
+                          agreeing to
+                        </p>
                       </div>
                     </div>
                   </div>
                   <div class="image-comparison-after">
-                    <img src="assets/glasgow-botanic-gardens-09.jpg" alt="After: Clear separation of AI suggestions" class="w-full h-96 object-cover rounded-lg" style="filter: hue-rotate(120deg) saturate(120%);">
-                    <div class="absolute inset-0 bg-emerald-900 bg-opacity-20 flex items-center justify-center rounded-lg">
-                      <div class="text-center bg-white bg-opacity-90 p-4 rounded-lg max-w-sm">
+                    <img
+                      src="assets/glasgow-botanic-gardens-09.jpg"
+                      alt="After: Clear separation of AI suggestions"
+                      class="w-full h-96 object-cover rounded-lg"
+                      style="filter: hue-rotate(120deg) saturate(120%)"
+                    />
+                    <div
+                      class="absolute inset-0 bg-emerald-900 bg-opacity-20 flex items-center justify-center rounded-lg"
+                    >
+                      <div
+                        class="text-center bg-white bg-opacity-90 p-4 rounded-lg max-w-sm"
+                      >
                         <div class="text-4xl mb-2">✅</div>
-                        <p class="text-emerald-800 font-medium text-sm">Clear separation of AI suggestions</p>
-                        <p class="text-xs text-emerald-600 mt-1">Distinct sections for "Our Model" vs "iNaturalist" recommendations</p>
+                        <p class="text-emerald-800 font-medium text-sm">
+                          Clear separation of AI suggestions
+                        </p>
+                        <p class="text-xs text-emerald-600 mt-1">
+                          Distinct sections for "Our Model" vs "iNaturalist"
+                          recommendations
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <div class="image-comparison-slider-handle" data-slider="slider1">
+                  <div
+                    class="image-comparison-slider-handle"
+                    data-slider="slider1"
+                  >
                     <div class="image-comparison-slider-line"></div>
                     <div class="image-comparison-slider-button">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15 6L9 12L15 18"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
                       </svg>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9 18L15 12L9 6"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -1241,7 +2105,9 @@
             </div>
             <div class="mt-4 text-center">
               <p class="text-sm text-gray-600">
-                <strong>Solution:</strong> We redesigned the interface to clearly separate our AI model suggestions from iNaturalist suggestions, with distinct visual styling and explicit labels.
+                <strong>Solution:</strong> We redesigned the interface to
+                clearly separate our AI model suggestions from iNaturalist
+                suggestions, with distinct visual styling and explicit labels.
               </p>
             </div>
           </div>
@@ -1249,14 +2115,29 @@
 
         <!-- User Feedback Iteration 2 -->
         <div class="mb-16">
-          <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-8 mb-8">
+          <div
+            class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-8 mb-8"
+          >
             <div class="flex items-start space-x-4 mb-6">
-              <div class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">2</div>
+              <div
+                class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg"
+              >
+                2
+              </div>
               <div>
-                <h3 class="text-2xl font-semibold text-purple-900 mb-2">Cluttered Button Layout</h3>
-                <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-purple-600">
-                  <p class="text-gray-700 italic mb-2">"I feel like the buttons are too cluttered, making it a bit messy and confusing, is there another alternative?"</p>
-                  <p class="text-sm text-purple-700 font-medium">- User Testing Participant</p>
+                <h3 class="text-2xl font-semibold text-purple-900 mb-2">
+                  Cluttered Button Layout
+                </h3>
+                <div
+                  class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-purple-600"
+                >
+                  <p class="text-gray-700 italic mb-2">
+                    "I feel like the buttons are too cluttered, making it a bit
+                    messy and confusing, is there another alternative?"
+                  </p>
+                  <p class="text-sm text-purple-700 font-medium">
+                    - User Testing Participant
+                  </p>
                 </div>
               </div>
             </div>
@@ -1264,42 +2145,108 @@
 
           <!-- Image Comparison Slider 2 -->
           <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-            <h4 class="text-xl font-semibold text-gray-900 mb-4 text-center">Before vs After: Reorganized Interface Layout</h4>
+            <h4 class="text-xl font-semibold text-gray-900 mb-4 text-center">
+              Before vs After: Reorganized Interface Layout
+            </h4>
             <div class="relative w-full max-w-4xl mx-auto">
               <div class="image-comparison-slider" id="slider2">
                 <div class="image-comparison-container">
                   <!-- Before/After Labels -->
-                  <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-md font-semibold z-10">BEFORE</div>
-                  <div class="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-md font-semibold z-10">AFTER</div>
-                  
+                  <div
+                    class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-md font-semibold z-10"
+                  >
+                    BEFORE
+                  </div>
+                  <div
+                    class="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-md font-semibold z-10"
+                  >
+                    AFTER
+                  </div>
+
                   <div class="image-comparison-before">
-                    <img src="assets/glasgow-botanic-gardens-09.jpg" alt="Before: Cluttered button arrangement" class="w-full h-96 object-cover rounded-lg" style="filter: contrast(110%) brightness(90%);">
-                    <div class="absolute inset-0 bg-red-900 bg-opacity-20 flex items-center justify-center rounded-lg">
-                      <div class="text-center bg-white bg-opacity-90 p-4 rounded-lg max-w-sm">
+                    <img
+                      src="assets/glasgow-botanic-gardens-09.jpg"
+                      alt="Before: Cluttered button arrangement"
+                      class="w-full h-96 object-cover rounded-lg"
+                      style="filter: contrast(110%) brightness(90%)"
+                    />
+                    <div
+                      class="absolute inset-0 bg-red-900 bg-opacity-20 flex items-center justify-center rounded-lg"
+                    >
+                      <div
+                        class="text-center bg-white bg-opacity-90 p-4 rounded-lg max-w-sm"
+                      >
                         <div class="text-4xl mb-2">🗂️</div>
-                        <p class="text-red-800 font-medium text-sm">Cluttered button arrangement</p>
-                        <p class="text-xs text-red-600 mt-1">Buttons scattered around images, creating visual chaos</p>
+                        <p class="text-red-800 font-medium text-sm">
+                          Cluttered button arrangement
+                        </p>
+                        <p class="text-xs text-red-600 mt-1">
+                          Buttons scattered around images, creating visual chaos
+                        </p>
                       </div>
                     </div>
                   </div>
                   <div class="image-comparison-after">
-                    <img src="assets/glasgow-botanic-gardens-09.jpg" alt="After: Clean, organized layout" class="w-full h-96 object-cover rounded-lg" style="filter: hue-rotate(60deg) saturate(110%) brightness(110%);">
-                    <div class="absolute inset-0 bg-emerald-900 bg-opacity-20 flex items-center justify-center rounded-lg">
-                      <div class="text-center bg-white bg-opacity-90 p-4 rounded-lg max-w-sm">
+                    <img
+                      src="assets/glasgow-botanic-gardens-09.jpg"
+                      alt="After: Clean, organized layout"
+                      class="w-full h-96 object-cover rounded-lg"
+                      style="
+                        filter: hue-rotate(60deg) saturate(110%)
+                          brightness(110%);
+                      "
+                    />
+                    <div
+                      class="absolute inset-0 bg-emerald-900 bg-opacity-20 flex items-center justify-center rounded-lg"
+                    >
+                      <div
+                        class="text-center bg-white bg-opacity-90 p-4 rounded-lg max-w-sm"
+                      >
                         <div class="text-4xl mb-2">📱</div>
-                        <p class="text-emerald-800 font-medium text-sm">Clean, organized layout</p>
-                        <p class="text-xs text-emerald-600 mt-1">Images on top, text and buttons grouped below</p>
+                        <p class="text-emerald-800 font-medium text-sm">
+                          Clean, organized layout
+                        </p>
+                        <p class="text-xs text-emerald-600 mt-1">
+                          Images on top, text and buttons grouped below
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <div class="image-comparison-slider-handle" data-slider="slider2">
+                  <div
+                    class="image-comparison-slider-handle"
+                    data-slider="slider2"
+                  >
                     <div class="image-comparison-slider-line"></div>
                     <div class="image-comparison-slider-button">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15 6L9 12L15 18"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
                       </svg>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9 18L15 12L9 6"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -1308,7 +2255,9 @@
             </div>
             <div class="mt-4 text-center">
               <p class="text-sm text-gray-600">
-                <strong>Solution:</strong> We restructured the layout by placing images at the top and grouping related text and action buttons together at the bottom, creating a cleaner visual hierarchy.
+                <strong>Solution:</strong> We restructured the layout by placing
+                images at the top and grouping related text and action buttons
+                together at the bottom, creating a cleaner visual hierarchy.
               </p>
             </div>
           </div>
@@ -1316,30 +2265,43 @@
 
         <!-- Expert Interview Section -->
         <div class="mb-16">
-          <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-lg p-8">
+          <div
+            class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-lg p-8"
+          >
             <div class="text-center mb-8">
               <div class="text-4xl mb-4">🎓</div>
-              <h3 class="text-2xl font-semibold text-emerald-900 mb-2">Expert Tutor Feedback Session</h3>
-              <p class="text-lg text-gray-700">In-depth insights and feedbacks from our research tutor</p>
+              <h3 class="text-2xl font-semibold text-emerald-900 mb-2">
+                Expert Tutor Feedback Session
+              </h3>
+              <p class="text-lg text-gray-700">
+                In-depth insights and feedbacks from our research tutor
+              </p>
             </div>
-            
+
             <div class="bg-white rounded-lg shadow-lg p-6">
-              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden mb-4">
-                <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube-nocookie.com/embed/rLIzdVb1hFA?si=NgXWLL09RMA2qD0e" 
-                  title="Tutor Feedback Session - Expert Interview" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerpolicy="strict-origin-when-cross-origin" 
+              <div
+                class="aspect-video bg-gray-100 rounded-lg overflow-hidden mb-4"
+              >
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube-nocookie.com/embed/rLIzdVb1hFA?si=NgXWLL09RMA2qD0e"
+                  title="Tutor Feedback Session - Expert Interview"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                   class="rounded-lg"
                 ></iframe>
               </div>
               <div class="text-center">
-                <h4 class="text-lg font-semibold text-gray-900 mb-2">Key Insights from Academic Review</h4>
-                <p class="text-sm text-gray-600">Comprehensive feedback on design decisions, methodology, and implementation approach from our academic supervisor</p>
+                <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                  Key Insights from Academic Review
+                </h4>
+                <p class="text-sm text-gray-600">
+                  Comprehensive feedback on design decisions, methodology, and
+                  implementation approach from our academic supervisor
+                </p>
               </div>
             </div>
           </div>
@@ -1563,76 +2525,86 @@
     <!-- Image Comparison Slider Script -->
     <script>
       // Initialize image comparison sliders
-      window.addEventListener('load', function() {
-        const sliders = document.querySelectorAll('.image-comparison-slider');
-        
+      window.addEventListener("load", function () {
+        const sliders = document.querySelectorAll(".image-comparison-slider");
+
         sliders.forEach((slider) => {
-          const container = slider.querySelector('.image-comparison-container');
-          const afterImage = slider.querySelector('.image-comparison-after');
-          const handle = slider.querySelector('.image-comparison-slider-handle');
-          
+          const container = slider.querySelector(".image-comparison-container");
+          const afterImage = slider.querySelector(".image-comparison-after");
+          const handle = slider.querySelector(
+            ".image-comparison-slider-handle"
+          );
+
           if (!container || !afterImage || !handle) return;
-          
+
           let isDragging = false;
-          
+
           function updateSlider(clientX) {
             const rect = container.getBoundingClientRect();
             const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
             const percentage = (x / rect.width) * 100;
-            
+
             afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
             handle.style.left = `${percentage}%`;
           }
-          
+
           // Mouse events
-          handle.addEventListener('mousedown', function(e) {
+          handle.addEventListener("mousedown", function (e) {
             isDragging = true;
-            document.body.style.cursor = 'ew-resize';
+            document.body.style.cursor = "ew-resize";
             updateSlider(e.clientX);
             e.preventDefault();
           });
-          
-          document.addEventListener('mousemove', function(e) {
+
+          document.addEventListener("mousemove", function (e) {
             if (!isDragging) return;
             updateSlider(e.clientX);
             e.preventDefault();
           });
-          
-          document.addEventListener('mouseup', function(e) {
+
+          document.addEventListener("mouseup", function (e) {
             if (!isDragging) return;
             isDragging = false;
-            document.body.style.cursor = '';
+            document.body.style.cursor = "";
           });
-          
+
           // Click to position
-          container.addEventListener('click', function(e) {
+          container.addEventListener("click", function (e) {
             if (e.target === handle || handle.contains(e.target)) return;
             updateSlider(e.clientX);
           });
-          
+
           // Touch events for mobile
-          handle.addEventListener('touchstart', function(e) {
-            isDragging = true;
-            const touch = e.touches[0];
-            updateSlider(touch.clientX);
-            e.preventDefault();
-          }, { passive: false });
-          
-          document.addEventListener('touchmove', function(e) {
-            if (!isDragging) return;
-            const touch = e.touches[0];
-            updateSlider(touch.clientX);
-            e.preventDefault();
-          }, { passive: false });
-          
-          document.addEventListener('touchend', function(e) {
+          handle.addEventListener(
+            "touchstart",
+            function (e) {
+              isDragging = true;
+              const touch = e.touches[0];
+              updateSlider(touch.clientX);
+              e.preventDefault();
+            },
+            { passive: false }
+          );
+
+          document.addEventListener(
+            "touchmove",
+            function (e) {
+              if (!isDragging) return;
+              const touch = e.touches[0];
+              updateSlider(touch.clientX);
+              e.preventDefault();
+            },
+            { passive: false }
+          );
+
+          document.addEventListener("touchend", function (e) {
             if (!isDragging) return;
             isDragging = false;
           });
-          
+
           // Initialize slider at 50% position
-          afterImage.style.clipPath = 'inset(0 50% 0 0)';
-          handle.style.left = '50%';
+          afterImage.style.clipPath = "inset(0 50% 0 0)";
+          handle.style.left = "50%";
         });
       });
     </script>
