@@ -532,7 +532,8 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   pointer-events: none;
 }
 
@@ -559,6 +560,12 @@ button:focus {
 .image-comparison-after .absolute {
   pointer-events: none;
   z-index: 5;
+}
+
+/* Label visibility based on slider position */
+.before-label,
+.after-label {
+  transition: opacity 0.2s ease;
 }
 
 .image-comparison-slider-handle {

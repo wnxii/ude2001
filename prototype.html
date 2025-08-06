@@ -2004,22 +2004,21 @@
                 <div class="image-comparison-container">
                   <!-- Before/After Labels -->
                   <div
-                    class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-md font-semibold z-10"
+                    class="before-label absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-md font-semibold z-10"
                   >
                     BEFORE
                   </div>
                   <div
-                    class="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-md font-semibold z-10"
+                    class="after-label absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-md font-semibold z-10"
                   >
                     AFTER
                   </div>
 
                   <div class="image-comparison-before">
                     <img
-                      src="assets/glasgow-botanic-gardens-09.jpg"
+                      src="assets/comparison-1-before.jpg"
                       alt="Before: Unclear model vs iNaturalist distinction"
                       class="w-full h-96 object-cover rounded-lg"
-                      style="filter: sepia(20%) saturate(80%)"
                     />
                     <div
                       class="absolute inset-0 bg-red-900 bg-opacity-20 flex items-center justify-center rounded-lg"
@@ -2040,10 +2039,9 @@
                   </div>
                   <div class="image-comparison-after">
                     <img
-                      src="assets/glasgow-botanic-gardens-09.jpg"
+                      src="assets/comparison-1-after.jpeg"
                       alt="After: Clear separation of AI suggestions"
                       class="w-full h-96 object-cover rounded-lg"
-                      style="filter: hue-rotate(120deg) saturate(120%)"
                     />
                     <div
                       class="absolute inset-0 bg-emerald-900 bg-opacity-20 flex items-center justify-center rounded-lg"
@@ -2153,22 +2151,21 @@
                 <div class="image-comparison-container">
                   <!-- Before/After Labels -->
                   <div
-                    class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-md font-semibold z-10"
+                    class="before-label absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-md font-semibold z-10"
                   >
                     BEFORE
                   </div>
                   <div
-                    class="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-md font-semibold z-10"
+                    class="after-label absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-md font-semibold z-10"
                   >
                     AFTER
                   </div>
 
                   <div class="image-comparison-before">
                     <img
-                      src="assets/glasgow-botanic-gardens-09.jpg"
+                      src="assets/comparison-2-before.jpeg"
                       alt="Before: Cluttered button arrangement"
                       class="w-full h-96 object-cover rounded-lg"
-                      style="filter: contrast(110%) brightness(90%)"
                     />
                     <div
                       class="absolute inset-0 bg-red-900 bg-opacity-20 flex items-center justify-center rounded-lg"
@@ -2188,13 +2185,9 @@
                   </div>
                   <div class="image-comparison-after">
                     <img
-                      src="assets/glasgow-botanic-gardens-09.jpg"
+                      src="assets/comparison-2-after.jpeg"
                       alt="After: Clean, organized layout"
                       class="w-full h-96 object-cover rounded-lg"
-                      style="
-                        filter: hue-rotate(60deg) saturate(110%)
-                          brightness(110%);
-                      "
                     />
                     <div
                       class="absolute inset-0 bg-emerald-900 bg-opacity-20 flex items-center justify-center rounded-lg"
@@ -2534,6 +2527,8 @@
           const handle = slider.querySelector(
             ".image-comparison-slider-handle"
           );
+          const beforeLabel = slider.querySelector(".before-label");
+          const afterLabel = slider.querySelector(".after-label");
 
           if (!container || !afterImage || !handle) return;
 
@@ -2546,6 +2541,14 @@
 
             afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
             handle.style.left = `${percentage}%`;
+            
+            // Hide/show labels based on slider position
+            if (beforeLabel) {
+              beforeLabel.style.opacity = percentage < 20 ? '0' : '1';
+            }
+            if (afterLabel) {
+              afterLabel.style.opacity = percentage > 80 ? '0' : '1';
+            }
           }
 
           // Mouse events
