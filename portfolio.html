@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Botaniq Project Timeline - Team 08 University of Glasgow project journey documenting key milestones and progress"
-    />
+    <meta name="description"
+        content="Botaniq Project Timeline - Team 08 University of Glasgow project journey documenting key milestones and progress" />
     <title>Project Timeline - Botaniq | Team 08 UofG</title>
 
     <!-- Tailwind CSS -->
@@ -16,171 +15,522 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
 
     <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+    <!-- Flowbite CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <style>
-      /* Timeline specific styles */
-      .timeline-container {
-        position: relative;
-      }
-
-      .timeline-line {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        background: linear-gradient(to bottom, #10b981, #059669);
-        transform: translateX(-50%);
-        border-radius: 2px;
-      }
-
-      .timeline-item {
-        position: relative;
-        margin-bottom: 3rem;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease;
-      }
-
-      .timeline-item.animate {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .timeline-item:nth-child(odd) {
-        padding-right: 50%;
-        padding-left: 0;
-      }
-
-      .timeline-item:nth-child(even) {
-        padding-left: 50%;
-        padding-right: 0;
-        text-align: left;
-      }
-
-      .timeline-item:nth-child(odd) .timeline-content {
-        margin-right: 2rem;
-        text-align: right;
-      }
-
-      .timeline-item:nth-child(even) .timeline-content {
-        margin-left: 2rem;
-        text-align: left;
-      }
-
-      .timeline-dot {
-        position: absolute;
-        left: 50%;
-        top: 1.5rem;
-        width: 20px;
-        height: 20px;
-        background: #10b981;
-        border: 4px solid white;
-        border-radius: 50%;
-        transform: translateX(-50%);
-        box-shadow: 0 0 0 4px #10b981;
-        z-index: 10;
-      }
-
-      .timeline-dot.milestone {
-        width: 24px;
-        height: 24px;
-        background: #dc2626;
-        box-shadow: 0 0 0 4px #dc2626;
-      }
-
-      .timeline-dot.future {
-        background: #9ca3af;
-        box-shadow: 0 0 0 4px #9ca3af;
-      }
-
-      @media (max-width: 768px) {
-        .timeline-line {
-          left: 2rem;
-        }
-
-        .timeline-item {
-          padding-left: 4rem !important;
-          padding-right: 0 !important;
-          text-align: left !important;
-        }
-
-        .timeline-item .timeline-content {
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-          text-align: left !important;
-        }
-
-        .timeline-dot {
-          left: 2rem;
-        }
-      }
-    </style>
-  </head>
-
-  <body class="font-inter bg-neutral-50">
+<body class="font-inter">
     <!-- Navigation -->
-    <nav
-      id="navbar"
-      class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300"
-    >
-      <div class="max-w-6xl mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
-          <!-- Logo/Brand -->
-          <a
-            class="text-2xl font-playfair font-bold text-emerald-700"
-            href="index.html"
-          >
-            Botaniq
-          </a>
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo/Brand -->
+                <a class="text-2xl font-playfair font-bold text-emerald-700" href="index.html">
+                    Botaniq
+                </a>
 
-          <!-- Navigation Links -->
-          <ul class="hidden md:flex space-x-8">
-            <li><a href="timeline.html" class="nav-link">Timeline</a></li>
-            <li><a href="ideation.html" class="nav-link">Ideation</a></li>
-            <li><a href="prototype.html" class="nav-link">Prototype</a></li>
-            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-            <li><a href="reflections.html" class="nav-link">Reflections</a></li>
-          </ul>
+                <!-- Navigation Links -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                    <li><a href="ideation.html" class="nav-link">Ideation</a></li>
+                    <li><a href="prototype.html" class="nav-link">Prototype</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="reflections.html" class="nav-link">Reflections</a></li>
+                </ul>
 
-          <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="md:hidden p-2">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#problem" class="nav-link-mobile">Problem & Solution</a>
+                    </li>
+                    <li>
+                        <a href="#journey" class="nav-link-mobile">Design Journey</a>
+                    </li>
+                    <li><a href="#portfolio" class="nav-link-mobile">Portfolio</a></li>
+                    <li>
+                        <a href="timeline.html" class="nav-link-mobile">Timeline</a>
+                    </li>
+                    <li>
+                        <a href="#reflections" class="nav-link-mobile">Reflections</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
-          <ul class="space-y-3">
-            <li>
-              <a href="#problem" class="nav-link-mobile">Problem & Solution</a>
-            </li>
-            <li>
-              <a href="#journey" class="nav-link-mobile">Design Journey</a>
-            </li>
-            <li><a href="#portfolio" class="nav-link-mobile">Portfolio</a></li>
-            <li>
-              <a href="timeline.html" class="nav-link-mobile">Timeline</a>
-            </li>
-            <li>
-              <a href="#reflections" class="nav-link-mobile">Reflections</a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </nav>
     <!-- Main Content -->
-  </body>
+    <section class="pt-24 pb-12 bg-gradient-to-br from-emerald-50 to-teal-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-playfair font-bold text-emerald-900 mb-6">
+                Portfolio
+            </h1>
+            <p class="text-xl md:text-2xl text-emerald-700 mb-8 max-w-2xl mx-auto">
+                A comprehensive collection of project artifacts and documentation showcasing our design process,
+                iterations, and final outcomes.
+            </p>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Interactive Prototype Highlight -->
+            <div class="mb-12">
+                <div
+                    class="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg p-8 border-2 border-emerald-200">
+                    <div class="text-center">
+                        <div class="text-5xl mb-4">🎨</div>
+                        <h3 class="text-3xl font-semibold text-gray-900 mb-4">
+                            Interactive Prototype
+                        </h3>
+                        <p class="text-gray-700 mb-6 max-w-2xl mx-auto">
+                            Experience our solution in action! Click through our interactive
+                            Figma prototype to see how we've designed the user journey for
+                            Glasgow Botanic Garden visitors.
+                        </p>
+                        <a href="#journey"
+                            class="inline-flex items-center px-6 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                            </svg>
+                            View Interactive Prototype
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Pitch Videos (External Links) -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-8">
+                    <div class="text-4xl mb-4">🎥</div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+                        Weekly Pitch Videos
+                    </h3>
+                    <p class="text-gray-700 mb-6">
+                        Progress presentations documenting our journey
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <button data-modal-target="video-modal" data-modal-toggle="video-modal" id="week-1-btn"
+                            data-video-id="5HlbpTqYCUA" data-title="Week 1 - Problem Definition"
+                            class="portfolio-link bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow block text-center w-full">
+                            <div class="text-2xl mb-2">📹</div>
+                            <h4 class="font-semibold mb-1">Week 1</h4>
+                            <p class="text-sm text-gray-600">Problem Definition</p>
+                        </button>
+                        <button data-modal-target="video-modal" data-modal-toggle="video-modal" id="week-2-btn"
+                            data-video-id="DJINIeTCdO8" data-title="Week 2 - Initial Research"
+                            class="portfolio-link bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow block text-center w-full">
+                            <div class="text-2xl mb-2">📹</div>
+                            <h4 class="font-semibold mb-1">Week 2</h4>
+                            <p class="text-sm text-gray-600">Initial Research</p>
+                        </button>
+                        <button data-modal-target="video-modal" data-modal-toggle="video-modal" id="final-btn"
+                            data-video-id="9wIYmuYOa9E" data-title="Final Presentation"
+                            class="portfolio-link bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow block text-center w-full">
+                            <div class="text-2xl mb-2">👦🏼</div>
+                            <h4 class="font-semibold mb-1">User</h4>
+                            <p class="text-sm text-gray-600">Feedback</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Partner Communications -->
+                <div class="portfolio-category">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 h-full">
+                        <div class="text-4xl mb-4">🤝</div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+                            Partner Communications
+                        </h3>
+                        <p class="text-gray-700 mb-6">
+                            Key communications with project partners
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-emerald-700 mb-2">
+                                    Initial Partnership Agreement
+                                </h4>
+                                <div class="text-sm text-gray-600 mb-2 space-y-2">
+                                    <p><strong>Questions to Document:</strong></p>
+                                    <ul class="text-xs space-y-1 ml-4">
+                                        <li>
+                                            • What was agreed upon initially with your partner?
+                                        </li>
+                                        <li>• What expectations were set on both sides?</li>
+                                        <li>• What communication protocols were established?</li>
+                                    </ul>
+                                </div>
+                                <div class="text-xs text-gray-500">
+                                    Date: [When did this occur?]
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-emerald-700 mb-2">
+                                    Weekly Check-in Summaries
+                                </h4>
+                                <div class="text-sm text-gray-600 mb-2 space-y-2">
+                                    <p>
+                                        <strong>Document Your Regular Communications:</strong>
+                                    </p>
+                                    <ul class="text-xs space-y-1 ml-4">
+                                        <li>
+                                            • How frequently did you communicate with your partner?
+                                        </li>
+                                        <li>• What was discussed in each check-in?</li>
+                                        <li>• What feedback did you receive and incorporate?</li>
+                                        <li>• How did communication methods evolve over time?</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-emerald-700 mb-2">
+                                    Final Deliverables Review
+                                </h4>
+                                <div class="text-sm text-gray-600 mb-2 space-y-2">
+                                    <p><strong>Final Review Documentation:</strong></p>
+                                    <ul class="text-xs space-y-1 ml-4">
+                                        <li>• What were the final deliverables presented?</li>
+                                        <li>• What feedback did your partner provide?</li>
+                                        <li>• How satisfied were they with the outcomes?</li>
+                                        <li>• What would they change or improve?</li>
+                                    </ul>
+                                </div>
+                                <div class="text-xs text-gray-500">
+                                    Status: [Completed/Scheduled/In Progress]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Process Documents -->
+                <div class="portfolio-category">
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8 h-full">
+                        <div class="text-4xl mb-4">📋</div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+                            Team Process Documents
+                        </h3>
+                        <p class="text-gray-700 mb-6">
+                            Internal planning and process documentation
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-emerald-700 mb-2">
+                                    Daily Team Briefs
+                                </h4>
+                                <div class="text-sm text-gray-600 mb-2 space-y-1">
+                                    <p><strong>Questions to Address:</strong></p>
+                                    <ul class="text-xs space-y-1 ml-4">
+                                        <li>• How often did your team meet?</li>
+                                        <li>• What format did you use for team coordination?</li>
+                                        <li>• What tools helped keep everyone aligned?</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-emerald-700 mb-2">
+                                    Planning Process
+                                </h4>
+                                <div class="text-sm text-gray-600 mb-2 space-y-1">
+                                    <p><strong>Document Your Planning Approach:</strong></p>
+                                    <ul class="text-xs space-y-1 ml-4">
+                                        <li>
+                                            • How did you break down tasks and assign
+                                            responsibilities?
+                                        </li>
+                                        <li>• What tools did you use for project management?</li>
+                                        <li>
+                                            • How did you handle timeline planning and deadlines?
+                                        </li>
+                                        <li>• How did you identify and manage risks?</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-emerald-700 mb-2">
+                                    Meeting Documentation
+                                </h4>
+                                <div class="text-sm text-gray-600 mb-2 space-y-1">
+                                    <p><strong>Questions for Documentation:</strong></p>
+                                    <ul class="text-xs space-y-1 ml-4">
+                                        <li>• How many team meetings did you hold?</li>
+                                        <li>• What key decisions were made in meetings?</li>
+                                        <li>• How did you document and share outcomes?</li>
+                                        <li>• What meeting formats worked best for your team?</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Research Section -->
+            <div class="mt-8">
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-8">
+                    <div class="text-4xl mb-4">🔍</div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+                        User Research
+                    </h3>
+                    <p class="text-gray-700 mb-6">
+                        Research findings and user engagement data
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h4 class="font-semibold text-emerald-700 mb-3">
+                                External Survey Data
+                            </h4>
+                            <div class="space-y-3 text-sm text-gray-600">
+                                <p><strong>Questions to Document Your Survey:</strong></p>
+                                <ul class="space-y-1 text-xs ml-4">
+                                    <li>• How many people responded to your survey?</li>
+                                    <li>• What was your completion rate?</li>
+                                    <li>• What were the key insights discovered?</li>
+                                    <li>• How did this data influence your solution?</li>
+                                    <li>• What survey questions were most revealing?</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 p-3 bg-yellow-50 border-l-4 border-yellow-400 text-xs">
+                                <strong>A1 Requirement:</strong> Include links to external
+                                surveys as part of portfolio work.
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h4 class="font-semibold text-emerald-700 mb-3">
+                                Public Interview Insights
+                            </h4>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p><strong>Document Your Interview Process:</strong></p>
+                                <ul class="space-y-1 text-xs ml-4">
+                                    <li>• How many public interviews did you conduct?</li>
+                                    <li>• What was the average duration of each interview?</li>
+                                    <li>• What key themes emerged from the conversations?</li>
+                                    <li>• How did you recruit interview participants?</li>
+                                    <li>
+                                        • What interview questions provided the most insight?
+                                    </li>
+                                    <li>
+                                        • How did interviews influence your design decisions?
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-3 p-3 bg-yellow-50 border-l-4 border-yellow-400 text-xs">
+                                <strong>A1 Requirement:</strong> Include additional public
+                                interviews as portfolio evidence.
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h4 class="font-semibold text-emerald-700 mb-3">
+                                User Testing Documentation
+                            </h4>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p><strong>Questions About Your Testing Process:</strong></p>
+                                <ul class="space-y-1 text-xs ml-4">
+                                    <li>• How many users did you test your prototypes with?</li>
+                                    <li>• What tasks did users attempt to complete?</li>
+                                    <li>• What was the success rate for key tasks?</li>
+                                    <li>• How long did users take to complete tasks?</li>
+                                    <li>• What satisfaction scores did you receive?</li>
+                                    <li>• What were the major findings and insights?</li>
+                                    <li>• How did testing results influence your design?</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h4 class="font-semibold text-emerald-700 mb-3">
+                                Research Methodology
+                            </h4>
+                            <div class="text-sm text-gray-600 space-y-2">
+                                <p><strong>Document Your Methodology:</strong></p>
+                                <ul class="space-y-1 text-xs ml-4">
+                                    <li>
+                                        • What research approach did you use?
+                                        (Qualitative/Quantitative/Mixed)
+                                    </li>
+                                    <li>• How did you select participants for research?</li>
+                                    <li>
+                                        • What tools and platforms did you use for data
+                                        collection?
+                                    </li>
+                                    <li>• What was your research timeline and schedule?</li>
+                                    <li>• How did you ensure research quality and validity?</li>
+                                    <li>• What ethical considerations did you address?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Poster -->
+            <div class="mt-8">
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-8">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+                        Project Poster
+                    </h3>
+                    <p class="text-gray-700 mb-6">
+                        Final project poster summarizing our findings and solution
+                    </p>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex justify-between items-center mb-4">
+                            <h4 class="font-semibold text-emerald-700">
+                                Team 08 Project Poster
+                            </h4>
+                            <a href="assets/Team08_Poster.pdf" target="_blank" download
+                                class="inline-flex items-center px-4 py-2 bg-emerald-600 text-white text-sm rounded-lg hover:bg-emerald-700 transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                                </svg>
+                                Download PDF
+                            </a>
+                        </div>
+
+                        <!-- PDF Preview -->
+                        <div class="border rounded-lg overflow-hidden">
+                            <embed src="assets/Team08_Poster.pdf" type="application/pdf" width="100%" height="600px"
+                                class="border-0">
+                            <!-- Fallback for browsers that don't support embed -->
+                            <div class="p-8 text-center bg-gray-50">
+                                <p class="text-gray-600 mb-4">
+                                    PDF preview not available in your browser.
+                                </p>
+                                <a href="assets/Team08_Poster.pdf" target="_blank"
+                                    class="inline-flex items-center px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                                    </svg>
+                                    Open PDF in New Tab
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Relevant Materials -->
+            <div class="mt-12">
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-8">
+                    <div class="text-center mb-8">
+                        <div class="text-4xl mb-4">📁</div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+                            Other Relevant Work
+                        </h3>
+                        <p class="text-gray-700">
+                            Additional materials demonstrating your project scope
+                        </p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h4 class="font-semibold text-emerald-700 mb-3">
+                                Links to Relevant Material
+                            </h4>
+                            <div class="text-sm text-gray-600 space-y-2">
+                                <p><strong>Questions to Address:</strong></p>
+                                <ul class="space-y-1 ml-4">
+                                    <li>
+                                        • What additional materials support your project
+                                        narrative?
+                                    </li>
+                                    <li>
+                                        • Do you have a GitHub repository or code documentation?
+                                    </li>
+                                    <li>• Are there research papers or academic references?</li>
+                                    <li>
+                                        • What design assets, mockups, or visual materials exist?
+                                    </li>
+                                    <li>
+                                        • Are there any demonstration videos or interactive
+                                        prototypes?
+                                    </li>
+                                    <li>
+                                        • What other artifacts help tell your complete story?
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 p-3 bg-yellow-50 border-l-4 border-yellow-400 text-xs">
+                                <strong>A1 Requirement:</strong> Include links to relevant
+                                material as part of your portfolio work.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="video-modal" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-4xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow-sm">
+                <!-- Modal header -->
+                <div
+                    class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+                    <h3 id="modal-title" class="text-xl font-semibold text-gray-900">
+                        Video Title
+                    </h3>
+                    <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="video-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <iframe id="video-iframe" width="100%" height="500" src="about:blank" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+</body>
+
 </html>

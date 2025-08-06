@@ -1,12 +1,11 @@
 // JavaScript for Botaniq Project Showcase
-
 // DOM Content Loaded Event
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize all functionality
   initNavigation();
   initScrollEffects();
-  initAnimations();
   initInteractiveElements();
+  initVideoModal(); // Add video modal functionality
 });
 
 // Navigation Functionality
@@ -367,6 +366,131 @@ function initInteractiveElements() {
   });
 
   images.forEach((img) => imageObserver.observe(img));
+}
+
+// Video Modal Functionality
+function initVideoModal() {
+  console.log('🎥 initVideoModal() function called!');
+
+  const videoButtons = document.querySelectorAll('[data-video-id]');
+  const videoIframe = document.getElementById('video-iframe');
+  const modalTitle = document.getElementById('modal-title');
+  const videoModal = document.getElementById('video-modal');
+
+  console.log('Video buttons found:', videoButtons.length);
+  console.log('Video iframe found:', !!videoIframe);
+  console.log('Modal title found:', !!modalTitle);
+  console.log('Video modal found:', !!videoModal);
+
+  // Function to load video
+  function loadVideo(videoId, title) {
+    console.log('Loading video:', videoId, title);
+
+    if (modalTitle && title) {
+      modalTitle.textContent = title;
+    }
+
+    if (videoIframe && videoId) {
+      const youtubeUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&rel=0&enablejsapi=1`;
+      console.log('Setting iframe src to:', youtubeUrl);
+      videoIframe.src = youtubeUrl;
+    }
+  }
+
+  // Function to clear video
+  function clearVideo() {
+    console.log('Clearing video');
+    if (videoIframe) {
+      videoIframe.src = 'about:blank';
+    }
+  }
+
+  videoButtons.forEach(button => {
+    button.addEventListener('click', function (e) {
+      console.log('Button clicked:', this);
+      const videoId = this.getAttribute('data-video-id');
+      const title = this.getAttribute('data-title');
+
+      // Store the video data on the modal for later use
+      if (videoModal) {
+        videoModal.setAttribute('data-current-video', videoId);
+        videoModal.setAttribute('data-current-title', title);
+      }
+
+      // Try to load immediately
+      loadVideo(videoId, title);
+
+      // Also try after a delay to ensure modal is fully opened
+      setTimeout(() => {
+        loadVideo(videoId, title);
+      }, 200);
+    });
+  });
+
+  // Listen for when modal is shown (Flowbite event)
+  if (videoModal) {
+    // Try multiple event types that Flowbite might use
+    const events = ['shown.bs.modal', 'show.bs.modal', 'flowbite:modal:show'];
+    events.forEach(eventType => {
+      videoModal.addEventListener(eventType, function () {
+        console.log('Modal shown event:', eventType);
+        const videoId = this.getAttribute('data-current-video');
+        const title = this.getAttribute('data-current-title');
+        if (videoId) {
+          loadVideo(videoId, title);
+        }
+      });
+    });
+
+    // Listen for when modal is hidden
+    const hideEvents = ['hidden.bs.modal', 'hide.bs.modal', 'flowbite:modal:hide'];
+    hideEvents.forEach(eventType => {
+      videoModal.addEventListener(eventType, function () {
+        console.log('Modal hidden event:', eventType);
+        clearVideo();
+      });
+    });
+  }
+
+  // Clear video when modal is closed
+  const closeModalButtons = document.querySelectorAll('[data-modal-hide="video-modal"]');
+  closeModalButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      console.log('Close button clicked');
+      clearVideo();
+    });
+  });
+
+  // Also clear video when clicking outside modal
+  if (videoModal) {
+    videoModal.addEventListener('click', function (e) {
+      if (e.target === videoModal) {
+        console.log('Modal backdrop clicked');
+        clearVideo();
+      }
+    });
+  }
+
+  // Fallback: Use MutationObserver to detect when modal becomes visible
+  if (videoModal) {
+    const observer = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutation) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          const target = mutation.target;
+          if (!target.classList.contains('hidden') && target.id === 'video-modal') {
+            console.log('Modal became visible via MutationObserver');
+            const videoId = target.getAttribute('data-current-video');
+            const title = target.getAttribute('data-current-title');
+            if (videoId) {
+              setTimeout(() => loadVideo(videoId, title), 100);
+            }
+          }
+        }
+      });
+    });
+
+    observer.observe(videoModal, { attributes: true, attributeFilter: ['class'] });
+  }
 }
 
 // Utility Functions
