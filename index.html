@@ -12,12 +12,6 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Flowbite -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
-      rel="stylesheet"
-    />
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,39 +48,69 @@
           <ul class="hidden md:flex items-center space-x-8">
             <!-- Page Overview Dropdown -->
             <li class="relative group">
-              <button class="nav-link flex items-center space-x-1 cursor-pointer">
+              <button
+                class="nav-link flex items-center space-x-1 cursor-pointer"
+              >
                 <span>Page Overview</span>
-                <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                <svg
+                  class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
                 </svg>
               </button>
-              <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div
+                class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+              >
                 <div class="py-2">
-                  <div class="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100">
+                  <div
+                    class="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100"
+                  >
                     This Page Sections
                   </div>
                   <div class="py-1">
-                    <a href="#problem-statement" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200">
+                    <a
+                      href="#problem-statement"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
+                    >
                       <div class="flex items-center space-x-2">
                         <span class="w-2 h-2 bg-red-400 rounded-full"></span>
                         <span>Problem Statement</span>
                       </div>
                     </a>
-                    <a href="#background-context" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200">
+                    <a
+                      href="#background-context"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
+                    >
                       <div class="flex items-center space-x-2">
                         <span class="w-2 h-2 bg-blue-400 rounded-full"></span>
                         <span>Background Context</span>
                       </div>
                     </a>
-                    <a href="#existing-solution" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200">
+                    <a
+                      href="#existing-solution"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
+                    >
                       <div class="flex items-center space-x-2">
                         <span class="w-2 h-2 bg-purple-400 rounded-full"></span>
                         <span>Pre-existing Solution</span>
                       </div>
                     </a>
-                    <a href="#our-team" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200">
+                    <a
+                      href="#our-team"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
+                    >
                       <div class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                        <span
+                          class="w-2 h-2 bg-emerald-400 rounded-full"
+                        ></span>
                         <span>Our Team</span>
                       </div>
                     </a>
@@ -105,68 +129,120 @@
           </ul>
 
           <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="md:hidden p-3 flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
-            <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
-            <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
-            <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-3 flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none"
+          >
+            <span
+              class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"
+            ></span>
+            <span
+              class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"
+            ></span>
+            <span
+              class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"
+            ></span>
           </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden mt-4 pb-4 border-t border-gray-200"
+        >
           <!-- Page Sections -->
           <div class="pt-4 pb-3">
             <div class="px-4 pb-2">
-              <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide">This Page</h4>
+              <h4
+                class="text-xs font-semibold text-gray-500 uppercase tracking-wide"
+              >
+                This Page
+              </h4>
             </div>
             <ul class="space-y-1">
               <li>
-                <a href="#problem-statement" class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">
+                <a
+                  href="#problem-statement"
+                  class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                >
                   <span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
                   <span>Problem Statement</span>
                 </a>
               </li>
               <li>
-                <a href="#background-context" class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">
+                <a
+                  href="#background-context"
+                  class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                >
                   <span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                   <span>Background Context</span>
                 </a>
               </li>
               <li>
-                <a href="#existing-solution" class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">
+                <a
+                  href="#existing-solution"
+                  class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                >
                   <span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                   <span>Pre-existing Solution</span>
                 </a>
               </li>
               <li>
-                <a href="#our-team" class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">
+                <a
+                  href="#our-team"
+                  class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                >
                   <span class="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
                   <span>Our Team</span>
                 </a>
               </li>
             </ul>
           </div>
-          
+
           <!-- Other Pages -->
           <div class="pt-3 border-t border-gray-100">
             <div class="px-4 pb-2">
-              <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Other Pages</h4>
+              <h4
+                class="text-xs font-semibold text-gray-500 uppercase tracking-wide"
+              >
+                Other Pages
+              </h4>
             </div>
             <ul class="space-y-1">
               <li>
-                <a href="timeline.html" class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">Timeline</a>
+                <a
+                  href="timeline.html"
+                  class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                  >Timeline</a
+                >
               </li>
               <li>
-                <a href="ideation.html" class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">Ideation</a>
+                <a
+                  href="ideation.html"
+                  class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                  >Ideation</a
+                >
               </li>
               <li>
-                <a href="prototype.html" class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">Prototype</a>
+                <a
+                  href="prototype.html"
+                  class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                  >Prototype</a
+                >
               </li>
               <li>
-                <a href="portfolio.html" class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">Portfolio</a>
+                <a
+                  href="portfolio.html"
+                  class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                  >Portfolio</a
+                >
               </li>
               <li>
-                <a href="reflections.html" class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">Reflections</a>
+                <a
+                  href="reflections.html"
+                  class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                  >Reflections</a
+                >
               </li>
             </ul>
           </div>
@@ -330,33 +406,59 @@
           </div>
 
           <div class="max-w-4xl mx-auto">
-            <div class="bg-blue-50 border-l-4 border-blue-400 p-8 rounded-r-lg shadow-lg">
+            <div
+              class="bg-blue-50 border-l-4 border-blue-400 p-8 rounded-r-lg shadow-lg"
+            >
               <h4 class="font-bold text-blue-800 text-2xl mb-6 text-center">
                 Glasgow Botanic Garden's Biodiversity Challenge
               </h4>
 
               <div class="grid md:grid-cols-2 gap-6 mb-6">
                 <div class="bg-white p-6 rounded-lg border border-blue-200">
-                  <h5 class="font-semibold text-blue-800 mb-3 flex items-center">
+                  <h5
+                    class="font-semibold text-blue-800 mb-3 flex items-center"
+                  >
                     <span class="text-lg mr-2">🌿</span> Current State
                   </h5>
                   <ul class="text-sm text-blue-700 space-y-2">
-                    <li>• Glasgow Botanic Garden houses over 12,000 plant species</li>
-                    <li>• Manual biodiversity tracking via traditional spreadsheets</li>
+                    <li>
+                      • Glasgow Botanic Garden houses over 12,000 plant species
+                    </li>
+                    <li>
+                      • Manual biodiversity tracking via traditional
+                      spreadsheets
+                    </li>
                     <li>• Single domain expert processing quarterly data</li>
-                    <li>• Limited integration with citizen science platforms</li>
+                    <li>
+                      • Limited integration with citizen science platforms
+                    </li>
                   </ul>
                 </div>
 
                 <div class="bg-white p-6 rounded-lg border border-blue-200">
-                  <h5 class="font-semibold text-blue-800 mb-3 flex items-center">
+                  <h5
+                    class="font-semibold text-blue-800 mb-3 flex items-center"
+                  >
                     <span class="text-lg mr-2">📊</span> Key Stakeholders
                   </h5>
                   <ul class="text-sm text-blue-700 space-y-2">
-                    <li>• <strong>Friends of Glasgow Botanic Gardens:</strong> Community advocacy</li>
-                    <li>• <strong>Domain Experts:</strong> Species identification specialists</li>
-                    <li>• <strong>City Decision-makers:</strong> Urban biodiversity policy</li>
-                    <li>• <strong>General Public:</strong> Citizen science contributors</li>
+                    <li>
+                      •
+                      <strong>Friends of Glasgow Botanic Gardens:</strong>
+                      Community advocacy
+                    </li>
+                    <li>
+                      • <strong>Domain Experts:</strong> Species identification
+                      specialists
+                    </li>
+                    <li>
+                      • <strong>City Decision-makers:</strong> Urban
+                      biodiversity policy
+                    </li>
+                    <li>
+                      • <strong>General Public:</strong> Citizen science
+                      contributors
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -369,12 +471,14 @@
                   </h5>
                 </div>
                 <p class="text-gray-700 mb-2">
-                  Glasgow's commitment to environmental sustainability requires accurate, 
-                  real-time biodiversity monitoring to inform urban planning decisions and 
-                  conservation efforts across the city's green spaces.
+                  Glasgow's commitment to environmental sustainability requires
+                  accurate, real-time biodiversity monitoring to inform urban
+                  planning decisions and conservation efforts across the city's
+                  green spaces.
                 </p>
                 <p class="text-sm text-gray-600 italic">
-                  Supporting Glasgow's Net Zero by 2030 goals and biodiversity action plans.
+                  Supporting Glasgow's Net Zero by 2030 goals and biodiversity
+                  action plans.
                 </p>
               </div>
             </div>
@@ -391,7 +495,9 @@
           </div>
 
           <div class="max-w-4xl mx-auto">
-            <div class="bg-purple-50 border-l-4 border-purple-400 p-8 rounded-r-lg shadow-lg">
+            <div
+              class="bg-purple-50 border-l-4 border-purple-400 p-8 rounded-r-lg shadow-lg"
+            >
               <h4 class="font-bold text-purple-800 text-2xl mb-6 text-center">
                 Current Tools & Limitations
               </h4>
@@ -402,15 +508,21 @@
                   <div class="flex items-center justify-between mb-4">
                     <div class="flex items-center">
                       <span class="text-2xl mr-3">🔬</span>
-                      <h5 class="font-bold text-purple-800 text-lg">iNaturalist Platform</h5>
+                      <h5 class="font-bold text-purple-800 text-lg">
+                        iNaturalist Platform
+                      </h5>
                     </div>
-                    <div class="text-sm bg-green-100 text-green-800 px-3 py-1 rounded-full font-medium">
+                    <div
+                      class="text-sm bg-green-100 text-green-800 px-3 py-1 rounded-full font-medium"
+                    >
                       Widely Used
                     </div>
                   </div>
                   <div class="grid md:grid-cols-2 gap-4">
                     <div>
-                      <h6 class="font-semibold text-green-700 mb-2">✅ Strengths</h6>
+                      <h6 class="font-semibold text-green-700 mb-2">
+                        ✅ Strengths
+                      </h6>
                       <ul class="text-sm text-gray-600 space-y-1">
                         <li>• Large citizen science community</li>
                         <li>• AI-powered species suggestions</li>
@@ -419,7 +531,9 @@
                       </ul>
                     </div>
                     <div>
-                      <h6 class="font-semibold text-red-700 mb-2">❌ Limitations</h6>
+                      <h6 class="font-semibold text-red-700 mb-2">
+                        ❌ Limitations
+                      </h6>
                       <ul class="text-sm text-gray-600 space-y-1">
                         <li>• No integration with local systems</li>
                         <li>• Generic, not Glasgow-specific</li>
@@ -435,15 +549,21 @@
                   <div class="flex items-center justify-between mb-4">
                     <div class="flex items-center">
                       <span class="text-2xl mr-3">📋</span>
-                      <h5 class="font-bold text-purple-800 text-lg">Traditional Spreadsheet Method</h5>
+                      <h5 class="font-bold text-purple-800 text-lg">
+                        Traditional Spreadsheet Method
+                      </h5>
                     </div>
-                    <div class="text-sm bg-red-100 text-red-800 px-3 py-1 rounded-full font-medium">
+                    <div
+                      class="text-sm bg-red-100 text-red-800 px-3 py-1 rounded-full font-medium"
+                    >
                       Current Method
                     </div>
                   </div>
                   <div class="grid md:grid-cols-2 gap-4">
                     <div>
-                      <h6 class="font-semibold text-green-700 mb-2">✅ Strengths</h6>
+                      <h6 class="font-semibold text-green-700 mb-2">
+                        ✅ Strengths
+                      </h6>
                       <ul class="text-sm text-gray-600 space-y-1">
                         <li>• Familiar to domain experts</li>
                         <li>• Complete control over data structure</li>
@@ -452,7 +572,9 @@
                       </ul>
                     </div>
                     <div>
-                      <h6 class="font-semibold text-red-700 mb-2">❌ Limitations</h6>
+                      <h6 class="font-semibold text-red-700 mb-2">
+                        ❌ Limitations
+                      </h6>
                       <ul class="text-sm text-gray-600 space-y-1">
                         <li>• Extremely time-consuming</li>
                         <li>• Single point of failure (one expert)</li>
@@ -464,14 +586,19 @@
                 </div>
 
                 <!-- Gap Analysis -->
-                <div class="bg-gradient-to-r from-purple-100 to-blue-100 p-6 rounded-lg border border-purple-300">
+                <div
+                  class="bg-gradient-to-r from-purple-100 to-blue-100 p-6 rounded-lg border border-purple-300"
+                >
                   <div class="text-center">
                     <span class="text-3xl mb-3 block">🔍</span>
-                    <h5 class="font-bold text-purple-900 text-lg mb-3">The Gap</h5>
+                    <h5 class="font-bold text-purple-900 text-lg mb-3">
+                      The Gap
+                    </h5>
                     <p class="text-purple-800 font-medium">
-                      No existing solution bridges the gap between powerful citizen science platforms 
-                      and the specific needs of Glasgow's biodiversity experts for efficient, 
-                      AI-assisted local data management.
+                      No existing solution bridges the gap between powerful
+                      citizen science platforms and the specific needs of
+                      Glasgow's biodiversity experts for efficient, AI-assisted
+                      local data management.
                     </p>
                   </div>
                 </div>

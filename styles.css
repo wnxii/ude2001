@@ -100,7 +100,8 @@ html {
   transform: rotate(45deg) translate(-2px, -6px);
 }
 
-/* Section Transitions */
+/* Section Transitions - Disabled to prevent Tailwind conflicts */
+/* 
 section {
   opacity: 0;
   transform: translateY(30px);
@@ -113,6 +114,7 @@ section {
     transform: translateY(0);
   }
 }
+*/
 
 /* Hero Section Enhancements */
 .hero-title {
