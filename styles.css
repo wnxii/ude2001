@@ -162,22 +162,7 @@ section {
   transform: translateY(-3px);
 }
 
-/* Team Member Cards */
-.team-member {
-  transition: transform 0.3s ease;
-}
-
-.team-member:hover {
-  transform: translateY(-10px);
-}
-
-.team-member .w-32 {
-  transition: all 0.3s ease;
-}
-
-.team-member:hover .w-32 {
-  background-color: var(--color-emerald-300);
-}
+/* Team Member Cards - Converted to Tailwind CSS classes in HTML */
 
 /* Prototype Cards */
 .prototype-card {
@@ -290,9 +275,7 @@ table td, table th {
     margin-bottom: 2rem;
   }
   
-  .team-member {
-    margin-bottom: 2rem;
-  }
+  /* .team-member styles converted to Tailwind CSS - mb-8 class in HTML */
   
   /* Stack table on mobile */
   .responsive-table {
