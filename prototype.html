@@ -135,130 +135,425 @@
     <!-- Section 1: Iterating -->
     <section id="iterating" class="py-20 bg-white">
       <div class="max-w-6xl mx-auto px-6">
+        <!-- Enhanced Section Header -->
         <div class="text-center mb-20">
-          <div class="inline-block p-2 bg-emerald-100 rounded-full mb-6">
-            <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center">
-              <span class="text-white text-2xl">🔄</span>
+          <div class="flex justify-center mb-8">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full blur-lg opacity-30"></div>
+              <div class="relative w-20 h-20 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full flex items-center justify-center shadow-xl">
+                <span class="text-white text-3xl">🔄</span>
+              </div>
             </div>
           </div>
-          <h2
-            class="text-4xl md:text-5xl font-playfair font-bold text-emerald-900 mb-6"
-          >
+          
+          <h2 class="text-4xl md:text-6xl font-playfair font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 to-teal-700 mb-6">
             Iterating
           </h2>
-          <div class="w-32 h-1 bg-gradient-to-r from-emerald-400 to-teal-500 mx-auto mb-8"></div>
-          <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          
+          <div class="flex justify-center mb-8">
+            <div class="w-32 h-1 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"></div>
+          </div>
+          
+          <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
             Our continuous improvement process through multiple design iterations, 
-            transforming ideas into refined, user-centered solutions
+            <span class="text-emerald-700 font-semibold">transforming ideas</span> into refined, user-centered solutions
           </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8 mb-16">
-          <div
-            class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8"
-          >
-            <div class="text-4xl mb-4">📝</div>
-            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Lo-fi</h3>
-            <div class="text-gray-700 leading-relaxed space-y-4">
-              <p class="font-medium text-gray-800">Initial Focus & Research</p>
-              <p>In the initial phase of developing the lo-fi, we focused on rapid ideation and conceptual clarity. To ground our design in real-world user behaviour, we looked to <span class="font-semibold text-blue-700">iNaturalist</span>, a widely used platform among nature enthusiasts all over the world.</p>
-              
-              <p class="font-medium text-gray-800">Key Insights & Features</p>
-              <p>This helped us identify core expectations and common interaction patterns among users. We then built on this foundation by including features that enhanced the base idea and streamlined the overall process of expert verification.</p>
-              
-              <div class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-400">
-                <p class="text-sm font-medium text-blue-800">💡 Main Innovation</p>
-                <p class="text-sm text-blue-700 mt-1">Expert verification prompts with the help of artificial intelligence</p>
-              </div>
-              
-              <p class="text-sm text-gray-600 italic">The lo-fi prototype served as a way for exploring layouts, user flows and essential functionality, without much concern for the aesthetics of the site.</p>
-            </div>
-          </div>
-
-          <div
-            class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-8"
-          >
-            <div class="text-4xl mb-4">🎨</div>
-            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Mid-fi</h3>
-            <div class="text-gray-700 leading-relaxed space-y-4">
-              <p class="font-medium text-gray-800">Visual & Functional Development</p>
-              <p>In the development of the mid-fi prototype, our website started to take shape visually and functionally. The interface started to resemble a working product, with clearer navigation and interactive elements.</p>
-              
-              <div class="bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-400">
-                <p class="text-sm font-medium text-yellow-800">⚠️ Challenge Identified</p>
-                <p class="text-sm text-yellow-700 mt-1">Discrepancies between design team's interpretation and other teammates' expectations</p>
-              </div>
-              
-              <p class="font-medium text-gray-800">Valuable Outcomes</p>
-              <p>These differences later paved the way for valuable and meaningful discussions and helped us refine our understanding of user needs and stakeholder goals.</p>
-            </div>
-          </div>
-
-          <div
-            class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8"
-          >
-            <div class="text-4xl mb-4">✨</div>
-            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Hi-fi</h3>
-            <div class="text-gray-700 leading-relaxed space-y-4">
-              <p class="font-medium text-gray-800">Team Alignment Achieved</p>
-              <p>The hi-fi prototype marked a turning point in alignment. With complete visuals, refined interactions and clarified feature behaviour, the team reached a shared vision of the website's functionality and purpose.</p>
-              
-              <div class="bg-green-50 p-3 rounded-lg border-l-4 border-green-400">
-                <p class="text-sm font-medium text-green-800">✅ Resolution</p>
-                <p class="text-sm text-green-700 mt-1">Misunderstandings from earlier miscommunications were resolved</p>
-              </div>
-              
-              <p class="text-sm font-semibold text-green-700">Ready for user feedback and testing</p>
+          
+          <!-- Progress indicators for the three phases -->
+          <div class="flex justify-center mt-8">
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-gray-200">
+              <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
+              <span class="text-sm text-gray-600">Lo-fi</span>
+              <div class="w-8 h-px bg-gray-300"></div>
+              <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
+              <span class="text-sm text-gray-600">Mid-fi</span>
+              <div class="w-8 h-px bg-gray-300"></div>
+              <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+              <span class="text-sm text-gray-600">Hi-fi</span>
             </div>
           </div>
         </div>
 
-        <div class="grid md:grid-cols-1 gap-8 mb-16">
-          <div
-            class="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg p-8"
-          >
-            <div class="text-4xl mb-4">🔄</div>
-            <h3 class="text-2xl font-semibold text-gray-900 mb-4">
-              Prototyping
-            </h3>
-            <div class="text-gray-700 leading-relaxed space-y-5">
-              <div>
-                <p class="font-semibold text-gray-800 mb-2">🎯 Central Role in Design</p>
-                <p>Prototyping played a central, key role in shaping the website's design and functionality. It allowed us to explore ideas efficiently, starting with lo-fi sketches that captured the core essence of our concept with minimal effort.</p>
+        <!-- Redesigned Prototyping Section with Better Layout -->
+        <div class="mb-16">
+          <div class="bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 rounded-2xl p-8 md:p-12 border border-emerald-200 shadow-xl">
+            <div class="text-center mb-12">
+              <div class="inline-block p-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl mb-4">
+                <span class="text-white text-4xl">🔄</span>
               </div>
-              
-              <div class="grid md:grid-cols-2 gap-4">
-                <div class="bg-blue-50 p-4 rounded-lg">
-                  <p class="font-medium text-blue-800 mb-2">Early Validation</p>
-                  <p class="text-sm text-blue-700">Early prototypes helped us validate core features and identify areas for improvement</p>
+              <h3 class="text-3xl font-playfair font-bold text-gray-900 mb-4">The Art of Prototyping</h3>
+              <div class="w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+              <div class="space-y-6">
+                <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-emerald-200 shadow-lg">
+                  <div class="flex items-start">
+                    <span class="text-3xl mr-4">🎯</span>
+                    <div>
+                      <h4 class="font-bold text-gray-800 text-lg mb-2">Central Role in Design</h4>
+                      <p class="text-gray-700">Prototyping played a central, key role in shaping the website's design and functionality. It allowed us to explore ideas efficiently, starting with lo-fi sketches that captured the core essence of our concept with minimal effort.</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="bg-purple-50 p-4 rounded-lg">
-                  <p class="font-medium text-purple-800 mb-2">Progressive Development</p>
-                  <p class="text-sm text-purple-700">Mid-fi and hi-fi versions ensured alignment with customer needs and real-world use cases</p>
+
+                <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-emerald-200 shadow-lg">
+                  <div class="flex items-start">
+                    <span class="text-3xl mr-4">📈</span>
+                    <div>
+                      <h4 class="font-bold text-gray-800 text-lg mb-2">Iterative Refinement</h4>
+                      <p class="text-gray-700 mb-3">Each iteration added depth to the user experience, enabling us to refine:</p>
+                      <div class="grid grid-cols-1 gap-2">
+                        <div class="flex items-center text-sm text-gray-600">
+                          <div class="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
+                          Navigation patterns
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                          <div class="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
+                          Feature placement
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                          <div class="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
+                          Interaction flow
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              
-              <div class="border-l-4 border-emerald-400 bg-emerald-50 p-4 rounded-r-lg">
-                <p class="font-semibold text-emerald-800 mb-2">🔧 Team Alignment Benefits</p>
-                <p class="text-emerald-700">Visualising the interface made it easier to resolve misunderstandings and ensure everyone shared a clear, common vision for the final product.</p>
-              </div>
-              
-              <div>
-                <p class="font-semibold text-gray-800 mb-2">📈 Iterative Refinement</p>
-                <p>Each iteration added depth to the user experience, enabling us to refine:</p>
-                <ul class="list-disc list-inside mt-2 space-y-1 text-sm text-gray-600 ml-4">
-                  <li>Navigation patterns</li>
-                  <li>Feature placement</li>
-                  <li>Interaction flow</li>
-                </ul>
-              </div>
-              
-              <div class="bg-gradient-to-r from-green-100 to-teal-100 p-4 rounded-lg">
-                <p class="font-semibold text-gray-800 mb-2">🚀 Ready for Testing</p>
-                <p class="text-gray-700">Our high-fidelity prototype was ready for usability testing, setting the stage for targeted feedback and further refinement based on real user interactions.</p>
+
+              <div class="space-y-6">
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="bg-gradient-to-br from-blue-100 to-blue-200 p-4 rounded-xl text-center shadow-lg">
+                    <div class="text-2xl mb-2">🔍</div>
+                    <p class="font-medium text-blue-800 text-sm">Early Validation</p>
+                    <p class="text-xs text-blue-700 mt-1">Core feature testing</p>
+                  </div>
+                  <div class="bg-gradient-to-br from-purple-100 to-purple-200 p-4 rounded-xl text-center shadow-lg">
+                    <div class="text-2xl mb-2">⚡</div>
+                    <p class="font-medium text-purple-800 text-sm">Progressive Dev</p>
+                    <p class="text-xs text-purple-700 mt-1">Customer alignment</p>
+                  </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-emerald-100 to-teal-100 p-6 rounded-xl border-l-4 border-emerald-500 shadow-lg">
+                  <div class="flex items-start">
+                    <span class="text-2xl mr-3">🔧</span>
+                    <div>
+                      <p class="font-bold text-emerald-800 mb-2">Team Alignment Benefits</p>
+                      <p class="text-emerald-700 text-sm">Visualising the interface made it easier to resolve misunderstandings and ensure everyone shared a clear, common vision for the final product.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-green-100 to-teal-100 p-6 rounded-xl text-center border-2 border-dashed border-green-300 shadow-lg">
+                  <span class="text-3xl mb-2 block">🚀</span>
+                  <p class="font-bold text-gray-800 mb-2">Ready for Testing</p>
+                  <p class="text-gray-700 text-sm">Our high-fidelity prototype was ready for usability testing, setting the stage for targeted feedback and further refinement based on real user interactions.</p>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- Enhanced Iteration Journey -->
+        <div class="mb-16">
+          <!-- Journey Overview -->
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-playfair font-bold text-gray-900 mb-6">The Evolution Journey</h3>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Each phase brought new insights, challenges, and breakthroughs as we refined our vision from concept to reality
+            </p>
+            
+            <!-- Visual Progress Flow -->
+            <div class="flex justify-center items-center mb-12">
+              <div class="flex items-center space-x-4 bg-white p-6 rounded-full shadow-lg border border-gray-200">
+                <div class="flex flex-col items-center">
+                  <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-sm font-bold">1</span>
+                  </div>
+                  <span class="text-xs text-gray-600 mt-1">Concept</span>
+                </div>
+                <div class="w-16 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
+                <div class="flex flex-col items-center">
+                  <div class="w-12 h-12 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-sm font-bold">2</span>
+                  </div>
+                  <span class="text-xs text-gray-600 mt-1">Design</span>
+                </div>
+                <div class="w-16 h-1 bg-gradient-to-r from-purple-400 to-green-400 rounded-full"></div>
+                <div class="flex flex-col items-center">
+                  <div class="w-12 h-12 bg-gradient-to-r from-green-400 to-green-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-sm font-bold">3</span>
+                  </div>
+                  <span class="text-xs text-gray-600 mt-1">Polish</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Three Phase Timeline -->
+          <div class="relative">
+            <!-- Connecting Timeline Line -->
+            <div class="hidden lg:block absolute top-32 left-1/2 transform -translate-x-1/2 w-2/3 h-1 bg-gradient-to-r from-blue-300 via-purple-300 to-green-300 rounded-full"></div>
+            
+            <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+              <!-- Lo-fi Phase -->
+              <div class="relative group flex">
+                <!-- Timeline Connector -->
+                <div class="hidden lg:block absolute top-24 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blue-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+                
+                <div class="bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-blue-200 flex-1 flex flex-col">
+                  <!-- Phase Header -->
+                  <div class="text-center mb-6">
+                    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <span class="text-white text-3xl">📝</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-blue-800 mb-2">Lo-Fi Exploration</h4>
+                    <div class="w-16 h-1 bg-blue-500 mx-auto rounded-full"></div>
+                  </div>
+
+                  <!-- Content Sections -->
+                  <div class="space-y-6 flex-1 flex flex-col justify-between">
+                    <!-- Iteration Focus Section -->
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-blue-200">
+                      <div class="flex items-start mb-3">
+                        <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                          <span class="text-blue-600 text-lg">�</span>
+                        </div>
+                        <div>
+                          <h5 class="font-bold text-blue-800 text-sm uppercase tracking-wide">Rapid Iteration</h5>
+                          <p class="text-gray-700 text-sm mt-1">Fast concept testing and idea refinement</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Iteration Process -->
+                    <div class="bg-blue-100/50 rounded-xl p-4">
+                      <p class="text-gray-700 text-sm leading-relaxed mb-3">
+                        We focused on rapid concept testing with hand-drawn wireframes, ensuring that core user journeys were captured. 
+                      </p>
+                      <p class="text-gray-700 text-sm leading-relaxed">
+                        <span class="font-semibold text-blue-700">Most importantly</span>, lo-fi prototypes helped us get our proposed feature ideas across to each other in the team. 
+                        Without these visual representations, it would have been much harder to be on the same page about our vision.
+                      </p>
+                    </div>
+
+                    <!-- Tutor Feedback -->
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-blue-200">
+                      <div class="flex items-start mb-3">
+                        <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                          <span class="text-blue-600 text-lg">👨‍🏫</span>
+                        </div>
+                        <div>
+                          <h5 class="font-bold text-blue-800 text-sm uppercase tracking-wide">Effective Communication Tool</h5>
+                          <p class="text-gray-700 text-sm mt-1">Presenting ideas clearly to tutors for targeted feedback</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Rapid Validation -->
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-blue-200">
+                      <div class="flex items-start mb-3">
+                        <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                          <span class="text-blue-600 text-lg">✅</span>
+                        </div>
+                        <div>
+                          <h5 class="font-bold text-blue-800 text-sm uppercase tracking-wide">Concept Validation</h5>
+                          <p class="text-gray-700 text-sm mt-1">Quick testing of core assumptions and feature priorities</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Prototyping Value -->
+                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl p-4 text-white">
+                      <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-3">⚡</span>
+                        <span class="font-bold text-sm uppercase tracking-wide">Prototyping Value</span>
+                      </div>
+                      <p class="text-sm">Enabled team alignment and clear communication of complex ideas</p>
+                    </div>
+
+                    <!-- Outcomes -->
+                    <div class="text-center pt-2">
+                      <div class="inline-flex items-center bg-blue-50 px-4 py-2 rounded-full">
+                        <span class="text-blue-600 text-xs font-medium">Team alignment • Clear communication • Tutor feedback</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mid-fi Phase -->
+              <div class="relative group flex">
+                <!-- Timeline Connector -->
+                <div class="hidden lg:block absolute top-24 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-purple-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+                
+                <div class="bg-gradient-to-br from-purple-50 via-purple-100 to-pink-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-purple-200 flex-1 flex flex-col">
+                  <!-- Phase Header -->
+                  <div class="text-center mb-6">
+                    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <span class="text-white text-3xl">🎨</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-purple-800 mb-2">Mid-Fi Development</h4>
+                    <div class="w-16 h-1 bg-purple-500 mx-auto rounded-full"></div>
+                  </div>
+
+                  <!-- Content Sections -->
+                  <div class="space-y-6 flex-1 flex flex-col justify-between">
+                    <!-- User Flow Focus -->
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-purple-200">
+                      <div class="flex items-start mb-3">
+                        <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                          <span class="text-purple-600 text-lg">🔀</span>
+                        </div>
+                        <div>
+                          <h5 class="font-bold text-purple-800 text-sm uppercase tracking-wide">Concrete User Flow</h5>
+                          <p class="text-gray-700 text-sm mt-1">First structured visualization of our feature interactions</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Team Understanding Challenge -->
+                    <div class="bg-purple-100/50 rounded-xl p-4">
+                      <p class="text-gray-700 text-sm leading-relaxed">
+                        Creating our first concrete user flow revealed that 
+                        <span class="font-semibold text-purple-700">not everyone had the same understanding</span> 
+                        of how our invasive species reporting feature should work. This iterative process became crucial for alignment.
+                      </p>
+                    </div>
+
+                    <!-- Digital Flow Creation -->
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-purple-200">
+                      <div class="flex items-start mb-3">
+                        <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                          <span class="text-purple-600 text-lg">🎯</span>
+                        </div>
+                        <div>
+                          <h5 class="font-bold text-purple-800 text-sm uppercase tracking-wide">Proposed Solution Clarity</h5>
+                          <p class="text-gray-700 text-sm mt-1">Digital tools helped visualize step-by-step user interactions</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Interactive Components -->
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-purple-200">
+                      <div class="flex items-start mb-3">
+                        <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                          <span class="text-purple-600 text-lg">🧩</span>
+                        </div>
+                        <div>
+                          <h5 class="font-bold text-purple-800 text-sm uppercase tracking-wide">Component Development</h5>
+                          <p class="text-gray-700 text-sm mt-1">Building reusable UI elements and interaction patterns</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Iteration & Understanding -->
+                    <div class="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-4 text-white">
+                      <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-3">🔄</span>
+                        <span class="font-bold text-sm uppercase tracking-wide">Iteration Breakthrough</span>
+                      </div>
+                      <p class="text-sm">Mid-fi prototyping uncovered different mental models within our team, leading to essential realignment discussions</p>
+                    </div>
+
+                    <!-- Outcomes -->
+                    <div class="text-center pt-2">
+                      <div class="inline-flex items-center bg-purple-50 px-4 py-2 rounded-full">
+                        <span class="text-purple-600 text-xs font-medium">User flow clarity • Team alignment • Solution consensus</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hi-fi Phase -->
+              <div class="relative group flex">
+                <!-- Timeline Connector -->
+                <div class="hidden lg:block absolute top-24 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+                
+                <div class="bg-gradient-to-br from-emerald-50 via-green-100 to-teal-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-green-200 flex-1 flex flex-col">
+                  <!-- Phase Header -->
+                  <div class="text-center mb-6">
+                    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <span class="text-white text-3xl">✨</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-green-800 mb-2">Hi-Fi Excellence</h4>
+                    <div class="w-16 h-1 bg-green-500 mx-auto rounded-full"></div>
+                  </div>
+
+                  <!-- Content Sections -->
+                  <div class="space-y-6 flex-1 flex flex-col justify-between">
+                    <!-- Complete Visual Solution -->
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-green-200">
+                      <div class="flex items-start mb-3">
+                        <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                          <span class="text-green-600 text-lg">�</span>
+                        </div>
+                        <div>
+                          <h5 class="font-bold text-green-800 text-sm uppercase tracking-wide">Complete Visual Solution</h5>
+                          <p class="text-gray-700 text-sm mt-1">Full visualization of the entire invasive species reporting system</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- User Journey Visualization -->
+                    <div class="bg-green-100/50 rounded-xl p-4">
+                      <p class="text-gray-700 text-sm leading-relaxed">
+                        Hi-fi prototyping provided the 
+                        <span class="font-semibold text-green-700">complete visual of the entire solution</span> 
+                        and showed exactly how the user journey would unfold from species discovery to verification.
+                      </p>
+                    </div>
+
+                    <!-- User Testing Focus -->
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-green-200">
+                      <div class="flex items-start mb-3">
+                        <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                          <span class="text-green-600 text-lg">👥</span>
+                        </div>
+                        <div>
+                          <h5 class="font-bold text-green-800 text-sm uppercase tracking-wide">Comprehensive User Feedback</h5>
+                          <p class="text-gray-700 text-sm mt-1">Users could test and interact with realistic feature implementations</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Real User Testing -->
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-green-200">
+                      <div class="flex items-start mb-3">
+                        <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                          <span class="text-green-600 text-lg">🧪</span>
+                        </div>
+                        <div>
+                          <h5 class="font-bold text-green-800 text-sm uppercase tracking-wide">Interactive Testing</h5>
+                          <p class="text-gray-700 text-sm mt-1">Users experienced the full reporting workflow firsthand</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Feedback Loop Achievement -->
+                    <div class="bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl p-4 text-white">
+                      <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-3">🔄</span>
+                        <span class="font-bold text-sm uppercase tracking-wide">Iteration Mastery</span>
+                      </div>
+                      <p class="text-sm">Enabled comprehensive user testing by allowing users to actually try out the feature, providing invaluable feedback for final refinements</p>
+                    </div>
+
+                    <!-- Outcomes -->
+                    <div class="text-center pt-2">
+                      <div class="inline-flex items-center bg-green-50 px-4 py-2 rounded-full">
+                        <span class="text-green-600 text-xs font-medium">Complete journey • User tested • Feedback validated</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
 
