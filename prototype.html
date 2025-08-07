@@ -720,7 +720,7 @@
                         <span class="text-2xl">💻</span>
                       </div>
                       <p class="text-sm font-semibold text-purple-800">Digital Tools</p>
-                      <p class="text-xs text-purple-600">Figma prototypes</p>
+                      <p class="text-xs text-purple-600">Draw.io for Wireframing</p>
                     </div>
                     <div class="flex flex-col items-center">
                       <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-2">
@@ -1077,7 +1077,7 @@
                         <span class="text-2xl">🚀</span>
                       </div>
                       <p class="text-sm font-semibold text-emerald-800">Test Ready</p>
-                      <p class="text-xs text-emerald-600">User validation</p>
+                      <p class="text-xs text-emerald-600">User testing ready</p>
                     </div>
                   </div>
                   <p class="text-emerald-700 text-center mt-4 text-sm leading-relaxed">
@@ -1344,7 +1344,7 @@
           >
             <div class="flex items-start space-x-4 mb-6">
               <div
-                class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg"
+                class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0"
               >
                 1
               </div>
@@ -1447,8 +1447,8 @@
                   Ambiguity with Agree Button
                 </p>
                 <p class="text-xs text-gray-600 mt-1">
-                  Users couldn't tell which AI suggestion they were
-                  agreeing to
+                  Users couldn't tell which suggestion they were
+                  agreeing or disagreeing to
                 </p>
               </div>
               <div class="text-center bg-emerald-50 p-4 rounded-lg">
@@ -1462,19 +1462,141 @@
                 </p>
               </div>
             </div>
+            
+            <!-- Solution Box for Item 1 -->
+            <div class="mt-6 bg-gradient-to-r from-emerald-100 to-green-100 rounded-lg p-6">
+              <div class="text-center mb-4">
+                <h5 class="text-lg font-semibold text-emerald-900 mb-2">💡 Solution Implemented</h5>
+              </div>
+              <div class="bg-white/70 backdrop-blur-sm rounded-lg p-4">
+                <div class="flex items-start space-x-3">
+                  <span class="text-emerald-600 font-bold text-lg">✓</span>
+                  <div>
+                    <p class="text-sm text-gray-700"><strong>Separate Agree Buttons:</strong> Added individual "Agree" buttons for each AI prediction source</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1 text-xs text-gray-600 ml-4">
+                      <li>Dedicated "Agree" button for AI Model predictions</li>
+                      <li>Separate "Agree" button for iNaturalist suggestions</li>
+                      <li>Clear visual distinction between the two sources</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- User Feedback Iteration 2 -->
         <div class="mb-16">
           <div
+            class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-8 mb-8"
+          >
+            <div class="flex items-start space-x-4 mb-6">
+              <div
+                class="bg-orange-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0"
+              >
+                2
+              </div>
+              <div>
+                <h3 class="text-2xl font-semibold text-orange-900 mb-2">
+                  Redundant Dialogue Box
+                </h3>
+                <div
+                  class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-orange-600"
+                >
+                  <p class="text-gray-700 italic mb-2">
+                    "If the expert were to agree with one of the suggestions, he would already have clicked their respective agree button. If he clicks on disagree, he would be disagreeing with both to input his own species identity. Therefore, a pop up for who the expert disagrees with is not useful."
+                  </p>
+                  <p class="text-sm text-orange-700 font-medium">
+                    - Design Analysis
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Comparison Slider 2 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <div class="grid md:grid-cols-2 gap-8 mb-6">
+              <!-- Main Page Image -->
+              <div class="text-center">
+                <div class="mb-4 relative">
+                  <img
+                    src="assets/redundant_dialogue_page.jpeg"
+                    alt="Main verification page showing identical suggestions"
+                    class="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                  <div class="absolute top-2 left-2 bg-blue-600 text-white px-3 py-1 rounded-md font-semibold text-sm">
+                    Main Page
+                  </div>
+                </div>
+              </div>
+
+              <!-- Popup Image -->
+              <div class="text-center">
+                <div class="mb-4 relative">
+                  <img
+                    src="assets/redundant_dialogue.jpeg"
+                    alt="Redundant popup asking which suggestion to disagree with"
+                    class="w-full h-64 object-contain rounded-lg shadow-md bg-gray-50"
+                  />
+                  <div class="absolute top-2 left-2 bg-red-600 text-white px-3 py-1 rounded-md font-semibold text-sm">
+                    Redundant Popup
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Analysis Summary -->
+            <div class="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-lg p-6">
+              <div class="text-center mb-4">
+                <h5 class="text-lg font-semibold text-orange-900 mb-2">Design Logic Issue</h5>
+              </div>
+              <div class="space-y-3 text-sm text-gray-700">
+                <div class="bg-red-50 p-4 rounded-lg">
+                  <p class="text-red-800 font-medium text-sm mb-2">Unnecessary Question</p>
+                  <p class="text-xs">
+                    "Who do you disagree with?" when you agree with one, the other is disagreed
+                  </p>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <p><strong>If expert agrees:</strong> They would click the appropriate "Agree" button for either Model or iNaturalist suggestion</p>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <span class="text-red-600 font-bold">✗</span>
+                  <p><strong>If expert disagrees:</strong> They disagree with <em>both</em> suggestions since they're identical, making the popup question meaningless</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 bg-gradient-to-r from-emerald-100 to-green-100 rounded-lg p-6">
+              <div class="text-center mb-4">
+                <h5 class="text-lg font-semibold text-emerald-900 mb-2">💡 Solution Implemented</h5>
+              </div>
+              <div class="bg-white/70 backdrop-blur-sm rounded-lg p-4">
+                <div class="flex items-start space-x-3">
+                  <span class="text-emerald-600 font-bold text-lg">✓</span>
+                  <div>
+                    <p class="text-sm text-gray-700"><strong>User Interface Removal:</strong> Updated flow of user interface</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1 text-xs text-gray-600 ml-4">
+                      <li>Remove redundant popup and streamline the disagreement workflow when suggestions are identical</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Feedback Iteration 3 -->
+        <div class="mb-16">
+          <div
             class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-8 mb-8"
           >
             <div class="flex items-start space-x-4 mb-6">
               <div
-                class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg"
+                class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0"
               >
-                2
+                3
               </div>
               <div>
                 <h3 class="text-2xl font-semibold text-purple-900 mb-2">
@@ -1495,13 +1617,13 @@
             </div>
           </div>
 
-          <!-- Image Comparison Slider 2 -->
+          <!-- Image Comparison Slider 3 -->
           <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
             <h4 class="text-xl font-semibold text-gray-900 mb-4 text-center">
               Before vs After: Reorganized Interface Layout
             </h4>
             <div class="relative w-full max-w-4xl mx-auto">
-              <div class="image-comparison-slider" id="slider2">
+              <div class="image-comparison-slider" id="slider3">
                 <div class="image-comparison-container">
                   <!-- Before/After Labels -->
                   <div
@@ -1531,7 +1653,7 @@
                   </div>
                   <div
                     class="image-comparison-slider-handle"
-                    data-slider="slider2"
+                    data-slider="slider3"
                   >
                     <div class="image-comparison-slider-line"></div>
                     <div class="image-comparison-slider-button">
@@ -1590,6 +1712,27 @@
                 </p>
               </div>
             </div>
+            
+            <!-- Solution Box for Item 3 -->
+            <div class="mt-6 bg-gradient-to-r from-emerald-100 to-green-100 rounded-lg p-6">
+              <div class="text-center mb-4">
+                <h5 class="text-lg font-semibold text-emerald-900 mb-2">💡 Solution Implemented</h5>
+              </div>
+              <div class="bg-white/70 backdrop-blur-sm rounded-lg p-4">
+                <div class="flex items-start space-x-3">
+                  <span class="text-emerald-600 font-bold text-lg">✓</span>
+                  <div>
+                    <p class="text-sm text-gray-700"><strong>Interface Reorganization:</strong> Streamlined layout with improved content grouping and spacing</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1 text-xs text-gray-600 ml-4">
+                      <li>Grouped predicted text together for better readability</li>
+                      <li>Removed unnecessary redundant text elements</li>
+                      <li>Added consistent padding throughout the UI</li>
+                      <li>Reorganized buttons for cleaner visual hierarchy</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1624,14 +1767,40 @@
                   class="rounded-lg"
                 ></iframe>
               </div>
-              <div class="text-center">
-                <h4 class="text-lg font-semibold text-gray-900 mb-2">
-                  Key Insights from Tutor Review
-                </h4>
-                <p class="text-sm text-gray-600">
-                  Comprehensive feedback on design decisions and
-                  implementation approach from one of the tutors.
-                </p>
+
+                
+                <!-- Key Insights Section -->
+                <div class="grid md:grid-cols-1 gap-6">
+                  <div class="bg-gray-50 rounded-lg p-6">
+                    <h5 class="font-semibold text-emerald-700 mb-4 flex items-center">
+                      <span class="text-xl mr-2">💡</span>
+                      Feedback & Insights Mentioned
+                    </h5>
+                    <div class="space-y-4">
+                      <div class="border-l-4 border-orange-300 pl-4 bg-orange-50 p-3 rounded-r-lg">
+                        <h6 class="font-medium text-gray-900 mb-2">Disagree Functionality Concerns</h6>
+                        <p class="text-sm text-gray-700">
+                          Questioned the purpose of the "disagree" button when neither of the AI's suggestions are correct. This could create unnecessary cognitive load on experts who frequently need to disagree with incorrect identifications.
+                        </p>
+                      </div>
+                      
+                      <div class="border-l-4 border-blue-300 pl-4 bg-blue-50 p-3 rounded-r-lg">
+                        <h6 class="font-medium text-gray-900 mb-2">Public Input Quality Issues</h6>
+                        <p class="text-sm text-gray-700">
+                          Concerns were raised about the quality of images uploaded by the public, including blurry or unclear pictures, and people uploading images for non-scientific purposes.
+                        </p>
+                      </div>
+                      
+                      <div class="border-l-4 border-red-300 pl-4 bg-red-50 p-3 rounded-r-lg">
+                        <h6 class="font-medium text-gray-900 mb-2">Low-Confidence Image Filtering</h6>
+                        <p class="text-sm text-gray-700">
+                          Feedback highlighted that automatically filtering out images with low AI confidence might unintentionally discard images of new or rarely seen species, potentially missing important scientific discoveries.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -1696,13 +1865,7 @@
                 target="_blank"
                 class="inline-flex items-center px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors text-sm font-medium"
               >
-                <svg
-                  class="w-4 h-4 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 12l-2 2 2 2m8-4l2-2-2-2m-2-3l-4 10" />
-                </svg>
+                <img src="assets/figma-icon.svg" alt="Figma" class="w-4 h-4 mr-2" />
                 Open in Figma
               </a>
             </div>
