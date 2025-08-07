@@ -175,6 +175,26 @@
     .reflection-card:hover {
       transform: translateY(-5px);
     }
+
+    .expanded-content {
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .read-more-btn {
+      cursor: pointer;
+      outline: none;
+      border: none;
+      background: none;
+      padding: 0;
+    }
+
+    .read-more-btn:focus {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
   </style>
 </head>
 
@@ -288,16 +308,50 @@
               </div>
               <h3 class="text-2xl font-playfair font-bold text-gray-800">Personal Growth</h3>
             </div>
-            <p class="text-gray-700 leading-relaxed mb-6">
-              Throughout this project, I've experienced significant growth in both technical skills and collaborative
-              abilities. Working on Botaniq challenged me to think beyond traditional UX patterns and consider the
-              unique needs of citizen scientists and environmental researchers.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-              The most valuable lesson was learning to balance user needs with technical constraints. Initially, I
-              focused heavily on feature-rich interfaces, but user testing revealed that simplicity and clarity were far
-              more important for our target audience.
-            </p>
+            <div class="reflection-content-wrapper">
+              <p class="text-gray-700 leading-relaxed mb-6">
+                Throughout this project, I've experienced significant growth in both technical skills and collaborative
+                abilities. Working on Botaniq challenged me to think beyond traditional UX patterns and consider the
+                unique needs of citizen scientists and environmental researchers.
+              </p>
+              <div class="expanded-content" style="display: none;">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  The most valuable lesson was learning to balance user needs with technical constraints. Initially, I
+                  focused heavily on feature-rich interfaces, but user testing revealed that simplicity and clarity were
+                  far
+                  more important for our target audience.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  One of the most challenging aspects was learning to let go of preconceived notions about what users
+                  wanted.
+                  I had to develop humility and accept that my assumptions were often wrong. This shift in mindset was
+                  uncomfortable at first but ultimately liberating.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  The project also taught me the importance of cross-functional collaboration. Working closely with
+                  developers,
+                  researchers, and domain experts expanded my perspective and improved the quality of our solutions. I
+                  learned
+                  to communicate design decisions more effectively and to incorporate technical constraints into my
+                  design process
+                  from the beginning rather than treating them as afterthoughts.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                  Perhaps most importantly, I developed confidence in my ability to tackle complex, ambiguous problems.
+                  The Botaniq project had no clear precedent, which forced me to think creatively and develop novel
+                  approaches.
+                  This experience has prepared me to take on more challenging design problems in the future.
+                </p>
+              </div>
+              <button
+                class="read-more-btn mt-4 text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200 flex items-center">
+                <span class="btn-text">Read More</span>
+                <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
           </div>
 
           <div
@@ -309,15 +363,50 @@
               </div>
               <h3 class="text-2xl font-playfair font-bold text-gray-800">Skills Development</h3>
             </div>
-            <p class="text-gray-700 leading-relaxed mb-6">
-              This project significantly enhanced my prototyping and user research skills. Learning to conduct effective
-              user interviews and synthesize findings into actionable design decisions was particularly valuable.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-              I also developed a deeper appreciation for accessibility and inclusive design. Designing for diverse user
-              groups, including those with varying levels of botanical knowledge, taught me the importance of
-              progressive disclosure and contextual help.
-            </p>
+            <div class="reflection-content-wrapper">
+              <p class="text-gray-700 leading-relaxed mb-6">
+                This project significantly enhanced my prototyping and user research skills. Learning to conduct
+                effective
+                user interviews and synthesize findings into actionable design decisions was particularly valuable.
+              </p>
+              <div class="expanded-content" style="display: none;">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  I also developed a deeper appreciation for accessibility and inclusive design. Designing for diverse
+                  user
+                  groups, including those with varying levels of botanical knowledge, taught me the importance of
+                  progressive disclosure and contextual help.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  The research phase was particularly transformative. I learned to ask better questions, to listen more
+                  carefully, and to identify patterns across different user interviews. The process of creating personas
+                  and user journey maps became much more meaningful when grounded in real user data rather than
+                  assumptions.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  My prototyping skills evolved from creating static mockups to building interactive prototypes that
+                  could
+                  effectively communicate complex interactions. Learning to use tools like Figma more effectively and
+                  understanding when to use different fidelities of prototypes was crucial for getting meaningful
+                  feedback
+                  from stakeholders and users.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                  I also gained experience in facilitating design workshops and collaborative sessions. Learning to
+                  guide
+                  discussions, manage different personalities, and synthesize diverse viewpoints into actionable
+                  insights
+                  was a valuable skill that extends beyond design work.
+                </p>
+              </div>
+              <button
+                class="read-more-btn mt-4 text-purple-600 hover:text-purple-800 font-medium transition-colors duration-200 flex items-center">
+                <span class="btn-text">Read More</span>
+                <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -329,16 +418,54 @@
             </div>
             <h3 class="text-2xl font-playfair font-bold text-gray-800">Design Philosophy Evolution</h3>
           </div>
-          <p class="text-gray-700 leading-relaxed mb-6">
-            My design philosophy has evolved from aesthetic-focused to user-centered. Before this project, I often
-            prioritized visual appeal over functionality. Working on Botaniq taught me that great design is invisible –
-            it enables users to accomplish their goals without friction.
-          </p>
-          <p class="text-gray-700 leading-relaxed">
-            I've also learned to embrace iterative design. The multiple rounds of prototyping and testing showed me that
-            the best solutions often emerge through refinement rather than initial brilliance. Each iteration brought us
-            closer to a solution that truly serves our users.
-          </p>
+          <div class="reflection-content-wrapper">
+            <p class="text-gray-700 leading-relaxed mb-6">
+              My design philosophy has evolved from aesthetic-focused to user-centered. Before this project, I often
+              prioritized visual appeal over functionality. Working on Botaniq taught me that great design is invisible
+              –
+              it enables users to accomplish their goals without friction.
+            </p>
+            <div class="expanded-content" style="display: none;">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                I've also learned to embrace iterative design. The multiple rounds of prototyping and testing showed me
+                that
+                the best solutions often emerge through refinement rather than initial brilliance. Each iteration
+                brought us
+                closer to a solution that truly serves our users.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                This shift required unlearning some habits I had developed. I used to become attached to my first ideas
+                and defend them vigorously. Now I understand that design is about solving problems, not showcasing
+                creativity. The best designs often feel obvious in hindsight, which means they're doing their job well.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                I've also developed a deeper appreciation for the entire user experience, not just the interface.
+                Understanding the context in which people use our product, their motivations, frustrations, and goals
+                has become central to how I approach design problems. This holistic view has made me a better
+                collaborator
+                with product managers, developers, and other stakeholders.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                The concept of "designing for the 80%" versus "designing for edge cases" became much clearer through
+                this
+                project. Learning when to optimize for the majority use case and when to accommodate outliers required
+                careful consideration of user research data and business priorities.
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                Moving forward, I'm committed to maintaining this user-centered approach while continuing to develop my
+                aesthetic sensibilities. The goal is to create designs that are both beautiful and functional, where
+                visual appeal serves to enhance usability rather than distract from it.
+              </p>
+            </div>
+            <button
+              class="read-more-btn mt-4 text-green-600 hover:text-green-800 font-medium transition-colors duration-200 flex items-center">
+              <span class="btn-text">Read More</span>
+              <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -408,89 +535,275 @@
 
       <!-- Event Reflections -->
       <div id="event" class="reflection-content">
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-          <div
-            class="reflection-card bg-gradient-to-br from-rose-50 to-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="flex items-center mb-4">
-              <div
-                class="w-12 h-12 bg-rose-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                🔬
-              </div>
-              <h3 class="text-2xl font-playfair font-bold text-gray-800">User Research Sessions</h3>
+        <!-- <div class="grid md:grid-cols-2 gap-8 mb-12"> -->
+        <div
+          class="reflection-card bg-gradient-to-br from-rose-50 to-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-rose-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+              🔬
             </div>
-            <p class="text-gray-700 leading-relaxed mb-6">
-              Our user research sessions at the Glasgow Botanic Gardens were eye-opening. Speaking directly with
-              botanists and citizen scientists revealed insights that we never would have discovered through assumption
-              or secondary research.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-              The most surprising finding was how much our target users valued community features. We initially focused
-              on individual data collection, but learned that collaboration and knowledge sharing were equally important
-              motivators.
-            </p>
+            <h3 class="text-2xl font-playfair font-bold text-gray-800">Asking better questions with a Shared mental
+              model using AEIOU
+            </h3>
           </div>
-
-          <div
-            class="reflection-card bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="flex items-center mb-4">
-              <div
-                class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                🎨
-              </div>
-              <h3 class="text-2xl font-playfair font-bold text-gray-800">Design Workshops</h3>
-            </div>
+          <div class="reflection-content-wrapper">
             <p class="text-gray-700 leading-relaxed mb-6">
-              Our collaborative design workshops were crucial for aligning our vision and generating innovative ideas.
-              The crazy 8s exercises and design studio sessions pushed us beyond conventional solutions.
+              Our team's project started with a critical misalignment in our understanding of the problem. We each
+              interpreted the problem statement differently, leading to confusion and a lack of clear direction. From
+              this, we learnt that a shared understanding isn't guaranteed and is instead a deliberate, active, and
+              explicit process.
             </p>
-            <p class="text-gray-700 leading-relaxed">
-              These sessions taught us the value of divergent thinking before converging on solutions. Some of our best
-              features emerged from seemingly wild ideas that we initially dismissed but later refined into practical
-              solutions.
-            </p>
+            <div class="expanded-content" style="display: none;">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                The initial disconnect came from the use of iNaturalist within our solution. Team members were not
+                sure if our partner needed an app like iNaturalist or to integrate iNaturalist into the solution. This
+                was one of many confusions about the premise of the problem. Due to the open-ended nature of the
+                problem statement that lacked specific constraints, there were a broad range of interpretations about
+                the premise and context of the problem. There were many questions that we wanted to ask, but we were
+                unsure if our questions were able to target all the different user needs and perspectives. We learnt
+                that when tackling an open-ended problem, there are too many viewpoints to take into consideration and
+                we needed a way to consolidate them.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                To fix this, we used the AEIOU method to systematically map out our thoughts and created a shared
+                mental model. It allowed us to consider things from the point of view of: activities, environment
+                interactions, objects and users, which gave us a comprehensive overview of gaps in our questions. This
+                allowed the questions we crafted to have a more holistic view to uncover various users and their
+                needs. We learnt the importance of having a shared mental model within our group to align our goals
+                and the importance of charting the different viewpoints involved with the problem.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                One particularly memorable session involved shadowing an expert botanist during their routine survey
+                work.
+                Observing their workflow, noting patterns, and understanding the cognitive load involved in species
+                identification completely reshaped our approach to interface design. We realized our initial designs
+                were far too complex for field use.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                The interviews also revealed the emotional aspects of citizen science participation. Users weren't
+                just
+                interested in data collection; they wanted to feel part of a larger conservation effort. This insight
+                led us to incorporate progress indicators and community engagement features that made users feel their
+                contributions were meaningful and impactful.
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                Perhaps most importantly, these sessions taught us to always question our assumptions. Every
+                preconceived
+                notion we had about user behavior was challenged, and often proven wrong. This experience has made me
+                a
+                much more humble and curious designer, always eager to learn from real users rather than rely on
+                intuition.
+              </p>
+            </div>
+            <button
+              class="read-more-btn mt-4 text-rose-600 hover:text-rose-800 font-medium transition-colors duration-200 flex items-center">
+              <span class="btn-text">Read More</span>
+              <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
           </div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8">
-          <div
-            class="reflection-card bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="flex items-center mb-4">
-              <div
-                class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                📊
-              </div>
-              <h3 class="text-2xl font-playfair font-bold text-gray-800">Usability Testing</h3>
+        <div
+          class="reflection-card bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+              🎨
             </div>
-            <p class="text-gray-700 leading-relaxed mb-6">
-              Our usability testing sessions were humbling experiences that highlighted the gap between designer intent
-              and user reality. Watching users struggle with features we thought were intuitive was initially
-              disheartening but ultimately invaluable.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-              These sessions reinforced the importance of testing early and often. Each round of testing revealed new
-              insights and led to significant improvements in our interface design and user flow.
-            </p>
+            <h3 class="text-2xl font-playfair font-bold text-gray-800">Resolving ideation disagreements using
+              integrative thinking
+            </h3>
           </div>
+          <div class="reflection-content-wrapper">
+            <p class="text-gray-700 leading-relaxed mb-6">
+              During our ideation phase, there was a divide within our group about the use of AI to automate the process
+              as opposed to a human expert identifier. Our partner in the project made it clear that while AI can be
+              helpful, it may be unreliable and so she discourages the use of it. This brought to light two opposing
+              perspectives: one advocating for AI-led identification to leverage speed and scalability, and the other
+              emphasizing the importance of expert judgement to ensure accuracy and trustworthiness. This clash of ideas
+              forced us to grapple with the limitations and strengths of both approaches, having to choose one or the
+              other.
 
-          <div
-            class="reflection-card bg-gradient-to-br from-violet-50 to-purple-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="flex items-center mb-4">
-              <div
-                class="w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                🎯
-              </div>
-              <h3 class="text-2xl font-playfair font-bold text-gray-800">Final Presentation</h3>
+            </p>
+            <div class="expanded-content" style="display: none;">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                To move forward, we applied integrative thinking. Rather than choosing one side, we faced the tension of
+                opposing ideas to generate a creative solution that contains elements of the opposing ideas but is
+                superior to simply using one. We identified the pros of each idea and identified the central tension of
+                “How can we use both AI and human expertise without compromising reliability or efficiency?”
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Our breakthrough came when we proposed a system where the AI suggests a species, but the expert makes
+                the final call. This approach allowed us to retain the reliability of the expert, while still benefiting
+                from AI’s speed and consistency. By embracing the tension instead of avoiding it, we created a more
+                resilient and well-rounded solution.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                This experience taught us several important lessons. First, conflicting ideas are not roadblocks but
+                opportunities for creative resolution. Disagreements can lead to stronger, more innovative outcomes when
+                explored thoughtfully. Second, decision-making models such as integrative thinking help push us beyond
+                surface-level comparisons. They encourage deeper analysis and structured reasoning, which ultimately
+                guided our team to a consensus. Lastly, we learnt that limitations like AI’s occasional inaccuracy can
+                be reframed as creative constraints that drive better design. In our case, AI’s weakness of
+                unreliability was mitigated when it was complemented with expert review to give the final verdict.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                When we encounter future opposing idea challenges, we no longer view weaknesses and constraints as
+                limitations to our solution but a springboard to innovation. With integrative thinking, we can use
+                structured thinking models to explore deep thinking avenues that guide us toward integrating our two
+                opposing ideas into a stronger and more resilient solution.
+              </p>
             </div>
-            <p class="text-gray-700 leading-relaxed mb-6">
-              Preparing for and delivering our final presentation was an excellent opportunity to synthesize our
-              learning and articulate the value of our solution. The process of creating our presentation helped us
-              identify the most compelling aspects of our work.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-              The feedback we received validated our approach while providing new perspectives on potential improvements
-              and future directions. It was rewarding to see how far we'd come from our initial concepts.
-            </p>
+            <button
+              class="read-more-btn mt-4 text-amber-600 hover:text-amber-800 font-medium transition-colors duration-200 flex items-center">
+              <span class="btn-text">Read More</span>
+              <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
           </div>
+          <!-- </div> -->
+        </div>
+
+        <!-- <div class="grid md:grid-cols-2 gap-8"> -->
+        <div
+          class="reflection-card bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+              📊
+            </div>
+            <h3 class="text-2xl font-playfair font-bold text-gray-800">User feedback - Testing should be done
+              continuously
+            </h3>
+          </div>
+          <div class="reflection-content-wrapper">
+            <p class="text-gray-700 leading-relaxed mb-6">
+              A key theme that emerged during this phase of our project was the importance of continuous user feedback
+              in shaping a user-centered product. When we sought feedback on our high-fidelity prototypes, it quickly
+              became apparent that our designs had various usability gaps. One screen, for example, only had a single
+              “agree” button without clearly indicating which suggestion it referred to. This ambiguity could have been
+              easily caught earlier, had we involved users consistently throughout.
+            </p>
+            <div class="expanded-content" style="display: none;">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Reflecting on this, we recognized a major oversight in our process: we had skipped user feedback during
+                the transition from mid-fi to high-fi, assuming that our design choices were sufficient. This
+                complacency led us to rely on internal assumptions rather than real user needs. As a result, what seemed
+                like obvious flaws in hindsight were completely missed until much later.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                This experience taught us that user feedback is not a one-time checkbox, but a vital and ongoing part of
+                the design process. By neglecting it, we risked drifting away from user needs and investing time in
+                refining ideas that did not fully capture the essence of our solution. In future projects, we are
+                committed to embedding user testing into every stage, not just to validate our work, but to inform
+                continuously. This approach will help us catch issues earlier, adapt more effectively, and stay aligned
+                with real-world use cases.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                We learned to observe not just what users did, but how they felt doing it. Facial expressions, sighs
+                of frustration, and moments of confusion were as valuable as click data. One participant's comment -
+                "I feel stupid using this" - completely changed how we approached error messaging and help text.
+                We realized that poor usability doesn't just waste time; it makes people feel bad about themselves.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Ultimately, this experience deepened our understanding of user feedback in design as a collaborative and
+                iterative process. It reminded us that the best products are not designed in isolation, but in
+                conversation with the people they are meant to serve.
+              </p>
+            </div>
+            <button
+              class="read-more-btn mt-4 text-emerald-600 hover:text-emerald-800 font-medium transition-colors duration-200 flex items-center">
+              <span class="btn-text">Read More</span>
+              <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="reflection-card bg-gradient-to-br from-violet-50 to-purple-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+              🎯
+            </div>
+            <h3 class="text-2xl font-playfair font-bold text-gray-800">Edge cases and disparity between developers and
+              users
+            </h3>
+          </div>
+          <div class="reflection-content-wrapper">
+            <p class="text-gray-700 leading-relaxed mb-6">
+              Another key learning point in our design journey emerged from continued user testing, specifically, how
+              real user behaviour can challenge our initial assumptions. For the species identification feature, we
+              initially designed a multi-step process: users would upload a
+              photo, receive multiple AI-generated species suggestions based on confidence levels, and then select one
+              to proceed to an information page. We believed that this would empower users to make more accurate
+              selections and feel more in control.
+            </p>
+            <div class="expanded-content" style="display: none;">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                However, user feedback revealed that this assumption was flawed. Users were not experts and in practice,
+                most users simply selected the first option without evaluating the others, undermining the purpose of
+                the feature. What we had thought was a helpful layer of precision ended up introducing friction and
+                unnecessarily complicating the experience.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                In response, we removed the species suggestion step entirely and streamlined the user flow to lead
+                directly from photo upload to the animal’s information page. This change better matched user
+                expectations and behaviour, reducing confusion and making the process more efficient.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                This experience reinforced a critical insight: our assumptions, no matter how logical, must be validated
+                through actual user testing. There’s often a gulf between how designers imagine a feature will be used
+                and how users actually interact with it. Assumptions should not be treated as truths, but as hypotheses
+                that need testing.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                User testing also helped us uncover edge cases and overlooked scenarios, particularly from the expert’s
+                perspective. We assumed that the expert would want to log every image sourced from iNaturalist,
+                believing that all data is valuable. However, feedback highlighted that some images might be of poor
+                quality or irrelevant, making them unsuitable for logging. Yet, our interface had no option for the
+                expert to skip or ignore such entries, an oversight on our part.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                This revealed the importance of designing for flexibility and real-world context, not just the ideal use
+                case. By failing to consider exceptions, we risked frustrating users and forcing them into decisions
+                that didn’t align with their goals.
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                Overall, these experiences have taught us that user testing is not only about validation but also
+                discovery. It reveals gaps, surfaces unexpected needs, and pushes us to let go of assumptions in favour
+                of real user needs. Moving forward, we are committed to grounding our design decisions in actual user
+                behaviour, not just theoretical logic, and ensuring that our solutions are shaped by the people who use
+                them.
+              </p>
+            </div>
+            <button
+              class="read-more-btn mt-4 text-violet-600 hover:text-violet-800 font-medium transition-colors duration-200 flex items-center">
+              <span class="btn-text">Read More</span>
+              <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+          <!-- </div> -->
         </div>
       </div>
     </div>
@@ -542,6 +855,39 @@
           // Add active class to clicked tab and corresponding content
           this.classList.add('active');
           document.getElementById(category).classList.add('active');
+        });
+      });
+
+      // Read More functionality
+      const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+      readMoreBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const wrapper = this.closest('.reflection-content-wrapper');
+          const expandedContent = wrapper.querySelector('.expanded-content');
+          const btnText = this.querySelector('.btn-text');
+          const btnIcon = this.querySelector('.btn-icon');
+
+          if (expandedContent.style.display === 'none') {
+            expandedContent.style.display = 'block';
+            btnText.textContent = 'Read Less';
+            btnIcon.style.transform = 'rotate(180deg)';
+
+            // Smooth scroll animation
+            setTimeout(() => {
+              expandedContent.style.opacity = '1';
+              expandedContent.style.transform = 'translateY(0)';
+            }, 10);
+          } else {
+            expandedContent.style.opacity = '0';
+            expandedContent.style.transform = 'translateY(-10px)';
+
+            setTimeout(() => {
+              expandedContent.style.display = 'none';
+              btnText.textContent = 'Read More';
+              btnIcon.style.transform = 'rotate(0deg)';
+            }, 300);
+          }
         });
       });
 
