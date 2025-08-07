@@ -41,11 +41,61 @@
                 </a>
 
                 <!-- Navigation Links -->
-                <ul class="hidden md:flex space-x-8">
+                <ul class="hidden md:flex items-center space-x-8">
                     <li><a href="timeline.html" class="nav-link">Timeline</a></li>
                     <li><a href="ideation.html" class="nav-link">Ideation</a></li>
                     <li><a href="prototype.html" class="nav-link">Prototype</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="relative group">
+                        <div class="flex items-center">
+                            <a href="portfolio.html" class="nav-link">Portfolio</a>
+                            <svg class="w-3 h-3 ml-1 transition-transform duration-200 group-hover:rotate-180 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <div class="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100">Sections</div>
+                                <div class="py-1">
+                                    <a href="#interactive-prototype" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                                            <span>Interactive Prototype</span>
+                                        </div>
+                                    </a>
+                                    <a href="#weekly-pitch-videos" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-purple-400 rounded-full"></span>
+                                            <span>Weekly Pitch Videos</span>
+                                        </div>
+                                    </a>
+                                    <a href="#partner-meeting-documentation" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-blue-400 rounded-full"></span>
+                                            <span>Partner Meeting Docs</span>
+                                        </div>
+                                    </a>
+                                    <a href="#user-research" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-orange-400 rounded-full"></span>
+                                            <span>User Research</span>
+                                        </div>
+                                    </a>
+                                    <a href="#project-poster" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-red-400 rounded-full"></span>
+                                            <span>Project Poster</span>
+                                        </div>
+                                    </a>
+                                    <a href="#other-relevant-work" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>
+                                            <span>Other Relevant Work</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="reflections.html" class="nav-link">Reflections</a></li>
                 </ul>
 
@@ -60,38 +110,109 @@
 
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
-                <ul class="space-y-1 pt-4">
+                <!-- Page Sections -->
+                <div class="pt-4 pb-3">
+                    <div class="px-4 pb-2">
+                        <h4
+                            class="text-xs font-semibold text-gray-500 uppercase tracking-wide"
+                        >
+                            This Page
+                        </h4>
+                    </div>
+                    <ul class="space-y-1">
+                        <li>
+                            <a
+                                href="#interactive-prototype"
+                                class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                            >
+                                <span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                                <span>Interactive Prototype</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#weekly-pitch-videos"
+                                class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                            >
+                                <span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                                <span>Weekly Pitch Videos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#partner-meeting-documentation"
+                                class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                            >
+                                <span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                                <span>Partner Meeting Documentation</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#user-research"
+                                class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                            >
+                                <span class="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
+                                <span>User Research</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#project-poster"
+                                class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                            >
+                                <span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                                <span>Project Poster</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#other-relevant-work"
+                                class="flex items-center py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300"
+                            >
+                                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                                <span>Other Relevant Work</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Other Pages -->
+                <div class="pt-3 border-t border-gray-100">
+                    <div class="px-4 pb-2">
+                        <h4
+                            class="text-xs font-semibold text-gray-500 uppercase tracking-wide"
+                        >
+                            Other Pages
+                        </h4>
+                    </div>
+                <ul class="space-y-1">
                     <li>
                         <a href="timeline.html"
-                            class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Timeline</a>
+                            class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">Timeline</a>
                     </li>
                     <li>
-                        <a href="index.html#problem"
-                            class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Problem
-                            & Solution</a>
-                    </li>
-                    <li>
-                        <a href="index.html#journey"
-                            class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Design
-                            Journey</a>
+                        <a href="index.html"
+                            class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">Home</a>
                     </li>
                     <li>
                         <a href="ideation.html"
-                            class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Ideation</a>
+                            class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">Ideation</a>
                     </li>
                     <li>
                         <a href="prototype.html"
-                            class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Prototype</a>
+                            class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">Prototype</a>
                     </li>
                     <li>
                         <a href="portfolio.html"
-                            class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Portfolio</a>
+                            class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">Portfolio</a>
                     </li>
                     <li>
                         <a href="reflections.html"
-                            class="block py-3 px-0 text-gray-700 font-medium hover:text-emerald-700 transition-colors duration-300">Reflections</a>
+                            class="block py-2 px-4 text-gray-700 font-medium hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-300">Reflections</a>
                     </li>
                 </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -111,7 +232,7 @@
     <section id="portfolio" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <!-- Interactive Prototype Highlight -->
-            <div class="mb-12">
+            <div id="interactive-prototype" class="mb-12">
                 <div
                     class="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg p-8 border-2 border-emerald-200">
                     <div class="text-center">
@@ -137,7 +258,7 @@
             </div>
 
             <!-- Weekly Pitch Videos (External Links) -->
-            <div class="mb-12">
+            <div id="weekly-pitch-videos" class="mb-12">
                 <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-8">
                     <div class="text-4xl mb-4">🎥</div>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-4">
@@ -166,7 +287,7 @@
             </div>
 
             <!-- Partner Meeting Notes - Full Width Section -->
-            <div class="mb-12">
+            <div id="partner-meeting-documentation" class="mb-12">
                 <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg py-8">
                     <div class="text-center mb-8">
                         <div class="text-4xl mb-4">🤝</div>
@@ -495,7 +616,7 @@
         </div> -->
 
             <!-- User Research Section -->
-            <div class="mt-8">
+            <div id="user-research" class="mt-8">
                 <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-8">
                     <div class="text-4xl mb-4">🔍</div>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-4">
@@ -701,7 +822,7 @@
             </div>
 
             <!-- Project Poster -->
-            <div class="mt-8">
+            <div id="project-poster" class="mt-8">
                 <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-8">
                     <div class="text-center mb-6">
                         <div class="text-4xl mb-4">📊</div>
@@ -749,7 +870,7 @@
             </div>
 
             <!-- Other Relevant Materials -->
-            <div class="mt-12">
+            <div id="other-relevant-work" class="mt-12">
                 <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-8">
                     <div class="text-center mb-8">
                         <div class="text-4xl mb-4">📁</div>

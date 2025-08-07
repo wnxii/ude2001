@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Botaniq - Team 08 University of Glasgow project focusing on Glasgow Botanic Garden, documenting our design thinking process and journey"
+      content="Botaniq - Team 08 University of Glasgow project focusing on Glasgow Species Identification, documenting our design thinking process and journey"
     />
-    <title>Botaniq - Glasgow Botanic Garden Project | Team 08 UofG</title>
+    <title>Botaniq | Team 08 UofG</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -36,22 +36,18 @@
     >
       <div class="max-w-6xl mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
-          <!-- Logo/Brand -->
-          <a
-            class="text-2xl font-playfair font-bold text-emerald-700"
-            href="index.html"
-          >
-            Botaniq
-          </a>
-
-          <!-- Navigation Links -->
-          <ul class="hidden md:flex items-center space-x-8">
-            <!-- Page Overview Dropdown -->
-            <li class="relative group">
-              <button
-                class="nav-link flex items-center space-x-1 cursor-pointer"
+          <!-- Logo/Brand with Dropdown -->
+          <div class="relative group">
+            <div class="flex items-center space-x-1">
+              <a
+                href="index.html"
+                class="text-2xl font-playfair font-bold text-emerald-700"
               >
-                <span>Page Overview</span>
+                Botaniq
+              </a>
+              <button
+                class="text-emerald-700 cursor-pointer p-1"
+              >
                 <svg
                   class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
                   fill="none"
@@ -66,60 +62,78 @@
                   ></path>
                 </svg>
               </button>
-              <div
-                class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
-              >
-                <div class="py-2">
-                  <div
-                    class="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100"
+            </div>
+            <div
+              class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+            >
+              <div class="py-2">
+                <div
+                  class="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100"
+                >
+                  Sections
+                </div>
+                <div class="py-1">
+                  <a
+                    href="#problem-statement"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
                   >
-                    This Page Sections
-                  </div>
-                  <div class="py-1">
-                    <a
-                      href="#problem-statement"
-                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
-                    >
-                      <div class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-red-400 rounded-full"></span>
-                        <span>Problem Statement</span>
-                      </div>
-                    </a>
-                    <a
-                      href="#background-context"
-                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
-                    >
-                      <div class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        <span>Background Context</span>
-                      </div>
-                    </a>
-                    <a
-                      href="#existing-solution"
-                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
-                    >
-                      <div class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-purple-400 rounded-full"></span>
-                        <span>Pre-existing Solution</span>
-                      </div>
-                    </a>
-                    <a
-                      href="#our-team"
-                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
-                    >
-                      <div class="flex items-center space-x-2">
-                        <span
-                          class="w-2 h-2 bg-emerald-400 rounded-full"
-                        ></span>
-                        <span>Our Team</span>
-                      </div>
-                    </a>
-                  </div>
+                    <div class="flex items-center space-x-2">
+                      <span class="w-2 h-2 bg-red-400 rounded-full"></span>
+                      <span>Problem Statement</span>
+                    </div>
+                  </a>
+                  <a
+                    href="#background-context"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <span class="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      <span>Background Context</span>
+                    </div>
+                  </a>
+                  <a
+                    href="#existing-solution"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <span class="w-2 h-2 bg-purple-400 rounded-full"></span>
+                      <span>Pre-existing Solution</span>
+                    </div>
+                  </a>
+                  <a
+                    href="#research-insights"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <span class="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                      <span>Research Insights</span>
+                    </div>
+                  </a>
+                  <a
+                    href="#proposed-solution"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                      <span>Proposed Solution</span>
+                    </div>
+                  </a>
+                  <a
+                    href="#our-team"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-200"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                      <span>Our Team</span>
+                    </div>
+                  </a>
                 </div>
               </div>
-            </li>
-            <!-- Separator -->
-            <li class="text-gray-300">|</li>
+            </div>
+          </div>
+
+          <!-- Navigation Links -->
+          <ul class="hidden md:flex items-center space-x-8">
             <!-- Other Pages -->
             <li><a href="timeline.html" class="nav-link">Timeline</a></li>
             <li><a href="ideation.html" class="nav-link">Ideation</a></li>
@@ -272,9 +286,9 @@
         <p
           class="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto drop-shadow-md"
         >
-          Team 08's comprehensive showcase focusing on Glasgow Botanic Garden -
-          documenting our design thinking process from problem identification to
-          final reflections
+          Team 08's comprehensive showcase focusing on Glasgow Species
+          Identification - documenting our design thinking process from problem
+          identification to final reflections
         </p>
         <div
           class="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -608,7 +622,7 @@
         </div>
 
         <!-- Research Section -->
-        <div class="mb-16">
+        <div id="research-insights" class="mb-16">
           <div class="text-center mb-8">
             <h3 class="text-3xl font-semibold text-gray-900 mb-4">
               Research Insights
@@ -878,7 +892,7 @@
         </div>
 
         <!-- Solution Section -->
-        <div class="mb-16">
+        <div id="proposed-solution" class="mb-16">
           <div class="text-center mb-8">
             <h3 class="text-3xl font-semibold text-gray-900 mb-4">
               Proposed Solution
