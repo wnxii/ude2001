@@ -1,195 +1,1084 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Botaniq Project Timeline - Team 08 University of Glasgow project journey documenting key milestones and progress"
-    />
-    <title>Project Timeline - Botaniq | Team 08 UofG</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Botaniq Project Timeline - Team 08 University of Glasgow project journey documenting key milestones and progress" />
+  <title>Project Timeline - Botaniq | Team 08 UofG</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- GSAP for animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css" />
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <style>
-      /* Timeline specific styles */
-      .timeline-container {
-        position: relative;
-      }
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
 
+  <style>
+    /* Timeline specific styles */
+    .timeline-container {
+      position: relative;
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #10b981, #059669);
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .timeline-item.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-item:nth-child(odd) {
+      padding-right: 50%;
+      padding-left: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+      padding-left: 50%;
+      padding-right: 0;
+      text-align: left;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-right: 2rem;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: 2rem;
+      text-align: left;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      top: 1.5rem;
+      width: 20px;
+      height: 20px;
+      background: #10b981;
+      border: 4px solid white;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 0 4px #10b981;
+      z-index: 10;
+    }
+
+    .timeline-dot.milestone {
+      width: 24px;
+      height: 24px;
+      background: #dc2626;
+      box-shadow: 0 0 0 4px #dc2626;
+    }
+
+    .timeline-dot.future {
+      background: #9ca3af;
+      box-shadow: 0 0 0 4px #9ca3af;
+    }
+
+    @media (max-width: 768px) {
       .timeline-line {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        background: linear-gradient(to bottom, #10b981, #059669);
-        transform: translateX(-50%);
-        border-radius: 2px;
+        left: 2rem;
       }
 
       .timeline-item {
-        position: relative;
-        margin-bottom: 3rem;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease;
+        padding-left: 4rem !important;
+        padding-right: 0 !important;
+        text-align: left !important;
       }
 
-      .timeline-item.animate {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .timeline-item:nth-child(odd) {
-        padding-right: 50%;
-        padding-left: 0;
-      }
-
-      .timeline-item:nth-child(even) {
-        padding-left: 50%;
-        padding-right: 0;
-        text-align: left;
-      }
-
-      .timeline-item:nth-child(odd) .timeline-content {
-        margin-right: 2rem;
-        text-align: right;
-      }
-
-      .timeline-item:nth-child(even) .timeline-content {
-        margin-left: 2rem;
-        text-align: left;
+      .timeline-item .timeline-content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: left !important;
       }
 
       .timeline-dot {
-        position: absolute;
-        left: 50%;
-        top: 1.5rem;
-        width: 20px;
-        height: 20px;
-        background: #10b981;
-        border: 4px solid white;
-        border-radius: 50%;
-        transform: translateX(-50%);
-        box-shadow: 0 0 0 4px #10b981;
-        z-index: 10;
+        left: 2rem;
+      }
+    }
+
+    .reflection-tab {
+      background: #f3f4f6;
+      color: #6b7280;
+      border: 2px solid transparent;
+    }
+
+    .reflection-tab.active {
+      background: #10b981;
+      color: white;
+      border-color: #059669;
+    }
+
+    .reflection-tab:hover {
+      background: #e5e7eb;
+      color: #374151;
+    }
+
+    .reflection-tab.active:hover {
+      background: #059669;
+      color: white;
+    }
+
+    .reflection-content {
+      display: none;
+    }
+
+    .reflection-content.active {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
 
-      .timeline-dot.milestone {
-        width: 24px;
-        height: 24px;
-        background: #dc2626;
-        box-shadow: 0 0 0 4px #dc2626;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
+    }
 
-      .timeline-dot.future {
-        background: #9ca3af;
-        box-shadow: 0 0 0 4px #9ca3af;
-      }
+    .reflection-card {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+    }
 
-      @media (max-width: 768px) {
-        .timeline-line {
-          left: 2rem;
-        }
+    .reflection-card:hover {
+      transform: translateY(-5px);
+    }
 
-        .timeline-item {
-          padding-left: 4rem !important;
-          padding-right: 0 !important;
-          text-align: left !important;
-        }
+    .expanded-content {
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
 
-        .timeline-item .timeline-content {
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-          text-align: left !important;
-        }
+    .read-more-btn {
+      cursor: pointer;
+      outline: none;
+      border: none;
+      background: none;
+      padding: 0;
+    }
 
-        .timeline-dot {
-          left: 2rem;
-        }
-      }
-    </style>
-  </head>
+    .read-more-btn:focus {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
 
-  <body class="font-inter bg-neutral-50">
-    <!-- Navigation -->
-    <nav
-      id="navbar"
-      class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300"
-    >
-      <div class="max-w-6xl mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
-          <!-- Logo/Brand -->
-          <a
-            class="text-2xl font-playfair font-bold text-emerald-700"
-            href="index.html"
-          >
-            Botaniq
-          </a>
+<body class="font-inter bg-neutral-50">
+  <!-- Navigation -->
+  <nav id="navbar"
+    class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo/Brand -->
+        <a class="text-2xl font-playfair font-bold text-emerald-700" href="index.html">
+          Botaniq
+        </a>
 
-          <!-- Navigation Links -->
-          <ul class="hidden md:flex space-x-8">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="timeline.html" class="nav-link">Timeline</a></li>
-            <li><a href="ideation.html" class="nav-link">Ideation</a></li>
-            <li><a href="prototype.html" class="nav-link">Prototype</a></li>
-            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-            <li><a href="reflections.html" class="nav-link">Reflections</a></li>
-          </ul>
+        <!-- Navigation Links -->
+        <ul class="hidden md:flex space-x-8">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+          <li><a href="ideation.html" class="nav-link">Ideation</a></li>
+          <li><a href="prototype.html" class="nav-link">Prototype</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="reflections.html" class="nav-link">Reflections</a></li>
+        </ul>
 
-          <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="md:hidden p-3 flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
-            <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
-            <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
-            <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
-          </button>
-        </div>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn"
+          class="md:hidden p-3 flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
+          <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
+          <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
+          <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
+        </button>
+      </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
-          <ul class="space-y-1 pt-4">
-            <li>
-              <a href="timeline.html" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Timeline</a>
-            </li>
-            <li>
-              <a href="index.html#problem" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Problem & Solution</a>
-            </li>
-            <li>
-              <a href="index.html#journey" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Design Journey</a>
-            </li>
-            <li>
-              <a href="ideation.html" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Ideation</a>
-            </li>
-            <li>
-              <a href="prototype.html" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Prototype</a>
-            </li>
-            <li>
-              <a href="portfolio.html" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Portfolio</a>
-            </li>
-            <li>
-              <a href="reflections.html" class="block py-3 px-0 text-gray-700 font-medium hover:text-emerald-700 transition-colors duration-300">Reflections</a>
-            </li>
-          </ul>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
+        <ul class="space-y-1 pt-4">
+          <li>
+            <a href="timeline.html"
+              class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Timeline</a>
+          </li>
+          <li>
+            <a href="index.html#problem"
+              class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Problem
+              & Solution</a>
+          </li>
+          <li>
+            <a href="index.html#journey"
+              class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Design
+              Journey</a>
+          </li>
+          <li>
+            <a href="ideation.html"
+              class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Ideation</a>
+          </li>
+          <li>
+            <a href="prototype.html"
+              class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Prototype</a>
+          </li>
+          <li>
+            <a href="portfolio.html"
+              class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Portfolio</a>
+          </li>
+          <li>
+            <a href="reflections.html"
+              class="block py-3 px-0 text-gray-700 font-medium hover:text-emerald-700 transition-colors duration-300">Reflections</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Main Content -->
+  <section class="pt-24 pb-12 bg-gradient-to-br from-emerald-50 to-teal-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-6xl font-playfair font-bold text-emerald-900 mb-6">
+        Reflections & Essays
+      </h1>
+      <p class="text-xl md:text-2xl text-emerald-700 mb-8 max-w-2xl mx-auto">
+        A critical reflection on our design journey, challenges faced, and lessons learned.
+      </p>
+    </div>
+  </section>
+
+  <!-- Reflections Categories -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Category Navigation -->
+      <div class="flex flex-wrap justify-center mb-12 space-x-0 space-y-2 md:space-y-0 md:space-x-4">
+        <button class="reflection-tab active px-6 py-3 rounded-full font-medium transition-all duration-300"
+          data-category="individual">
+          Individual Reflections
+        </button>
+        <button class="reflection-tab px-6 py-3 rounded-full font-medium transition-all duration-300"
+          data-category="team">
+          Team Reflections
+        </button>
+        <button class="reflection-tab px-6 py-3 rounded-full font-medium transition-all duration-300"
+          data-category="event">
+          Event Reflections
+        </button>
+      </div>
+
+      <!-- Individual Reflections -->
+      <div id="individual" class="reflection-content active">
+        <div class="space-y-8">
+          <div
+            class="reflection-card bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                💭
+              </div>
+              <h3 class="text-2xl font-playfair font-bold text-gray-800">Lew Jiajun </h3>
+            </div>
+            <div class="reflection-content-wrapper">
+              <p class="text-gray-700 leading-relaxed mb-6">
+                Going through this eventful journey from requirement gathering to solution designing has taught me
+                various lessons and enhanced my views and modus operandi. It has taught me insightful lessons such as:
+                how to ask good questions through the “mum test”, handling conflicts during ideation by integrating
+                them, how everybody has different mental models and the risks, benefits and how’s of aligning our mental
+                models, the importance of integrating user feedback into our design process and many more lessons among
+                those.
+              </p>
+              <div class="expanded-content" style="display: none;">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  One memorable learning experience was when I was heavily involved with the ideation and prototyping
+                  process of this project. After finishing my segment, I simply handed over to the person in charge of
+                  the next step of the project and took my hands off of it. However, due to my negligence, the intended
+                  solution started diverging from the intended solution.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  To remedy this, the team realigned our views of the solution by consolidating our diverging views onto
+                  a thinking model for a shared mental model throughout the team. This experience taught me the valuable
+                  lesson of keeping my involvement to ensure that my team members are on the same page and pursue a
+                  unified solution. The stages involved in designing a solution should not be silo but a constant
+                  collaborative journey.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  This project has taught me numerous valuable lessons that will stick with me and shape how I approach
+                  future collaborative work. I’ve learnt that good design isn’t just about having strong individual
+                  ideas but also co-creating with others, aligning perspectives, and continuously validating assumptions
+                  with real users. Moving forward, I’ll be more intentional about maintaining open communication across
+                  stages, staying engaged beyond my assigned tasks, and embracing tension and feedback as opportunities
+                  for growth. These takeaways have not only enhanced my design thinking skills but also made me a more
+                  reflective and adaptive team member.
+                </p>
+              </div>
+              <button
+                class="read-more-btn mt-4 text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200 flex items-center">
+                <span class="btn-text">Read More</span>
+                <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="reflection-card bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                💡
+              </div>
+              <h3 class="text-2xl font-playfair font-bold text-gray-800">Deston Seet</h3>
+            </div>
+            <div class="reflection-content-wrapper">
+              <p class="text-gray-700 leading-relaxed mb-6">
+                Over the course of this project, I had the opportunity to work on every aspects of the project, from the
+                ideation phase all the way to the final documentation of the proposed solution. I would say the journey
+                had been interesting and fulfilling with many ups and downs.
+              </p>
+              <div class="expanded-content" style="display: none;">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  The journey started at the ideation and problem statement clarification. At that stage, we were trying
+                  to figure out the details of the problem, gain context knowledge as well as brainstorm some potential
+                  ideas and solutions. This ideation phase was filled with back and forth conversation, clarifying each
+                  other’s understanding of the problem as well as the objective that we are specifically trying to
+                  solve. Throwing ideas around helped us find the best features that will solve the pain points of the
+                  problem. Looking back, I personally think that the mood of the discussion was the most important
+                  aspect. The right mood among my team members allowed everyone to contribute their thoughts and ideas
+                  freely without repercussions or judgments. The final solution was a combination of everyone’s inputs
+                  and apprehension, which fully satisfy the objective we laid out at the start of the ideation process.
+                  Therefore, I am glad that we, as a group, jelled well together and maintained a professional yet
+                  friendly atmosphere within the group, striving to reach the best idea possible.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  The next major phase is the prototyping phase, which involves iterating through the prototype as it
+                  goes from lo-fi, mid-fi and high-fi. As it iterates, the word journey fits it really well. The process
+                  feels like a journey where it progressively builds on the past work, taking in different kind of
+                  feedback along the way in order to become a final prototype that reflects the final product. My
+                  takeaway is exactly that it was more of a journey than anything else and should be seen as 1 whole
+                  process. One of the key event during this process was that we tried to hasten the process by doing the
+                  mid-fi and high-fi simultaneously, skipping user feedback and proceeding with what we think was right.
+                  This came to haunt us as we realised that we missed many issues that could have been identified during
+                  the mid-fi stage. We learnt that there are no shortcut on the road to quality. I used to see
+                  prototyping as 3 different phases but after this experience, I see them as a long process that build
+                  ontop of each other to reach a quality product at the end.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  While this project is coming to an end, the takeaways will stay with me in my future works and it had
+                  been an pleasant experience doing this project in Glasgow.
+                </p>
+              </div>
+              <button
+                class="read-more-btn mt-4 text-green-600 hover:text-green-800 font-medium transition-colors duration-200 flex items-center">
+                <span class="btn-text">Read More</span>
+                <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="reflection-card bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                🌸
+              </div>
+              <h3 class="text-2xl font-playfair font-bold text-gray-800">Ma Wen Xi</h3>
+            </div>
+            <div class="reflection-content-wrapper">
+              <p class="text-gray-700 leading-relaxed mb-6">
+
+              </p>
+              <div class="expanded-content" style="display: none;">
+                <p class="text-gray-700 leading-relaxed mb-4">
+
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+
+                </p>
+              </div>
+              <button
+                class="read-more-btn mt-4 text-purple-600 hover:text-purple-800 font-medium transition-colors duration-200 flex items-center">
+                <span class="btn-text">Read More</span>
+                <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="reflection-card bg-gradient-to-br from-pink-50 to-rose-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                🎨
+              </div>
+              <h3 class="text-2xl font-playfair font-bold text-gray-800">Hannah Woo</h3>
+            </div>
+            <div class="reflection-content-wrapper">
+              <p class="text-gray-700 leading-relaxed mb-6">
+                Working on the Figma prototype for the species identification website was a valuable exercise in both
+                design precision and empathy. I had to pay close attention to detail,not just in terms of layout,
+                colors, and consistency, but also in how the interface would actually be used by real experts in the
+                field. The experts had an important task on verifying several species types in sometimes subtle visual
+                differences in photos, so it was crucial to provide a seamless and smooth experience.
+              </p>
+              <div class="expanded-content" style="display: none;">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  Designing for that kind of workflow meant stepping into their shoes and imagining what would make
+                  their job easier and more efficient. I had to think about how images are displayed, how information is
+                  prioritized, and how easy it is to compare, tag, or reject submissions. The goal was to reduce
+                  cognitive load and friction in the process, without sacrificing clarity or scientific accuracy. It
+                  challenged me to design not just something that looked good, but something that supports critical,
+                  detail-oriented work.
+                </p>
+              </div>
+              <button
+                class="read-more-btn mt-4 text-pink-600 hover:text-pink-800 font-medium transition-colors duration-200 flex items-center">
+                <span class="btn-text">Read More</span>
+                <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="reflection-card bg-gradient-to-br from-amber-50 to-yellow-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                ⭐
+              </div>
+              <h3 class="text-2xl font-playfair font-bold text-gray-800">Jolie Yeo</h3>
+            </div>
+            <div class="reflection-content-wrapper">
+              <p class="text-gray-700 leading-relaxed mb-6">
+                Designing the Figma prototype for the species identification website pushed me to think deeply about
+                creating a visually appealing, seamless, and intuitive user experience. Throughout the design process, I
+                found myself constantly evaluating decisions against Nielsen's usability heuristics, particularly
+                focusing on how each choice would impact the mental workload of researchers engaged in
+                detailed-oriented, repetitive identification tasks.
+              </p>
+              <div class="expanded-content" style="display: none;">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  I became increasingly aware of how much small, thoughtful choices matter. For example, emphasis on
+                  consistency in spacing, type hierarchy, and color usage to ensure a clean visual rhythm. Rather than
+                  drawing attention to the design itself, I aimed to let the content and the task at hand stay front and
+                  center. It was a balance of form and function, where aesthetics serve usability. Seeing the pieces
+                  slowly but surely come together in a way that feels natural and smooth was definitely one of the most
+                  satisfying parts of the process.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  Moreover, another complex challenge I faced was designing for such a varied group of users, not just
+                  because of their varying levels of expertise, but because each group accessed the system through
+                  different entry points and needed different functionalities. This pushed me to think very critically
+                  about user journeys. This meant that I had to put myself in the various users’ shoes and gain insights
+                  on their expectations as well as their pain points, which the interviews and discussions conducted
+                  helped tremendously. It definitely was a little frustrating having to go through countless iterations
+                  to align with what the entire team wanted but the innate passion to solve the problem deeply motivated
+                  me. I wanted to create tailored and curated experiences that also felt cohesive across the entire
+                  platform. I tried to maintain consistency in core design elements, while also allowing flexibility in
+                  layout and functionality depending on who was accessing the page. This experience gave me a much
+                  clearer appreciation of the “flexibility and efficiency of use” heuristic, and how it can be
+                  implemented through adaptive design.
+                </p>
+              </div>
+              <button
+                class="read-more-btn mt-4 text-amber-600 hover:text-amber-800 font-medium transition-colors duration-200 flex items-center">
+                <span class="btn-text">Read More</span>
+                <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="reflection-card bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                �
+              </div>
+              <h3 class="text-2xl font-playfair font-bold text-gray-800">Isaiah Ang</h3>
+            </div>
+            <div class="reflection-content-wrapper">
+              <p class="text-gray-700 leading-relaxed mb-6">
+
+              </p>
+              <div class="expanded-content" style="display: none;">
+                <p class="text-gray-700 leading-relaxed mb-4">
+
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+
+                </p>
+              </div>
+              <button
+                class="read-more-btn mt-4 text-indigo-600 hover:text-indigo-800 font-medium transition-colors duration-200 flex items-center">
+                <span class="btn-text">Read More</span>
+                <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
-    <!-- Main Content -->
-  </body>
+
+      <!-- Team Reflections -->
+      <div id="team" class="reflection-content">
+        <div class="bg-gradient-to-r from-emerald-50 to-teal-50 p-6 rounded-xl mb-8 border-l-4 border-emerald-500">
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Over the past three weeks, our team collaborated on a project aimed at streamlining the current process of
+            species identification. Reflecting on the work we produced, we are proud of what we have managed to achieve
+            within this short time frame. However, there are also many areas where we could have performed better as a
+            team. Overall, the experience was deeply insightful and helped us to understand how we could work better as
+            a team in future projects.
+          </p>
+        </div>
+        <div class="space-y-8">
+          <div
+            class="reflection-card bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                🤝
+              </div>
+              <h3 class="text-2xl font-playfair font-bold text-gray-800">What we are proud of</h3>
+            </div>
+            <div class="reflection-content-wrapper">
+              <p class="text-gray-700 leading-relaxed mb-6">
+                One strength we recognised was our team’s willingness to adapt, especially when we didn’t initially
+                agree on a particular approach. Whilst the team was in the process of creating the prototype, we had
+                differing views on the layout of the page where the expert would verify the identification of the
+                species.
+              </p>
+              <div class="expanded-content" style="display: none;">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  Initially, our layout did not account for the expert to “disagree” with the prediction of the model.
+                  One of our team members pointed out this concern, leading on a discussion on whether or not to include
+                  a separate disagree button for the AI model prediction, and the justification for each. While
+                  maintaining a single button would be simpler, and the disagree button would rely on the iNaturalist’s
+                  identification and train the model in the background, having a separate button would allow the expert
+                  to provide direct feedback to our model.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  We opted to have separate disagree buttons for the model and
+                  iNaturalist, as it improved the clarity and functionality of the expert input process. As such, with
+                  this, even though we had disagreements, we weighed different perspectives and decided on the option
+                  that gave the most value.
+                </p>
+              </div>
+              <button
+                class="read-more-btn mt-4 text-orange-600 hover:text-orange-800 font-medium transition-colors duration-200 flex items-center">
+                <span class="btn-text">Read More</span>
+                <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="reflection-card bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                ⚡
+              </div>
+              <h3 class="text-2xl font-playfair font-bold text-gray-800">What we are not proud of</h3>
+            </div>
+            <div class="reflection-content-wrapper">
+              <p class="text-gray-700 leading-relaxed mb-6">
+                While there were many things we were proud of, we regretted not properly testing some of our initial
+                ideas before implementing them. This led to design decisions that had to be reworked, affecting both our
+                timeline and confidence in the solution.
+              </p>
+              <div class="expanded-content" style="display: none;">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  During the early prototyping stages, we lacked user and team feedback. After completing our
+                  low-fidelity (Lo-Fi) prototype, we did not gather any feedback for our design, and moved straight into
+                  developing the mid-fidelity (Mid-Fi) prototype. The same problem continued with the Mid-Fi prototype,
+                  with us not consulting users or prompting any discussion within our team on any potential
+                  improvements.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  When we developed the high-fidelity (Hi-Fi), then only did we seek user feedback. The feedback given
+                  revealed many core design issues that had not been addressed. This led to multiple iterations of the
+                  prototype, which led to a series of delays and difficult changes due to the time-consuming and complex
+                  nature of Hi-Fi prototype revision. This could have been avoided had we sought user feedback in all
+                  steps of the prototyping stages.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  This experience taught us the importance of user testing and feedback at every stage of the design
+                  process. In future projects, we will prioritise this early, ensuring that user feedback is gotten in
+                  the early stages to ensure that the prototype is going in the right direction.
+                </p>
+              </div>
+              <button
+                class="read-more-btn mt-4 text-teal-600 hover:text-teal-800 font-medium transition-colors duration-200 flex items-center">
+                <span class="btn-text">Read More</span>
+                <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl mt-8 border-l-4 border-blue-500">
+          <h3 class="text-xl font-playfair font-bold text-gray-800 mb-4">Conclusion</h3>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            In conclusion, despite the obstacles that we faced throughout the project, the experiences gained was a
+            valuable opportunity for growth both individually and as a team. We learnt the importance of early and
+            consistent feedback, and the need to be adaptable when changes arise. We enjoyed the process doing this
+            project, and value the insights gained.
+          </p>
+        </div>
+      </div>
+
+      <!-- Event Reflections -->
+      <div id="event" class="reflection-content">
+        <!-- <div class="grid md:grid-cols-2 gap-8 mb-12"> -->
+        <div
+          class="reflection-card bg-gradient-to-br from-rose-50 to-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-rose-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+              🔬
+            </div>
+            <h3 class="text-2xl font-playfair font-bold text-gray-800">Asking better questions with a Shared mental
+              model using AEIOU
+            </h3>
+          </div>
+          <div class="reflection-content-wrapper">
+            <p class="text-gray-700 leading-relaxed mb-6">
+              Our team's project started with a critical misalignment in our understanding of the problem. We each
+              interpreted the problem statement differently, leading to confusion and a lack of clear direction. From
+              this, we learnt that a shared understanding isn't guaranteed and is instead a deliberate, active, and
+              explicit process.
+            </p>
+            <div class="expanded-content" style="display: none;">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                The initial disconnect came from the use of iNaturalist within our solution. Team members were not
+                sure if our partner needed an app like iNaturalist or to integrate iNaturalist into the solution. This
+                was one of many confusions about the premise of the problem. Due to the open-ended nature of the
+                problem statement that lacked specific constraints, there were a broad range of interpretations about
+                the premise and context of the problem. There were many questions that we wanted to ask, but we were
+                unsure if our questions were able to target all the different user needs and perspectives. We learnt
+                that when tackling an open-ended problem, there are too many viewpoints to take into consideration and
+                we needed a way to consolidate them.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                To fix this, we used the AEIOU method to systematically map out our thoughts and created a shared
+                mental model. It allowed us to consider things from the point of view of: activities, environment
+                interactions, objects and users, which gave us a comprehensive overview of gaps in our questions. This
+                allowed the questions we crafted to have a more holistic view to uncover various users and their
+                needs. We learnt the importance of having a shared mental model within our group to align our goals
+                and the importance of charting the different viewpoints involved with the problem.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                One particularly memorable session involved shadowing an expert botanist during their routine survey
+                work.
+                Observing their workflow, noting patterns, and understanding the cognitive load involved in species
+                identification completely reshaped our approach to interface design. We realized our initial designs
+                were far too complex for field use.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                The interviews also revealed the emotional aspects of citizen science participation. Users weren't
+                just
+                interested in data collection; they wanted to feel part of a larger conservation effort. This insight
+                led us to incorporate progress indicators and community engagement features that made users feel their
+                contributions were meaningful and impactful.
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                Perhaps most importantly, these sessions taught us to always question our assumptions. Every
+                preconceived
+                notion we had about user behavior was challenged, and often proven wrong. This experience has made me
+                a
+                much more humble and curious designer, always eager to learn from real users rather than rely on
+                intuition.
+              </p>
+            </div>
+            <button
+              class="read-more-btn mt-4 text-rose-600 hover:text-rose-800 font-medium transition-colors duration-200 flex items-center">
+              <span class="btn-text">Read More</span>
+              <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="reflection-card bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+              🎨
+            </div>
+            <h3 class="text-2xl font-playfair font-bold text-gray-800">Resolving ideation disagreements using
+              integrative thinking
+            </h3>
+          </div>
+          <div class="reflection-content-wrapper">
+            <p class="text-gray-700 leading-relaxed mb-6">
+              During our ideation phase, there was a divide within our group about the use of AI to automate the
+              process
+              as opposed to a human expert identifier. Our partner in the project made it clear that while AI can be
+              helpful, it may be unreliable and so she discourages the use of it. This brought to light two opposing
+              perspectives: one advocating for AI-led identification to leverage speed and scalability, and the other
+              emphasizing the importance of expert judgement to ensure accuracy and trustworthiness. This clash of
+              ideas
+              forced us to grapple with the limitations and strengths of both approaches, having to choose one or the
+              other.
+
+            </p>
+            <div class="expanded-content" style="display: none;">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                To move forward, we applied integrative thinking. Rather than choosing one side, we faced the tension
+                of
+                opposing ideas to generate a creative solution that contains elements of the opposing ideas but is
+                superior to simply using one. We identified the pros of each idea and identified the central tension
+                of
+                “How can we use both AI and human expertise without compromising reliability or efficiency?”
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Our breakthrough came when we proposed a system where the AI suggests a species, but the expert makes
+                the final call. This approach allowed us to retain the reliability of the expert, while still
+                benefiting
+                from AI’s speed and consistency. By embracing the tension instead of avoiding it, we created a more
+                resilient and well-rounded solution.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                This experience taught us several important lessons. First, conflicting ideas are not roadblocks but
+                opportunities for creative resolution. Disagreements can lead to stronger, more innovative outcomes
+                when
+                explored thoughtfully. Second, decision-making models such as integrative thinking help push us beyond
+                surface-level comparisons. They encourage deeper analysis and structured reasoning, which ultimately
+                guided our team to a consensus. Lastly, we learnt that limitations like AI’s occasional inaccuracy can
+                be reframed as creative constraints that drive better design. In our case, AI’s weakness of
+                unreliability was mitigated when it was complemented with expert review to give the final verdict.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                When we encounter future opposing idea challenges, we no longer view weaknesses and constraints as
+                limitations to our solution but a springboard to innovation. With integrative thinking, we can use
+                structured thinking models to explore deep thinking avenues that guide us toward integrating our two
+                opposing ideas into a stronger and more resilient solution.
+              </p>
+            </div>
+            <button
+              class="read-more-btn mt-4 text-amber-600 hover:text-amber-800 font-medium transition-colors duration-200 flex items-center">
+              <span class="btn-text">Read More</span>
+              <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+          <!-- </div> -->
+        </div>
+
+        <!-- <div class="grid md:grid-cols-2 gap-8"> -->
+        <div
+          class="reflection-card bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+              📊
+            </div>
+            <h3 class="text-2xl font-playfair font-bold text-gray-800">User feedback - Testing should be done
+              continuously
+            </h3>
+          </div>
+          <div class="reflection-content-wrapper">
+            <p class="text-gray-700 leading-relaxed mb-6">
+              A key theme that emerged during this phase of our project was the importance of continuous user feedback
+              in shaping a user-centered product. When we sought feedback on our high-fidelity prototypes, it quickly
+              became apparent that our designs had various usability gaps. One screen, for example, only had a single
+              “agree” button without clearly indicating which suggestion it referred to. This ambiguity could have
+              been
+              easily caught earlier, had we involved users consistently throughout.
+            </p>
+            <div class="expanded-content" style="display: none;">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Reflecting on this, we recognized a major oversight in our process: we had skipped user feedback
+                during
+                the transition from mid-fi to high-fi, assuming that our design choices were sufficient. This
+                complacency led us to rely on internal assumptions rather than real user needs. As a result, what
+                seemed
+                like obvious flaws in hindsight were completely missed until much later.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                This experience taught us that user feedback is not a one-time checkbox, but a vital and ongoing part
+                of
+                the design process. By neglecting it, we risked drifting away from user needs and investing time in
+                refining ideas that did not fully capture the essence of our solution. In future projects, we are
+                committed to embedding user testing into every stage, not just to validate our work, but to inform
+                continuously. This approach will help us catch issues earlier, adapt more effectively, and stay
+                aligned
+                with real-world use cases.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                We learned to observe not just what users did, but how they felt doing it. Facial expressions, sighs
+                of frustration, and moments of confusion were as valuable as click data. One participant's comment -
+                "I feel stupid using this" - completely changed how we approached error messaging and help text.
+                We realized that poor usability doesn't just waste time; it makes people feel bad about themselves.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Ultimately, this experience deepened our understanding of user feedback in design as a collaborative
+                and
+                iterative process. It reminded us that the best products are not designed in isolation, but in
+                conversation with the people they are meant to serve.
+              </p>
+            </div>
+            <button
+              class="read-more-btn mt-4 text-emerald-600 hover:text-emerald-800 font-medium transition-colors duration-200 flex items-center">
+              <span class="btn-text">Read More</span>
+              <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="reflection-card bg-gradient-to-br from-violet-50 to-purple-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+              🎯
+            </div>
+            <h3 class="text-2xl font-playfair font-bold text-gray-800">Edge cases and disparity between developers and
+              users
+            </h3>
+          </div>
+          <div class="reflection-content-wrapper">
+            <p class="text-gray-700 leading-relaxed mb-6">
+              Another key learning point in our design journey emerged from continued user testing, specifically, how
+              real user behaviour can challenge our initial assumptions. For the species identification feature, we
+              initially designed a multi-step process: users would upload a
+              photo, receive multiple AI-generated species suggestions based on confidence levels, and then select one
+              to proceed to an information page. We believed that this would empower users to make more accurate
+              selections and feel more in control.
+            </p>
+            <div class="expanded-content" style="display: none;">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                However, user feedback revealed that this assumption was flawed. Users were not experts and in
+                practice,
+                most users simply selected the first option without evaluating the others, undermining the purpose of
+                the feature. What we had thought was a helpful layer of precision ended up introducing friction and
+                unnecessarily complicating the experience.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                In response, we removed the species suggestion step entirely and streamlined the user flow to lead
+                directly from photo upload to the animal’s information page. This change better matched user
+                expectations and behaviour, reducing confusion and making the process more efficient.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                This experience reinforced a critical insight: our assumptions, no matter how logical, must be
+                validated
+                through actual user testing. There’s often a gulf between how designers imagine a feature will be used
+                and how users actually interact with it. Assumptions should not be treated as truths, but as
+                hypotheses
+                that need testing.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                User testing also helped us uncover edge cases and overlooked scenarios, particularly from the
+                expert’s
+                perspective. We assumed that the expert would want to log every image sourced from iNaturalist,
+                believing that all data is valuable. However, feedback highlighted that some images might be of poor
+                quality or irrelevant, making them unsuitable for logging. Yet, our interface had no option for the
+                expert to skip or ignore such entries, an oversight on our part.
+
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                This revealed the importance of designing for flexibility and real-world context, not just the ideal
+                use
+                case. By failing to consider exceptions, we risked frustrating users and forcing them into decisions
+                that didn’t align with their goals.
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                Overall, these experiences have taught us that user testing is not only about validation but also
+                discovery. It reveals gaps, surfaces unexpected needs, and pushes us to let go of assumptions in
+                favour
+                of real user needs. Moving forward, we are committed to grounding our design decisions in actual user
+                behaviour, not just theoretical logic, and ensuring that our solutions are shaped by the people who
+                use
+                them.
+              </p>
+            </div>
+            <button
+              class="read-more-btn mt-4 text-violet-600 hover:text-violet-800 font-medium transition-colors duration-200 flex items-center">
+              <span class="btn-text">Read More</span>
+              <svg class="w-4 h-4 ml-2 transition-transform duration-200 btn-icon" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lessons Learned Summary -->
+  <section class="py-16 bg-gradient-to-br from-emerald-50 to-teal-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-playfair font-bold text-emerald-900 mb-8">Key Takeaways</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <div class="text-3xl mb-4">🌱</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Iterative Design</h3>
+          <p class="text-gray-600">Great solutions emerge through continuous refinement and user feedback, not initial
+            perfection.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <div class="text-3xl mb-4">🤝</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Collaboration</h3>
+          <p class="text-gray-600">Diverse perspectives and open communication lead to more innovative and robust
+            solutions.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <div class="text-3xl mb-4">👥</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">User-Centered</h3>
+          <p class="text-gray-600">Direct user engagement reveals insights that assumptions and secondary research
+            cannot provide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    // Reflection category switching
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabs = document.querySelectorAll('.reflection-tab');
+      const contents = document.querySelectorAll('.reflection-content');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          const category = this.getAttribute('data-category');
+
+          // Remove active class from all tabs and contents
+          tabs.forEach(t => t.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+
+          // Add active class to clicked tab and corresponding content
+          this.classList.add('active');
+          document.getElementById(category).classList.add('active');
+        });
+      });
+
+      // Read More functionality
+      const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+      readMoreBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const wrapper = this.closest('.reflection-content-wrapper');
+          const expandedContent = wrapper.querySelector('.expanded-content');
+          const btnText = this.querySelector('.btn-text');
+          const btnIcon = this.querySelector('.btn-icon');
+
+          if (expandedContent.style.display === 'none') {
+            expandedContent.style.display = 'block';
+            btnText.textContent = 'Read Less';
+            btnIcon.style.transform = 'rotate(180deg)';
+
+            // Smooth scroll animation
+            setTimeout(() => {
+              expandedContent.style.opacity = '1';
+              expandedContent.style.transform = 'translateY(0)';
+            }, 10);
+          } else {
+            expandedContent.style.opacity = '0';
+            expandedContent.style.transform = 'translateY(-10px)';
+
+            setTimeout(() => {
+              expandedContent.style.display = 'none';
+              btnText.textContent = 'Read More';
+              btnIcon.style.transform = 'rotate(0deg)';
+            }, 300);
+          }
+        });
+      });
+
+      // Animate cards on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reflection-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+
 </html>
