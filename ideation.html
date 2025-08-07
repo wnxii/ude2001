@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Botaniq Project Timeline - Team 08 University of Glasgow project journey documenting key milestones and progress"
-    />
+    <meta name="description"
+        content="Botaniq Project Timeline - Team 08 University of Glasgow project journey documenting key milestones and progress" />
     <title>Project Timeline - Botaniq | Team 08 UofG</title>
 
     <!-- Tailwind CSS -->
@@ -16,9 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
 
     <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -28,168 +26,536 @@
     <link rel="stylesheet" href="styles.css" />
 
     <style>
-      /* Timeline specific styles */
-      .timeline-container {
-        position: relative;
-      }
+        /* Timeline specific styles */
+        .timeline-container {
+            position: relative;
+        }
 
-      .timeline-line {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        background: linear-gradient(to bottom, #10b981, #059669);
-        transform: translateX(-50%);
-        border-radius: 2px;
-      }
-
-      .timeline-item {
-        position: relative;
-        margin-bottom: 3rem;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease;
-      }
-
-      .timeline-item.animate {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .timeline-item:nth-child(odd) {
-        padding-right: 50%;
-        padding-left: 0;
-      }
-
-      .timeline-item:nth-child(even) {
-        padding-left: 50%;
-        padding-right: 0;
-        text-align: left;
-      }
-
-      .timeline-item:nth-child(odd) .timeline-content {
-        margin-right: 2rem;
-        text-align: right;
-      }
-
-      .timeline-item:nth-child(even) .timeline-content {
-        margin-left: 2rem;
-        text-align: left;
-      }
-
-      .timeline-dot {
-        position: absolute;
-        left: 50%;
-        top: 1.5rem;
-        width: 20px;
-        height: 20px;
-        background: #10b981;
-        border: 4px solid white;
-        border-radius: 50%;
-        transform: translateX(-50%);
-        box-shadow: 0 0 0 4px #10b981;
-        z-index: 10;
-      }
-
-      .timeline-dot.milestone {
-        width: 24px;
-        height: 24px;
-        background: #dc2626;
-        box-shadow: 0 0 0 4px #dc2626;
-      }
-
-      .timeline-dot.future {
-        background: #9ca3af;
-        box-shadow: 0 0 0 4px #9ca3af;
-      }
-
-      @media (max-width: 768px) {
         .timeline-line {
-          left: 2rem;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #10b981, #059669);
+            transform: translateX(-50%);
+            border-radius: 2px;
         }
 
         .timeline-item {
-          padding-left: 4rem !important;
-          padding-right: 0 !important;
-          text-align: left !important;
+            position: relative;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
         }
 
-        .timeline-item .timeline-content {
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-          text-align: left !important;
+        .timeline-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:nth-child(odd) {
+            padding-right: 50%;
+            padding-left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            padding-left: 50%;
+            padding-right: 0;
+            text-align: left;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 2rem;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 2rem;
+            text-align: left;
         }
 
         .timeline-dot {
-          left: 2rem;
+            position: absolute;
+            left: 50%;
+            top: 1.5rem;
+            width: 20px;
+            height: 20px;
+            background: #10b981;
+            border: 4px solid white;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 4px #10b981;
+            z-index: 10;
         }
-      }
+
+        .timeline-dot.milestone {
+            width: 24px;
+            height: 24px;
+            background: #dc2626;
+            box-shadow: 0 0 0 4px #dc2626;
+        }
+
+        .timeline-dot.future {
+            background: #9ca3af;
+            box-shadow: 0 0 0 4px #9ca3af;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 2rem;
+            }
+
+            .timeline-item {
+                padding-left: 4rem !important;
+                padding-right: 0 !important;
+                text-align: left !important;
+            }
+
+            .timeline-item .timeline-content {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                text-align: left !important;
+            }
+
+            .timeline-dot {
+                left: 2rem;
+            }
+        }
     </style>
-  </head>
+</head>
 
-  <body class="font-inter bg-neutral-50">
+<body class="font-inter bg-neutral-50">
     <!-- Navigation -->
-    <nav
-      id="navbar"
-      class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300"
-    >
-      <div class="max-w-6xl mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
-          <!-- Logo/Brand -->
-          <a
-            class="text-2xl font-playfair font-bold text-emerald-700"
-            href="index.html"
-          >
-            Botaniq
-          </a>
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo/Brand -->
+                <div class="text-2xl font-playfair font-bold text-emerald-700">
+                    Botaniq
+                </div>
 
-          <!-- Navigation Links -->
-          <ul class="hidden md:flex space-x-8">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="timeline.html" class="nav-link">Timeline</a></li>
-            <li><a href="ideation.html" class="nav-link">Ideation</a></li>
-            <li><a href="prototype.html" class="nav-link">Prototype</a></li>
-            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-            <li><a href="reflections.html" class="nav-link">Reflections</a></li>
-          </ul>
+                <!-- Navigation Links -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                    <li><a href="ideation.html" class="nav-link">Ideation</a></li>
+                    <li><a href="prototype.html" class="nav-link">Prototype</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="reflections.html" class="nav-link">Reflections</a></li>
+                </ul>
 
-          <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="md:hidden p-3 flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
-            <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
-            <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
-            <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
-          </button>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden p-3 flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
+                    <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
+                    <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
+                    <span class="hamburger-line block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
+                <ul class="space-y-1 pt-4">
+                    <li>
+                        <a href="timeline.html"
+                            class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Timeline</a>
+                    </li>
+                    <li>
+                        <a href="index.html#problem"
+                            class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Problem
+                            & Solution</a>
+                    </li>
+                    <li>
+                        <a href="index.html#journey"
+                            class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Design
+                            Journey</a>
+                    </li>
+                    <li>
+                        <a href="ideation.html"
+                            class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Ideation</a>
+                    </li>
+                    <li>
+                        <a href="prototype.html"
+                            class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Prototype</a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html"
+                            class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="reflections.html"
+                            class="block py-3 px-0 text-gray-700 font-medium hover:text-emerald-700 transition-colors duration-300">Reflections</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
-          <ul class="space-y-1 pt-4">
-            <li>
-              <a href="timeline.html" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Timeline</a>
-            </li>
-            <li>
-              <a href="index.html#problem" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Problem & Solution</a>
-            </li>
-            <li>
-              <a href="index.html#journey" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Design Journey</a>
-            </li>
-            <li>
-              <a href="ideation.html" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Ideation</a>
-            </li>
-            <li>
-              <a href="prototype.html" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Prototype</a>
-            </li>
-            <li>
-              <a href="portfolio.html" class="block py-3 px-0 text-gray-700 font-medium border-b border-gray-100 hover:text-emerald-700 transition-colors duration-300">Portfolio</a>
-            </li>
-            <li>
-              <a href="reflections.html" class="block py-3 px-0 text-gray-700 font-medium hover:text-emerald-700 transition-colors duration-300">Reflections</a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </nav>
+
+    <section class="pt-24 pb-12 bg-gradient-to-br from-emerald-50 to-teal-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-playfair font-bold text-emerald-900 mb-6">
+                Ideation
+            </h1>
+            <p class="text-xl md:text-2xl text-emerald-700 mb-8 max-w-2xl mx-auto">
+                How our team brainstormed and refined ideas to create a unique solution for our project.
+            </p>
+        </div>
+    </section>
+
     <!-- Main Content -->
-  </body>
+    <section id="journey" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <!-- Requirements Gathering -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-semibold text-gray-900 mb-8">
+                    Requirement Gathering
+                </h3>
+                <div class="bg-white rounded-lg shadow-lg p-8 mt-8">
+                    <div class="text-gray-700 leading-relaxed mb-8 space-y-4">
+                        <h5 class="font-semibold text-emerald-700">
+                            User research:
+                        </h5>
+                        <p>
+                            To initiate our project, we engaged in structured requirement gathering to ensure alignment
+                            with real user needs and stakeholder expectations. This phase involved collaboration with:
+                        </p>
+                        <ul class="list-disc list-inside">
+                            <li>Glasgow City Council (policy alignment, biodiversity goals)</li>
+                            <li>Conservation organisations (e.g. Friends of Glasgow Green, RSPB Scotland)</li>
+                            <li>Academic experts (urban ecology, HCI, AI ethics)</li>
+                        </ul>
+
+                        <p>
+                            To help us analyze environments, activities, and user interactions during field observation
+                            and community walks, we utilised the AEIOU framework.
+                        </p>
+
+                        <div class="grid md:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-emerald-50 p-4 rounded-lg">
+                                <h6 class="font-semibold text-emerald-700 mb-2">Activities:</h6>
+                                <p class="text-sm">Observing how citizens and experts interact with the
+                                    species identification process, including reporting sightings and verifying data.
+                                </p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h6 class="font-semibold text-blue-700 mb-2">Environments:</h6>
+                                <p class="text-sm">Locations such as the Glasgow Botanic Gardens, community
+                                    spaces, and digital platforms used for reporting and identification.</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <h6 class="font-semibold text-purple-700 mb-2">Interactions:</h6>
+                                <p class="text-sm">Communication between citizens, experts, and the
+                                    reporting system, including email exchanges and feedback loops.</p>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded-lg">
+                                <h6 class="font-semibold text-orange-700 mb-2">Objects:</h6>
+                                <p class="text-sm">Tools and resources used, such as cameras, smartphones,
+                                    spreadsheets, and the iNaturalist platform.</p>
+                            </div>
+                            <div class="bg-teal-50 p-4 rounded-lg md:col-span-2">
+                                <h6 class="font-semibold text-teal-700 mb-2">Users:</h6>
+                                <p class="text-sm">Citizens reporting sightings, experts verifying species, and
+                                    council staff managing biodiversity data.</p>
+                            </div>
+                        </div>
+                        <p>The following insights were gathered and recorded in a document: </p>
+                        <iframe allowfullscreen frameborder="0" style="width:100%; height:550px"
+                            src="https://lucid.app/documents/embedded/bce0932c-49af-4afa-8454-d2ed3e130e98"
+                            id="mOOErzixZVm5"></iframe>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 mt-8">
+                    <div class="text-gray-700 leading-relaxed mb-8 space-y-4">
+                        <h5 class="font-semibold text-emerald-700">
+                            Partner Meeting:
+                        </h5>
+                        <p>
+                            A partner meeting with our project partner, Chrissy, was conducted to gather insights and
+                            requirements for the project.
+
+                        </p>
+                        <div class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 text-sm">
+                            <p>
+                                Chrissy is part of the Friends of Glasgow Botanic Gardens, a volunteer-led charitable
+                                organization that supports the conservation, enhancement, and public engagement efforts
+                                of
+                                the Glasgow Botanic Gardens.
+                            </p>
+                        </div>
+
+                        <p>Prior to the meeting, the team utlised the "How Might We" framework to better understand the
+                            situation and prepare some questions
+                            to ask Chrissy. Utilising this framework helped us avoid assumptions and focus interviews
+                            around real-world challenges. Some examples include: </p>
+
+                        <div class="grid md:grid-cols-3 gap-4 mt-6 mb-6">
+                            <div
+                                class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg border-l-4 border-blue-400 shadow-sm">
+                                <div class="flex items-center space-x-3">
+                                    <div
+                                        class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                        ?
+                                    </div>
+                                    <p class="text-gray-800 font-medium text-sm">How might we support experts in
+                                        validating
+                                        species data more efficiently?</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-lg border-l-4 border-green-400 shadow-sm">
+                                <div class="flex items-center space-x-3">
+                                    <div
+                                        class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                        ?
+                                    </div>
+                                    <p class="text-gray-800 font-medium text-sm">How might we help users record accurate
+                                        species
+                                        details without making the process overwhelming?</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-gradient-to-r from-purple-50 to-purple-100 p-4 rounded-lg border-l-4 border-purple-400 shadow-sm">
+                                <div class="flex items-center space-x-3">
+                                    <div
+                                        class="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                        ?
+                                    </div>
+                                    <p class="text-gray-800 font-medium text-sm">How might we reduce errors in manual
+                                        species
+                                        data entry and improve consistency?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p> With these "How Might We" questions in mind, the table below summarizes these questions and
+                            their relevance
+                            to the
+                            project.</p>
+                        <div class="bg-gray-50 p-4 rounded">
+                            <p><strong>What is the current process of the species identification in
+                                    Glasgow?</strong>
+                            </p>
+                            <div class="flex justify-end mt-4">
+                                <div class="max-w-5xl text-right">
+                                    <p>Currently, a single expert is responsible for the
+                                        identification and recording of the
+                                        species. Citizens would report observations of species through email, with the
+                                        image
+                                        of
+                                        the species attached. The expert will then manually identify the species in the
+                                        image,
+                                        and then record it into a spreadsheet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded">
+                            <p><strong>What is the relevance of iNaturalist with regards to our project?</strong>
+                            </p>
+                            <div class="flex justify-end mt-4">
+                                <div class="max-w-5xl text-right">
+                                    <p>It would be good to explore how iNaturalist data can be integrated into the
+                                        current process such that there is one centralised database for the species. In
+                                        addition to that, requests that come in through current process could be
+                                        automatically routed to iNaturalist.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end mt-6">
+                            <a href="#"
+                                class="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium transition-colors duration-200">
+                                View the full partner meeting documentation
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" bg-white rounded-lg shadow-lg p-8 mt-8">
+                    <div class="text-gray-700 leading-relaxed mb-8 space-y-4">
+                        <h5 class="font-semibold text-emerald-700">
+                            Key Insights:
+                        </h5>
+                        <p>
+                            Following the meeting, the team was able to gather key insights that would help
+                            shape the direction of the project. The key insights are summarised below:
+                        </p>
+                        <div class="grid md:grid-cols-1 gap-4 mt-6">
+                            <div
+                                class="bg-gradient-to-r from-emerald-50 to-emerald-100 p-5 rounded-lg border-l-4 border-emerald-400 shadow-sm">
+                                <div class="flex items-start space-x-3">
+                                    <div
+                                        class="bg-emerald-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-1">
+                                        1
+                                    </div>
+                                    <p class="text-gray-800 font-medium">The current process of identifying species in
+                                        Glasgow is manual and
+                                        time-consuming, with a single expert responsible for the identification and
+                                        recording of
+                                        species.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-gradient-to-r from-blue-50 to-blue-100 p-5 rounded-lg border-l-4 border-blue-400 shadow-sm">
+                                <div class="flex items-start space-x-3">
+                                    <div
+                                        class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-1">
+                                        2
+                                    </div>
+                                    <p class="text-gray-800 font-medium">There is potential to integrate iNaturalist
+                                        data into the current process to
+                                        create a centralised database for species identification.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-gradient-to-r from-purple-50 to-purple-100 p-5 rounded-lg border-l-4 border-purple-400 shadow-sm">
+                                <div class="flex items-start space-x-3">
+                                    <div
+                                        class="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-1">
+                                        3
+                                    </div>
+                                    <p class="text-gray-800 font-medium">Requests that come in through the current
+                                        process could be automatically routed
+                                        to iNaturalist, streamlining the identification process.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ideation Process -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-semibold text-gray-900 mb-8">
+                    Ideation Process
+                </h3>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="text-gray-700 leading-relaxed mb-6 space-y-4">
+                        <h5 class="font-semibold text-emerald-700">
+                            Initial Brainstorming phase:
+                        </h5>
+
+                        <p>
+                            Our ideation process was a collaborative effort that involved brainstorming,
+                            evaluating, and refining ideas to arrive at a unique solution. We utilized various
+                            techniques such as mind mapping, sketching, and group discussions to generate a wide
+                            range of concepts.
+                            <br> <br>
+                            Each team member came up with many initial ideas, which was then placed onto a
+                            Action
+                            Priority Matrix, as seen in the embedded Miro Board, to determine the most feasible
+                            and
+                            impactful concepts. The ideas were
+                            grouped into four categories, that being:
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4 mt-4">
+                            <div class="flex items-center space-x-3 p-3 bg-emerald-50 rounded-lg">
+                                <span
+                                    class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</span>
+                                <span class="text-sm font-medium">Quick Wins (Top Left, Low Effort/High
+                                    Impact)</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
+                                <span
+                                    class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</span>
+                                <span class="text-sm font-medium">Big Projects (Top Right, High Effort/High
+                                    Impact)</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-purple-50 rounded-lg">
+                                <span
+                                    class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</span>
+                                <span class="text-sm font-medium">Fill-Ins (Bottom Left, Low Effort/Low
+                                    Impact)</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-lg">
+                                <span
+                                    class="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">4</span>
+                                <span class="text-sm font-medium">Time Sinks (Bottom Right, High Effort/Low
+                                    Impact)</span>
+                            </div>
+                        </div>
+                        <iframe width="100%" height="550"
+                            src="https://miro.com/app/live-embed/uXjVK7_XY_E=/?focusWidget=3458764636495739541&embedMode=view_only_without_ui&embedId=480102418784"
+                            frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write"
+                            allowfullscreen></iframe>
+                        <h5 class="font-semibold text-emerald-700">
+                            Narrowing down ideas:
+                        </h5>
+                        <p>
+                            After brainstorming with a large pool of ideas, we narrowed down our focus to the
+                            projects that aligned with our goals and objectives. In addition, we considered the
+                            feasibility and effort for each idea, ultimately selected four ideas that stood out.
+                            </br></br>
+                            The projects that we selected mainly had high impact, and are outlined by the green
+                            and
+                            orange rectangles in the Miro Board.
+                        </p>
+
+                        <iframe width="100%" height="550"
+                            src="https://miro.com/app/live-embed/uXjVK7_XY_E=/?focusWidget=3458764636495965465&embedMode=view_only_without_ui&embedId=777527757235"
+                            frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write"
+                            allowfullscreen></iframe>
+                        <div class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 text-sm">
+                            <p>
+                                The idea that is outlined by the orange rectangles was one that we considered.
+                                However,
+                                after considering the timeframe that the team had to complete the project, we
+                                decided to
+                                not pursue this idea as it would require too much effort within the timeframe.
+                            </p>
+                        </div>
+                        <!-- <div class="mt-4 p-3 bg-yellow-50 border-l-4 border-yellow-400 text-sm">
+                            <strong>A1 Focus:</strong> Show your complete creative process
+                            including ideas that were discarded.
+                        </div> -->
+                        <h5 class="font-semibold text-emerald-700">
+                            Final Concept:
+                        </h5>
+                        <p>
+                            The final concept that we decided to pursue was a combination of the ideas that were
+                            had
+                            the highest impact and most feasible for the team to complete. These ideas were:
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div
+                                class="bg-yellow-100 p-6 rounded-lg mb-4 h-48 flex flex-col justify-center items-center">
+                                <div class="text-4xl mb-2">📋</div>
+                                <h4 class="font-semibold">An API to feed authenticated biodiversity data to the
+                                    Glasgow
+                                    City Council's reporting system</h4>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="bg-orange-100 p-6 rounded-lg mb-4 h-48 flex flex-col justify-center items-center">
+                                <div class="text-4xl mb-2">🕸️</div>
+                                <h4 class="font-semibold">A web portal for experts to rapidly verify, comment on, or
+                                    correct flagged iNaturalist submissions</h4>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="bg-green-100 p-6 rounded-lg mb-4 h-48 flex flex-col justify-center items-center">
+                                <div class="text-4xl mb-2">✅</div>
+                                <h4 class="font-semibold">A "triage" system that auto-verified high-confidence
+                                    sightings
+                                    of common species, leaving only challenging IDs for experts</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
 </html>
